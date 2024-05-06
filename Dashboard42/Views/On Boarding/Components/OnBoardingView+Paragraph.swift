@@ -40,6 +40,7 @@ extension OnBoardingView {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
+            .slideIn(rowHeight: 50, duration: 1, delay: delayAnimation)
         }
     }
 

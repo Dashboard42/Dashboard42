@@ -23,6 +23,7 @@ extension OnBoardingView {
             .lineSpacing(1.0)
             .multilineTextAlignment(.center)
             .frame(minWidth: 0, maxWidth: .infinity)
+            .slideIn(rowHeight: 50, duration: 1, delay: 0.2)
         }
     }
 
