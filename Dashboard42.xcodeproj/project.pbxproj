@@ -17,7 +17,9 @@
 		0170E9A12BE8D39E00D59D45 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		0170E9A32BE8D46D00D59D45 /* .swift-format */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-format"; sourceTree = "<group>"; };
 		0170E9A42BE8D48300D59D45 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		01D976AD2BE8D0D900DB9F30 /* Dashboard42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dashboard42.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0170E9A62BE8D50A00D59D45 /* Template.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Template.plist; sourceTree = "<group>"; };
+		0170E9A72BE8D57000D59D45 /* ci_pre_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_pre_xcodebuild.sh; sourceTree = "<group>"; };
+		01D976AD2BE8D0D900DB9F30 /* Dashboard42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Dashboard42.app; path = "/Users/marcmosca/Developer/Xcode/Dashboard42/build/Debug-iphoneos/Dashboard42.app"; sourceTree = "<absolute>"; };
 		01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard42App.swift; sourceTree = "<group>"; };
 		01D976B22BE8D0D900DB9F30 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		01D976B42BE8D0DA00DB9F30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -35,23 +37,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0170E9A52BE8D4D300D59D45 /* ci_scripts */ = {
+			isa = PBXGroup;
+			children = (
+				0170E9A62BE8D50A00D59D45 /* Template.plist */,
+				0170E9A72BE8D57000D59D45 /* ci_pre_xcodebuild.sh */,
+			);
+			path = ci_scripts;
+			sourceTree = "<group>";
+		};
 		01D976A42BE8D0D900DB9F30 = {
 			isa = PBXGroup;
 			children = (
-				0170E9A42BE8D48300D59D45 /* README.md */,
-				0170E9A32BE8D46D00D59D45 /* .swift-format */,
-				0170E9A12BE8D39E00D59D45 /* .gitignore */,
+				0170E9A52BE8D4D300D59D45 /* ci_scripts */,
 				01D976AF2BE8D0D900DB9F30 /* Dashboard42 */,
-				01D976AE2BE8D0D900DB9F30 /* Products */,
+				0170E9A12BE8D39E00D59D45 /* .gitignore */,
+				0170E9A32BE8D46D00D59D45 /* .swift-format */,
+				0170E9A42BE8D48300D59D45 /* README.md */,
 			);
-			sourceTree = "<group>";
-		};
-		01D976AE2BE8D0D900DB9F30 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				01D976AD2BE8D0D900DB9F30 /* Dashboard42.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		01D976AF2BE8D0D900DB9F30 /* Dashboard42 */ = {
@@ -118,7 +121,7 @@
 				Base,
 			);
 			mainGroup = 01D976A42BE8D0D900DB9F30;
-			productRefGroup = 01D976AE2BE8D0D900DB9F30 /* Products */;
+			productRefGroup = 01D976A42BE8D0D900DB9F30;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
