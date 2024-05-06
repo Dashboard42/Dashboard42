@@ -126,7 +126,7 @@ final class Api {
         request.httpMethod = methodType
 
         if let token = authorization == .application
-            ? Constants.Api.APPLICATION_ACCESS_TOKEN : Constants.Api.USER_ACCESS_TOKEN
+            ? Constants.Api.applicationAccessToken : Constants.Api.userAccessToken
         {
             request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         }
@@ -156,7 +156,7 @@ final class Api {
                 try KeychainManager.shared.save(account: .applicationAccessToken, data: token.accessToken)
             }
             else {
-                guard let refreshToken = Constants.Api.USER_REFRESH_TOKEN else { throw Errors.invalidAccessToken }
+                guard let refreshToken = Constants.Api.userRefreshToken else { throw Errors.invalidAccessToken }
                 let endpoint = Api.OAuthEndpoints.updateUserAccessToken(refreshToken: refreshToken)
                 let token = try await post(endpoint, type: Api.OAuthUser.self)
                 try KeychainManager.shared.save(account: .userAccessToken, data: token.accessToken)

@@ -35,33 +35,33 @@ extension Api {
             switch self {
             case .authorize:
                 return [
-                    "client_id": "",
-                    "redirect_uri": "",
+                    "client_id": Constants.Api.clientId,
+                    "redirect_uri": Constants.Api.redirectUri,
                     "response_type": "code",
                     "scope": "public+projects+profile",
                 ]
             case .fetchUserAccessToken(let code):
                 return [
                     "grant_type": "authorization_code",
-                    "client_id": "",
-                    "client_secret": "",
+                    "client_id": Constants.Api.clientId,
+                    "client_secret": Constants.Api.clientSecret,
                     "code": code,
-                    "redirect_uri": "",
+                    "redirect_uri": Constants.Api.redirectUri,
                 ]
             case .fetchApplicationAccessToken:
                 return [
                     "grant_type": "client_credentials",
-                    "client_id": "",
-                    "client_secret": "",
+                    "client_id": Constants.Api.clientId,
+                    "client_secret": Constants.Api.clientSecret,
                     "scope": "public+projects+profile",
                 ]
             case .updateUserAccessToken(let refreshToken):
                 return [
                     "grant_type": "refresh_token",
-                    "client_id": "",
-                    "client_secret": "",
+                    "client_id": Constants.Api.clientId,
+                    "client_secret": Constants.Api.clientSecret,
                     "refresh_token": refreshToken,
-                    "redirect_uri": "",
+                    "redirect_uri": Constants.Api.redirectUri,
                 ]
             }
         }

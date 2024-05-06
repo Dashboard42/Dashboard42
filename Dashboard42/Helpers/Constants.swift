@@ -13,24 +13,29 @@ enum Constants {
 
     /// An enumeration of all the tokens and keys linked to the API.
     enum Api {
-        static let CLIENT_ID = getValueOfKeyInApiFile(for: "API_CLIENT_ID")
-        static let CLIENT_SECRET = getValueOfKeyInApiFile(for: "API_CLIENT_SECRET")
-        static let REDIRECT_URI = getValueOfKeyInApiFile(for: "API_REDIRECT_URI")
+        static let clientId = getValueOfKeyInApiFile(for: "API_CLIENT_ID")
+        static let clientSecret = getValueOfKeyInApiFile(for: "API_CLIENT_SECRET")
+        static let redirectUri = getValueOfKeyInApiFile(for: "API_REDIRECT_URI")
 
-        static var APPLICATION_ACCESS_TOKEN: String? {
+        static var applicationAccessToken: String? {
             get { KeychainManager.shared.get(account: .applicationAccessToken) }
             set { saveTokenInKeychain(newValue: newValue, account: .applicationAccessToken) }
         }
 
-        static var USER_ACCESS_TOKEN: String? {
+        static var userAccessToken: String? {
             get { KeychainManager.shared.get(account: .userAccessToken) }
             set { saveTokenInKeychain(newValue: newValue, account: .userAccessToken) }
         }
 
-        static var USER_REFRESH_TOKEN: String? {
+        static var userRefreshToken: String? {
             get { KeychainManager.shared.get(account: .userRefreshToken) }
             set { saveTokenInKeychain(newValue: newValue, account: .userRefreshToken) }
         }
+    }
+
+    /// An enumeration of all the tokens and keys linked to the app storage.
+    enum AppStorage {
+        static let userIsConnected: String = "APPSTORAGE_USER_IS_CONNECTED"
     }
 
 }
