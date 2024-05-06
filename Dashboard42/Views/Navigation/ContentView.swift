@@ -12,7 +12,7 @@ struct ContentView: View {
     // MARK: - Properties
 
     @Environment(\.store) private var store
-    @AppStorage(Constants.AppStorage.Keys.userIsConnected) private var userIsConnected: Bool?
+    @AppStorage(Constants.AppStorage.userIsConnected) private var userIsConnected: Bool?
 
     // MARK: - Body
 

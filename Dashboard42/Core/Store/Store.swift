@@ -17,6 +17,7 @@ final class Store {
 
     var error: Api.Errors?
     var errorAction: (() -> Void)?
-    var errorIsPresented: Bool { error != nil }
+
+    let authService = AuthService()
 
 }

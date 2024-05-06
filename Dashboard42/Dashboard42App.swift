@@ -20,7 +20,7 @@ struct Dashboard42App: App {
         WindowGroup {
             ContentView()
                 .environment(\.store, store)
-                .handleError(isPresented: store.errorIsPresented, error: store.error, actions: store.errorAction)
+                .handleError(error: store.error, actions: store.errorAction)
         }
     }
 }

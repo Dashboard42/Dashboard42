@@ -13,7 +13,6 @@ struct HandleErrorsViewModifier: ViewModifier {
 
     @Environment(\.dismiss) private var dismiss
 
-    let isPresented: Bool
     let error: Api.Errors?
     let actions: (() -> Void)?
 
@@ -21,7 +20,7 @@ struct HandleErrorsViewModifier: ViewModifier {
 
     func body(content: Content) -> some View {
         content
-            .alert(isPresented: .constant(isPresented), error: error) { error in
+            .alert(isPresented: .constant(error != nil), error: error) { error in
                 Button("Annuler", role: .cancel) {}
 
                 Button("OK") {
@@ -29,9 +28,7 @@ struct HandleErrorsViewModifier: ViewModifier {
                     dismiss()
                 }
             } message: { error in
-                if let failureReason = error.failureReason {
-                    Text(failureReason)
-                }
+                Text(error.failureReason ?? "Une erreur s'est produite. Merci de réessayer plus tard.")
             }
 
     }
@@ -44,12 +41,11 @@ extension View {
 
     /// Presents an alert when an error occurs in the application.
     /// - Parameters:
-    ///   - isPresented: Boolean used to determine whether an error has occurred during the execution of a process.
     ///   - error: An ErrorType value indicating the type of error.
     ///   - actions: Actions to be triggered when the button in the error alert is validated.
     /// - Returns: A view with a new error alert.
-    func handleError(isPresented: Bool, error: Api.Errors?, actions: (() -> Void)? = nil) -> some View {
-        modifier(HandleErrorsViewModifier(isPresented: isPresented, error: error, actions: actions))
+    func handleError(error: Api.Errors?, actions: (() -> Void)? = nil) -> some View {
+        modifier(HandleErrorsViewModifier(error: error, actions: actions))
     }
 
 }

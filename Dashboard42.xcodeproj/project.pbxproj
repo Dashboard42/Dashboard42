@@ -28,6 +28,7 @@
 		0170E9DD2BE9037800D59D45 /* SlideInViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0170E9DC2BE9037800D59D45 /* SlideInViewModifier.swift */; };
 		0176FCBD2BE9052200C41C06 /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0176FCBC2BE9052200C41C06 /* AppScreen.swift */; };
 		0176FCBF2BE905D400C41C06 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0176FCBE2BE905D400C41C06 /* AppTabView.swift */; };
+		0176FCC22BE90F5000C41C06 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0176FCC12BE90F5000C41C06 /* AuthService.swift */; };
 		01D976B12BE8D0D900DB9F30 /* Dashboard42App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */; };
 		01D976B32BE8D0D900DB9F30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D976B22BE8D0D900DB9F30 /* ContentView.swift */; };
 		01D976B52BE8D0DA00DB9F30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01D976B42BE8D0DA00DB9F30 /* Assets.xcassets */; };
@@ -59,9 +60,11 @@
 		0170E9D72BE8FE3700D59D45 /* EnvironmentValues+Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Store.swift"; sourceTree = "<group>"; };
 		0170E9DA2BE9004900D59D45 /* HandleErrorsViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleErrorsViewModifier.swift; sourceTree = "<group>"; };
 		0170E9DC2BE9037800D59D45 /* SlideInViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInViewModifier.swift; sourceTree = "<group>"; };
-		0176FCBB2BE904F300C41C06 /* Dashboard42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Dashboard42.app; path = "/Users/marcmosca/Developer/Xcode/Dashboard42/build/Debug-iphoneos/Dashboard42.app"; sourceTree = "<absolute>"; };
 		0176FCBC2BE9052200C41C06 /* AppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreen.swift; sourceTree = "<group>"; };
 		0176FCBE2BE905D400C41C06 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		0176FCC12BE90F5000C41C06 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		0176FCC32BE9129200C41C06 /* Dashboard42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dashboard42.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0176FCC42BE9129200C41C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard42App.swift; sourceTree = "<group>"; };
 		01D976B22BE8D0D900DB9F30 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		01D976B42BE8D0DA00DB9F30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				0170E9AC2BE8D75A00D59D45 /* Api */,
+				0176FCC02BE90F3100C41C06 /* Auth */,
 				0170E9BE2BE8DCC800D59D45 /* Keychain */,
 				0170E9D32BE8FD1100D59D45 /* Store */,
 			);
@@ -218,6 +222,14 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		0176FCC02BE90F3100C41C06 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				0176FCC12BE90F5000C41C06 /* AuthService.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		01D976A42BE8D0D900DB9F30 = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +238,7 @@
 				0170E9A12BE8D39E00D59D45 /* .gitignore */,
 				0170E9A32BE8D46D00D59D45 /* .swift-format */,
 				0170E9A42BE8D48300D59D45 /* README.md */,
+				0176FCC32BE9129200C41C06 /* Dashboard42.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -239,6 +252,7 @@
 				0170E9C62BE8E90300D59D45 /* Views */,
 				01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */,
 				0170E9A82BE8D5BD00D59D45 /* Api.plist */,
+				0176FCC42BE9129200C41C06 /* Info.plist */,
 			);
 			path = Dashboard42;
 			sourceTree = "<group>";
@@ -269,7 +283,7 @@
 			);
 			name = Dashboard42;
 			productName = Dashboard42;
-			productReference = 0176FCBB2BE904F300C41C06 /* Dashboard42.app */;
+			productReference = 0176FCC32BE9129200C41C06 /* Dashboard42.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -346,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0170E9AE2BE8D77300D59D45 /* Api.swift in Sources */,
+				0176FCC22BE90F5000C41C06 /* AuthService.swift in Sources */,
 				0170E9B52BE8D85900D59D45 /* Api+OAuthEndpoints.swift in Sources */,
 				0170E9D22BE8EDC300D59D45 /* OnBoardingView+Author.swift in Sources */,
 				0170E9DB2BE9004900D59D45 /* HandleErrorsViewModifier.swift in Sources */,
@@ -503,6 +518,7 @@
 				DEVELOPMENT_TEAM = BHH429N5DK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Dashboard42/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Dashboard42;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -534,6 +550,7 @@
 				DEVELOPMENT_TEAM = BHH429N5DK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Dashboard42/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Dashboard42;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

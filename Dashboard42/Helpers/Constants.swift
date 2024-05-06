@@ -35,14 +35,7 @@ enum Constants {
 
     /// An enumeration of all the tokens and keys linked to the app storage.
     enum AppStorage {
-        enum Keys {
-            static let userIsConnected: String = "APPSTORAGE_USER_IS_CONNECTED"
-        }
-
-        static var userIsConnected: Bool {
-            get { UserDefaults.standard.bool(forKey: Keys.userIsConnected) }
-            set { UserDefaults.standard.set(newValue, forKey: Keys.userIsConnected) }
-        }
+        static let userIsConnected: String = "APPSTORAGE_USER_IS_CONNECTED"
     }
 
 }

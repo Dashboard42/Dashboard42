@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct AppTabView: View {
-    
+
     // MARK: - Properties
-    
+
     @Environment(\.store) private var store
     @Binding var selection: AppScreen
-    
-    
+
     // MARK: - Body
-    
+
     var body: some View {
         VStack {
             TabView(selection: $selection) {

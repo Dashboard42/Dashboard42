@@ -17,7 +17,7 @@ extension Api {
         case corruptAccessToken
         case invalidServerResponse
 
-        var errorDescription: String? { "Quelque chose n'a pas fonctionné" }
+        var errorDescription: String? { "Une erreur est survenue" }
 
         var failureReason: String {
             switch self {

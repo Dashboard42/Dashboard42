@@ -14,6 +14,7 @@ struct OnBoardingView: View {
 
     @Environment(\.webAuthenticationSession) private var webAuthenticationSession
     @Environment(\.store) private var store
+    @AppStorage(Constants.AppStorage.userIsConnected) private var userIsConnected: Bool?
 
     // MARK: - Body
 
@@ -66,6 +67,30 @@ struct OnBoardingView: View {
 extension OnBoardingView {
 
     func authenticate() {
+        Task {
+            let authorizeUrl = Api.OAuthEndpoints.authorize.url
+            let callbackUrl = Constants.Api.redirectUri.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+
+            guard let authorizeUrl = authorizeUrl, let callbackUrl = callbackUrl else {
+                store.error = .invalidUrl
+                return
+            }
+
+            do {
+                let url = try await webAuthenticationSession.authenticate(
+                    using: authorizeUrl,
+                    callbackURLScheme: callbackUrl
+                )
+                try await store.authService.signIn(using: url)
+
+                userIsConnected = true
+            }
+            catch {
+                if error is Api.Errors {
+                    store.error = error as? Api.Errors
+                }
+            }
+        }
     }
 
 }
