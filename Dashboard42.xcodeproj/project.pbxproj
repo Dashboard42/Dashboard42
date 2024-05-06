@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0170E9A92BE8D5BD00D59D45 /* Api.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0170E9A82BE8D5BD00D59D45 /* Api.plist */; };
+		0170E9AE2BE8D77300D59D45 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0170E9AD2BE8D77300D59D45 /* Api.swift */; };
+		0170E9B02BE8D7D400D59D45 /* Api+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0170E9AF2BE8D7D400D59D45 /* Api+Errors.swift */; };
+		0170E9B22BE8D7E700D59D45 /* Api+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0170E9B12BE8D7E700D59D45 /* Api+Endpoint.swift */; };
+		0170E9B52BE8D85900D59D45 /* Api+OAuthEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0170E9B42BE8D85900D59D45 /* Api+OAuthEndpoints.swift */; };
+		0170E9B82BE8D8A800D59D45 /* Api+OAuthApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0170E9B72BE8D8A800D59D45 /* Api+OAuthApplication.swift */; };
+		0170E9BA2BE8D8C800D59D45 /* Api+OAuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0170E9B92BE8D8C800D59D45 /* Api+OAuthUser.swift */; };
+		0170E9BD2BE8D98F00D59D45 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0170E9BC2BE8D98F00D59D45 /* Constants.swift */; };
+		0170E9C02BE8DCDD00D59D45 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0170E9BF2BE8DCDD00D59D45 /* Keychain.swift */; };
+		0170E9C22BE8DE9E00D59D45 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0170E9C12BE8DE9E00D59D45 /* KeychainManager.swift */; };
 		01D976B12BE8D0D900DB9F30 /* Dashboard42App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */; };
 		01D976B32BE8D0D900DB9F30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D976B22BE8D0D900DB9F30 /* ContentView.swift */; };
 		01D976B52BE8D0DA00DB9F30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01D976B42BE8D0DA00DB9F30 /* Assets.xcassets */; };
@@ -14,7 +24,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		01D976AD2BE8D0D900DB9F30 /* Dashboard42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dashboard42.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0170E9A12BE8D39E00D59D45 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		0170E9A32BE8D46D00D59D45 /* .swift-format */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-format"; sourceTree = "<group>"; };
+		0170E9A42BE8D48300D59D45 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0170E9A62BE8D50A00D59D45 /* Template.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Template.plist; sourceTree = "<group>"; };
+		0170E9A72BE8D57000D59D45 /* ci_pre_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_pre_xcodebuild.sh; sourceTree = "<group>"; };
+		0170E9A82BE8D5BD00D59D45 /* Api.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Api.plist; sourceTree = "<group>"; };
+		0170E9AD2BE8D77300D59D45 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		0170E9AF2BE8D7D400D59D45 /* Api+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+Errors.swift"; sourceTree = "<group>"; };
+		0170E9B12BE8D7E700D59D45 /* Api+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+Endpoint.swift"; sourceTree = "<group>"; };
+		0170E9B42BE8D85900D59D45 /* Api+OAuthEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+OAuthEndpoints.swift"; sourceTree = "<group>"; };
+		0170E9B72BE8D8A800D59D45 /* Api+OAuthApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+OAuthApplication.swift"; sourceTree = "<group>"; };
+		0170E9B92BE8D8C800D59D45 /* Api+OAuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+OAuthUser.swift"; sourceTree = "<group>"; };
+		0170E9BC2BE8D98F00D59D45 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0170E9BF2BE8DCDD00D59D45 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		0170E9C12BE8DE9E00D59D45 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		01D976AD2BE8D0D900DB9F30 /* Dashboard42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Dashboard42.app; path = "/Users/marcmosca/Developer/Xcode/Dashboard42/build/Debug-iphoneos/Dashboard42.app"; sourceTree = "<absolute>"; };
 		01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard42App.swift; sourceTree = "<group>"; };
 		01D976B22BE8D0D900DB9F30 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		01D976B42BE8D0DA00DB9F30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,29 +57,99 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0170E9A52BE8D4D300D59D45 /* ci_scripts */ = {
+			isa = PBXGroup;
+			children = (
+				0170E9A62BE8D50A00D59D45 /* Template.plist */,
+				0170E9A72BE8D57000D59D45 /* ci_pre_xcodebuild.sh */,
+			);
+			path = ci_scripts;
+			sourceTree = "<group>";
+		};
+		0170E9AA2BE8D69C00D59D45 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				01D976B42BE8D0DA00DB9F30 /* Assets.xcassets */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		0170E9AB2BE8D73B00D59D45 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0170E9AC2BE8D75A00D59D45 /* Api */,
+				0170E9BE2BE8DCC800D59D45 /* Keychain */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0170E9AC2BE8D75A00D59D45 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				0170E9B32BE8D83D00D59D45 /* Endpoints */,
+				0170E9B62BE8D89A00D59D45 /* Types */,
+				0170E9AD2BE8D77300D59D45 /* Api.swift */,
+				0170E9B12BE8D7E700D59D45 /* Api+Endpoint.swift */,
+				0170E9AF2BE8D7D400D59D45 /* Api+Errors.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		0170E9B32BE8D83D00D59D45 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				0170E9B42BE8D85900D59D45 /* Api+OAuthEndpoints.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		0170E9B62BE8D89A00D59D45 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				0170E9B72BE8D8A800D59D45 /* Api+OAuthApplication.swift */,
+				0170E9B92BE8D8C800D59D45 /* Api+OAuthUser.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		0170E9BB2BE8D97B00D59D45 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0170E9BC2BE8D98F00D59D45 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0170E9BE2BE8DCC800D59D45 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				0170E9BF2BE8DCDD00D59D45 /* Keychain.swift */,
+				0170E9C12BE8DE9E00D59D45 /* KeychainManager.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
 		01D976A42BE8D0D900DB9F30 = {
 			isa = PBXGroup;
 			children = (
+				0170E9A52BE8D4D300D59D45 /* ci_scripts */,
 				01D976AF2BE8D0D900DB9F30 /* Dashboard42 */,
-				01D976AE2BE8D0D900DB9F30 /* Products */,
+				0170E9A12BE8D39E00D59D45 /* .gitignore */,
+				0170E9A32BE8D46D00D59D45 /* .swift-format */,
+				0170E9A42BE8D48300D59D45 /* README.md */,
 			);
-			sourceTree = "<group>";
-		};
-		01D976AE2BE8D0D900DB9F30 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				01D976AD2BE8D0D900DB9F30 /* Dashboard42.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		01D976AF2BE8D0D900DB9F30 /* Dashboard42 */ = {
 			isa = PBXGroup;
 			children = (
+				0170E9AB2BE8D73B00D59D45 /* Core */,
+				0170E9BB2BE8D97B00D59D45 /* Helpers */,
+				01D976B62BE8D0DA00DB9F30 /* Preview Content */,
+				0170E9AA2BE8D69C00D59D45 /* Ressources */,
 				01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */,
 				01D976B22BE8D0D900DB9F30 /* ContentView.swift */,
-				01D976B42BE8D0DA00DB9F30 /* Assets.xcassets */,
-				01D976B62BE8D0DA00DB9F30 /* Preview Content */,
+				0170E9A82BE8D5BD00D59D45 /* Api.plist */,
 			);
 			path = Dashboard42;
 			sourceTree = "<group>";
@@ -77,6 +172,7 @@
 				01D976A92BE8D0D900DB9F30 /* Sources */,
 				01D976AA2BE8D0D900DB9F30 /* Frameworks */,
 				01D976AB2BE8D0D900DB9F30 /* Resources */,
+				0170E9A22BE8D3E700D59D45 /* Format */,
 			);
 			buildRules = (
 			);
@@ -111,7 +207,7 @@
 				Base,
 			);
 			mainGroup = 01D976A42BE8D0D900DB9F30;
-			productRefGroup = 01D976AE2BE8D0D900DB9F30 /* Products */;
+			productRefGroup = 01D976A42BE8D0D900DB9F30;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -125,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0170E9A92BE8D5BD00D59D45 /* Api.plist in Resources */,
 				01D976B82BE8D0DA00DB9F30 /* Preview Assets.xcassets in Resources */,
 				01D976B52BE8D0DA00DB9F30 /* Assets.xcassets in Resources */,
 			);
@@ -132,13 +229,43 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0170E9A22BE8D3E700D59D45 /* Format */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Format;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"${ENABLE_PREVIEWS}\" = \"YES\" ]]; then\n  echo \"Not running swift-format for Xcode Previews\"\n  exit 0;\nfi\n\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swift-format > /dev/null; then\n  swift-format format --in-place --recursive .\nelse\n  echo \"warning: swift-format not installed, download from https://github.com/apple/swift-format\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		01D976A92BE8D0D900DB9F30 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0170E9AE2BE8D77300D59D45 /* Api.swift in Sources */,
+				0170E9B52BE8D85900D59D45 /* Api+OAuthEndpoints.swift in Sources */,
+				0170E9B02BE8D7D400D59D45 /* Api+Errors.swift in Sources */,
+				0170E9BA2BE8D8C800D59D45 /* Api+OAuthUser.swift in Sources */,
 				01D976B32BE8D0D900DB9F30 /* ContentView.swift in Sources */,
 				01D976B12BE8D0D900DB9F30 /* Dashboard42App.swift in Sources */,
+				0170E9C22BE8DE9E00D59D45 /* KeychainManager.swift in Sources */,
+				0170E9B22BE8D7E700D59D45 /* Api+Endpoint.swift in Sources */,
+				0170E9B82BE8D8A800D59D45 /* Api+OAuthApplication.swift in Sources */,
+				0170E9BD2BE8D98F00D59D45 /* Constants.swift in Sources */,
+				0170E9C02BE8DCDD00D59D45 /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -275,16 +402,18 @@
 				DEVELOPMENT_TEAM = BHH429N5DK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Dashboard42;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.marcmosca.Dashboard42;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -304,16 +433,18 @@
 				DEVELOPMENT_TEAM = BHH429N5DK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Dashboard42;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.marcmosca.Dashboard42;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
