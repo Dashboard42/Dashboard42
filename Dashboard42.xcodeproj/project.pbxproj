@@ -15,6 +15,8 @@
 		0170E9B82BE8D8A800D59D45 /* Api+OAuthApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0170E9B72BE8D8A800D59D45 /* Api+OAuthApplication.swift */; };
 		0170E9BA2BE8D8C800D59D45 /* Api+OAuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0170E9B92BE8D8C800D59D45 /* Api+OAuthUser.swift */; };
 		0170E9BD2BE8D98F00D59D45 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0170E9BC2BE8D98F00D59D45 /* Constants.swift */; };
+		0170E9C02BE8DCDD00D59D45 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0170E9BF2BE8DCDD00D59D45 /* Keychain.swift */; };
+		0170E9C22BE8DE9E00D59D45 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0170E9C12BE8DE9E00D59D45 /* KeychainManager.swift */; };
 		01D976B12BE8D0D900DB9F30 /* Dashboard42App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */; };
 		01D976B32BE8D0D900DB9F30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D976B22BE8D0D900DB9F30 /* ContentView.swift */; };
 		01D976B52BE8D0DA00DB9F30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01D976B42BE8D0DA00DB9F30 /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 		0170E9B72BE8D8A800D59D45 /* Api+OAuthApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+OAuthApplication.swift"; sourceTree = "<group>"; };
 		0170E9B92BE8D8C800D59D45 /* Api+OAuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+OAuthUser.swift"; sourceTree = "<group>"; };
 		0170E9BC2BE8D98F00D59D45 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0170E9BF2BE8DCDD00D59D45 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		0170E9C12BE8DE9E00D59D45 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		01D976AD2BE8D0D900DB9F30 /* Dashboard42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Dashboard42.app; path = "/Users/marcmosca/Developer/Xcode/Dashboard42/build/Debug-iphoneos/Dashboard42.app"; sourceTree = "<absolute>"; };
 		01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard42App.swift; sourceTree = "<group>"; };
 		01D976B22BE8D0D900DB9F30 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				0170E9AC2BE8D75A00D59D45 /* Api */,
+				0170E9BE2BE8DCC800D59D45 /* Keychain */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -113,6 +118,15 @@
 				0170E9BC2BE8D98F00D59D45 /* Constants.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0170E9BE2BE8DCC800D59D45 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				0170E9BF2BE8DCDD00D59D45 /* Keychain.swift */,
+				0170E9C12BE8DE9E00D59D45 /* KeychainManager.swift */,
+			);
+			path = Keychain;
 			sourceTree = "<group>";
 		};
 		01D976A42BE8D0D900DB9F30 = {
@@ -247,9 +261,11 @@
 				0170E9BA2BE8D8C800D59D45 /* Api+OAuthUser.swift in Sources */,
 				01D976B32BE8D0D900DB9F30 /* ContentView.swift in Sources */,
 				01D976B12BE8D0D900DB9F30 /* Dashboard42App.swift in Sources */,
+				0170E9C22BE8DE9E00D59D45 /* KeychainManager.swift in Sources */,
 				0170E9B22BE8D7E700D59D45 /* Api+Endpoint.swift in Sources */,
 				0170E9B82BE8D8A800D59D45 /* Api+OAuthApplication.swift in Sources */,
 				0170E9BD2BE8D98F00D59D45 /* Constants.swift in Sources */,
+				0170E9C02BE8DCDD00D59D45 /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
