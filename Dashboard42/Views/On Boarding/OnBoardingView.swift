@@ -13,6 +13,7 @@ struct OnBoardingView: View {
     // MARK: - Properties
 
     @Environment(\.webAuthenticationSession) private var webAuthenticationSession
+    @Environment(\.store) private var store
 
     // MARK: - Body
 
@@ -46,9 +47,7 @@ struct OnBoardingView: View {
             .frame(maxHeight: .infinity, alignment: .top)
 
             VStack(spacing: 15) {
-                SignInButton(placeholder: "Se connecter") {
-                }
-
+                SignInButton(placeholder: "Se connecter", action: authenticate)
                 Author()
             }
         }
@@ -65,5 +64,8 @@ struct OnBoardingView: View {
 // MARK: - Private Methods
 
 extension OnBoardingView {
+
+    func authenticate() {
+    }
 
 }
