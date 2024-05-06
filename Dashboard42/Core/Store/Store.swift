@@ -13,6 +13,8 @@ final class Store {
 
     // MARK: - Properties
 
+    var selection = AppScreen.home
+
     var error: Api.Errors?
     var errorAction: (() -> Void)?
     var errorIsPresented: Bool { error != nil }
