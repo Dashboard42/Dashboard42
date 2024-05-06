@@ -54,6 +54,15 @@ final class Api {
         try await request(endpoint: endpoint, methodType: "POST")
     }
 
+    /// A method for executing POST requests to the API.
+    /// - Parameters:
+    ///   - endpoint: The access point on which the request is made.
+    ///   - type: The type corresponding to the object expected in return in the case of a valid request.
+    /// - Returns: Returns data received from the API converted into a T-type object.
+    func post<T: Decodable>(_ endpoint: Endpoint, type: T.Type) async throws -> T {
+        try await request(endpoint: endpoint, methodType: "POST", type: type)
+    }
+
     /// A method for executing UPDATE requests to the API.
     /// - Parameter endpoint: The access point on which the request is made.
     func update(_ endpoint: Endpoint) async throws {
@@ -75,7 +84,7 @@ final class Api {
         let (data, response) = try await URLSession.shared.data(for: request)
 
         do {
-            try await handleURLResponse(request: request, response: response)
+            try await handleURLResponse(request: request, response: response, authorization: endpoint.authorization)
         }
         catch Errors.invalidAccessToken {
             return try await self.request(endpoint: endpoint, methodType: methodType, type: T.self)
@@ -97,7 +106,7 @@ final class Api {
         let (_, response) = try await URLSession.shared.data(for: request)
 
         do {
-            try await handleURLResponse(request: request, response: response)
+            try await handleURLResponse(request: request, response: response, authorization: endpoint.authorization)
         }
         catch Errors.invalidAccessToken {
             try await self.request(endpoint: endpoint, methodType: methodType)
@@ -116,13 +125,18 @@ final class Api {
         var request = URLRequest(url: url)
         request.httpMethod = methodType
 
-        // TODO: Implement bearer token
-        //        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        if let token = authorization == .application
+            ? Constants.Api.APPLICATION_ACCESS_TOKEN : Constants.Api.USER_ACCESS_TOKEN
+        {
+            request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        }
 
         return request
     }
 
-    private func handleURLResponse(request: URLRequest, response: URLResponse) async throws {
+    private func handleURLResponse(request: URLRequest, response: URLResponse, authorization: EndpointAuthorizationType)
+        async throws
+    {
         guard let response = response as? HTTPURLResponse else { throw Errors.invalidServerResponse }
         guard failedQueryAttemps <= 10 else { throw Errors.corruptAccessToken }
 
@@ -134,8 +148,21 @@ final class Api {
             logger.info("✅ [\(statusCode)] [\(httpMethod)] \(request, privacy: .private) - Request successful.")
         case 401:
             failedQueryAttemps += 1
-            // TODO: Implement refresh token
             logger.error("🛑 [\(statusCode)] [\(httpMethod)] \(request, privacy: .private) - Access token expired.")
+
+            if authorization == .application {
+                let endpoint = Api.OAuthEndpoints.fetchApplicationAccessToken
+                let token = try await post(endpoint, type: Api.OAuthApplication.self)
+                try KeychainManager.shared.save(account: .applicationAccessToken, data: token.accessToken)
+            }
+            else {
+                guard let refreshToken = Constants.Api.USER_REFRESH_TOKEN else { throw Errors.invalidAccessToken }
+                let endpoint = Api.OAuthEndpoints.updateUserAccessToken(refreshToken: refreshToken)
+                let token = try await post(endpoint, type: Api.OAuthUser.self)
+                try KeychainManager.shared.save(account: .userAccessToken, data: token.accessToken)
+                try KeychainManager.shared.save(account: .userRefreshToken, data: token.refreshToken)
+            }
+
             throw Errors.invalidAccessToken
         case 429:
             logger.error("🛑 [\(statusCode)] [\(httpMethod)] \(request, privacy: .private) - Too many requests.")
