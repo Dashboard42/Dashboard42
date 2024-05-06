@@ -10,35 +10,35 @@ import OSLog
 
 /// An object that coordinates API-related tasks.
 final class Api {
-    
+
     // MARK: - Properties
-    
+
     /// The shared singleton api object.
     static let shared = Api()
-    
+
     /// The number of failed query attempts.
     private var failedQueryAttemps = 0
-    
+
     /// An object used to decode the data received from the API.
     private let decoder = JSONDecoder()
-    
+
     /// An object used to display the final status of the request in the console.
     private let logger = Logger(subsystem: "Dashboard42", category: "API")
-    
+
     // MARK: - Initializers
-    
+
     private init() {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         formatter.timeZone = TimeZone.current
         formatter.locale = Locale.current
-        
+
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         decoder.dateDecodingStrategy = .formatted(formatter)
     }
-    
+
     // MARK: - Public Methods
-    
+
     /// A method for executing GET requests to the API and return received data.
     /// - Parameters:
     ///   - endpoint: The access point on which the request is made.
@@ -47,33 +47,33 @@ final class Api {
     func fetch<T: Decodable>(_ endpoint: Endpoint, type: T.Type) async throws -> T {
         try await request(endpoint: endpoint, methodType: "GET", type: type)
     }
-    
+
     /// A method for executing POST requests to the API.
     /// - Parameter endpoint: The access point on which the request is made.
     func post(_ endpoint: Endpoint) async throws {
         try await request(endpoint: endpoint, methodType: "POST")
     }
-    
+
     /// A method for executing UPDATE requests to the API.
     /// - Parameter endpoint: The access point on which the request is made.
     func update(_ endpoint: Endpoint) async throws {
         try await request(endpoint: endpoint, methodType: "UPDATE")
     }
-    
+
     /// A method for executing DELETE requests to the API.
     /// - Parameter endpoint: The access point on which the request is made.
     func delete(_ endpoint: Endpoint) async throws {
         try await request(endpoint: endpoint, methodType: "DELETE")
     }
-    
+
     // MARK: - Private Methods
-    
+
     private func request<T: Decodable>(endpoint: Endpoint, methodType: String, type: T.Type) async throws -> T {
         guard let url = endpoint.url else { throw Errors.invalidUrl }
-        
+
         let request = buildRequest(url: url, methodType: methodType, authorization: endpoint.authorization)
         let (data, response) = try await URLSession.shared.data(for: request)
-        
+
         do {
             try await handleURLResponse(request: request, response: response)
         }
@@ -86,16 +86,16 @@ final class Api {
         catch {
             throw error
         }
-        
+
         return try decoder.decode(T.self, from: data)
     }
-    
+
     private func request(endpoint: Endpoint, methodType: String) async throws {
         guard let url = endpoint.url else { throw Errors.invalidUrl }
-        
+
         let request = buildRequest(url: url, methodType: methodType, authorization: endpoint.authorization)
         let (_, response) = try await URLSession.shared.data(for: request)
-        
+
         do {
             try await handleURLResponse(request: request, response: response)
         }
@@ -109,26 +109,26 @@ final class Api {
             throw error
         }
     }
-    
+
     // MARK: - Private Helpers
-    
+
     private func buildRequest(url: URL, methodType: String, authorization: EndpointAuthorizationType) -> URLRequest {
         var request = URLRequest(url: url)
         request.httpMethod = methodType
-        
+
         // TODO: Implement bearer token
-//        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-        
+        //        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+
         return request
     }
-    
+
     private func handleURLResponse(request: URLRequest, response: URLResponse) async throws {
         guard let response = response as? HTTPURLResponse else { throw Errors.invalidServerResponse }
         guard failedQueryAttemps <= 10 else { throw Errors.corruptAccessToken }
-        
+
         let httpMethod = request.httpMethod ?? "Undefined"
         let statusCode = response.statusCode
-        
+
         switch statusCode {
         case 200..<300:
             logger.info("✅ [\(statusCode)] [\(httpMethod)] \(request, privacy: .private) - Request successful.")
@@ -146,5 +146,5 @@ final class Api {
             throw Errors.invalidServerResponse
         }
     }
-    
+
 }

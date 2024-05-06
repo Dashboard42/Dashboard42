@@ -8,16 +8,16 @@
 import Foundation
 
 extension Api {
-    
+
     enum OAuthEndpoints: Endpoint {
         case authorize
         case fetchUserAccessToken(code: String)
         case fetchApplicationAccessToken
         case updateUserAccessToken(refreshToken: String)
-        
+
         var host: String { "api.intra.42.fr" }
         var authorization: EndpointAuthorizationType { .user }
-        
+
         var path: String {
             switch self {
             case .authorize:
@@ -30,15 +30,15 @@ extension Api {
                 return "/oauth/token"
             }
         }
-        
-        var queryItems: [String : String]? {
+
+        var queryItems: [String: String]? {
             switch self {
             case .authorize:
                 return [
                     "client_id": "",
                     "redirect_uri": "",
                     "response_type": "code",
-                    "scope": "public+projects+profile"
+                    "scope": "public+projects+profile",
                 ]
             case .fetchUserAccessToken(let code):
                 return [
@@ -46,14 +46,14 @@ extension Api {
                     "client_id": "",
                     "client_secret": "",
                     "code": code,
-                    "redirect_uri": ""
+                    "redirect_uri": "",
                 ]
             case .fetchApplicationAccessToken:
                 return [
                     "grant_type": "client_credentials",
                     "client_id": "",
                     "client_secret": "",
-                    "scope": "public+projects+profile"
+                    "scope": "public+projects+profile",
                 ]
             case .updateUserAccessToken(let refreshToken):
                 return [
@@ -61,26 +61,26 @@ extension Api {
                     "client_id": "",
                     "client_secret": "",
                     "refresh_token": refreshToken,
-                    "redirect_uri": ""
+                    "redirect_uri": "",
                 ]
             }
         }
-        
+
         var url: URL? {
             var urlComponents = URLComponents()
             urlComponents.scheme = "https"
             urlComponents.host = host
             urlComponents.path = path
-            
+
             var requestQueryItems = [URLQueryItem]()
-            
+
             for item in queryItems ?? [:] {
                 requestQueryItems.append(URLQueryItem(name: item.key, value: item.value))
             }
             urlComponents.queryItems = requestQueryItems
-            
+
             return urlComponents.url
         }
     }
-    
+
 }

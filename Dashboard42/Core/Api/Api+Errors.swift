@@ -8,7 +8,7 @@
 import Foundation
 
 extension Api {
-    
+
     /// An object containing the various possible api network errors.
     enum Errors: LocalizedError {
         case invalidUrl
@@ -16,9 +16,9 @@ extension Api {
         case tooManyRequests
         case corruptAccessToken
         case invalidServerResponse
-        
+
         var errorDescription: String? { "Quelque chose n'a pas fonctionné" }
-        
+
         var failureReason: String {
             switch self {
             case .invalidUrl:
@@ -34,5 +34,5 @@ extension Api {
             }
         }
     }
-    
+
 }

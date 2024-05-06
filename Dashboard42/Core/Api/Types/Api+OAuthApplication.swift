@@ -8,10 +8,10 @@
 import Foundation
 
 extension Api {
-    
+
     /// An object representing the application's API access keys.
     struct OAuthApplication: Decodable {
         let accessToken: String
     }
-    
+
 }
