@@ -14,6 +14,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0170E9A12BE8D39E00D59D45 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		0170E9A32BE8D46D00D59D45 /* .swift-format */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-format"; sourceTree = "<group>"; };
+		0170E9A42BE8D48300D59D45 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		01D976AD2BE8D0D900DB9F30 /* Dashboard42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dashboard42.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard42App.swift; sourceTree = "<group>"; };
 		01D976B22BE8D0D900DB9F30 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +38,9 @@
 		01D976A42BE8D0D900DB9F30 = {
 			isa = PBXGroup;
 			children = (
+				0170E9A42BE8D48300D59D45 /* README.md */,
+				0170E9A32BE8D46D00D59D45 /* .swift-format */,
+				0170E9A12BE8D39E00D59D45 /* .gitignore */,
 				01D976AF2BE8D0D900DB9F30 /* Dashboard42 */,
 				01D976AE2BE8D0D900DB9F30 /* Products */,
 			);
@@ -77,6 +83,7 @@
 				01D976A92BE8D0D900DB9F30 /* Sources */,
 				01D976AA2BE8D0D900DB9F30 /* Frameworks */,
 				01D976AB2BE8D0D900DB9F30 /* Resources */,
+				0170E9A22BE8D3E700D59D45 /* Format */,
 			);
 			buildRules = (
 			);
@@ -131,6 +138,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0170E9A22BE8D3E700D59D45 /* Format */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Format;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"${ENABLE_PREVIEWS}\" = \"YES\" ]]; then\n  echo \"Not running swift-format for Xcode Previews\"\n  exit 0;\nfi\n\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swift-format > /dev/null; then\n  swift-format format --in-place --recursive .\nelse\n  echo \"warning: swift-format not installed, download from https://github.com/apple/swift-format\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		01D976A92BE8D0D900DB9F30 /* Sources */ = {
