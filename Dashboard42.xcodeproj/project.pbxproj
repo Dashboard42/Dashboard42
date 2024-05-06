@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0170E9A92BE8D5BD00D59D45 /* Api.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0170E9A82BE8D5BD00D59D45 /* Api.plist */; };
 		01D976B12BE8D0D900DB9F30 /* Dashboard42App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */; };
 		01D976B32BE8D0D900DB9F30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D976B22BE8D0D900DB9F30 /* ContentView.swift */; };
 		01D976B52BE8D0DA00DB9F30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01D976B42BE8D0DA00DB9F30 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 		0170E9A42BE8D48300D59D45 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0170E9A62BE8D50A00D59D45 /* Template.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Template.plist; sourceTree = "<group>"; };
 		0170E9A72BE8D57000D59D45 /* ci_pre_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_pre_xcodebuild.sh; sourceTree = "<group>"; };
+		0170E9A82BE8D5BD00D59D45 /* Api.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Api.plist; sourceTree = "<group>"; };
 		01D976AD2BE8D0D900DB9F30 /* Dashboard42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Dashboard42.app; path = "/Users/marcmosca/Developer/Xcode/Dashboard42/build/Debug-iphoneos/Dashboard42.app"; sourceTree = "<absolute>"; };
 		01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard42App.swift; sourceTree = "<group>"; };
 		01D976B22BE8D0D900DB9F30 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +48,14 @@
 			path = ci_scripts;
 			sourceTree = "<group>";
 		};
+		0170E9AA2BE8D69C00D59D45 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				01D976B42BE8D0DA00DB9F30 /* Assets.xcassets */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
 		01D976A42BE8D0D900DB9F30 = {
 			isa = PBXGroup;
 			children = (
@@ -60,10 +70,11 @@
 		01D976AF2BE8D0D900DB9F30 /* Dashboard42 */ = {
 			isa = PBXGroup;
 			children = (
+				01D976B62BE8D0DA00DB9F30 /* Preview Content */,
+				0170E9AA2BE8D69C00D59D45 /* Ressources */,
 				01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */,
 				01D976B22BE8D0D900DB9F30 /* ContentView.swift */,
-				01D976B42BE8D0DA00DB9F30 /* Assets.xcassets */,
-				01D976B62BE8D0DA00DB9F30 /* Preview Content */,
+				0170E9A82BE8D5BD00D59D45 /* Api.plist */,
 			);
 			path = Dashboard42;
 			sourceTree = "<group>";
@@ -135,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0170E9A92BE8D5BD00D59D45 /* Api.plist in Resources */,
 				01D976B82BE8D0DA00DB9F30 /* Preview Assets.xcassets in Resources */,
 				01D976B52BE8D0DA00DB9F30 /* Assets.xcassets in Resources */,
 			);
