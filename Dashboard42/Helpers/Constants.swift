@@ -7,34 +7,46 @@
 
 import Foundation
 
+/// Container for static constants and configurations used in the application.
+/// It is structured into sub-enumerations to organise the constants linked to the application's APIs and local storage.
 enum Constants {
-
-    // MARK: - Api
-
-    /// An enumeration of all the tokens and keys linked to the API.
+    
+    /// Groups together constants and properties related to API configuration, including client identifiers, secrets, redirection URIs and access token managers.
     enum Api {
+        /// The API client ID.
         static let clientId = getValueOfKeyInApiFile(for: "API_CLIENT_ID")
+        
+        /// The API client secret.
         static let clientSecret = getValueOfKeyInApiFile(for: "API_CLIENT_SECRET")
+        
+        /// The redirection URI configured for OAuth authentication.
         static let redirectUri = getValueOfKeyInApiFile(for: "API_REDIRECT_URI")
 
+        /// An application-level access token, stored and retrieved from the keychain via `KeychainManager`.
+        /// Accessors are used to retrieve and store the token securely.
         static var applicationAccessToken: String? {
             get { KeychainManager.shared.get(account: .applicationAccessToken) }
             set { saveTokenInKeychain(newValue: newValue, account: .applicationAccessToken) }
         }
 
+        /// An user-level access token, stored and retrieved from the keychain via `KeychainManager`.
+        /// Accessors are used to retrieve and store the token securely.
         static var userAccessToken: String? {
             get { KeychainManager.shared.get(account: .userAccessToken) }
             set { saveTokenInKeychain(newValue: newValue, account: .userAccessToken) }
         }
 
+        /// An user-level refresh token, stored and retrieved from the keychain via `KeychainManager`.
+        /// Accessors are used to retrieve and store the token securely.
         static var userRefreshToken: String? {
             get { KeychainManager.shared.get(account: .userRefreshToken) }
             set { saveTokenInKeychain(newValue: newValue, account: .userRefreshToken) }
         }
     }
 
-    /// An enumeration of all the tokens and keys linked to the app storage.
+    /// Contains the keys used to store application data in `UserDefaults` or other persistent storage mechanisms.
     enum AppStorage {
+        /// A key to store the user's connection status, used to quickly check whether the user is connected without requiring an authentication request.
         static let userIsConnected: String = "APPSTORAGE_USER_IS_CONNECTED"
     }
 
@@ -42,9 +54,11 @@ enum Constants {
 
 // MARK: - Private Helpers
 
-/// Try to retrieve a value from the API configuration file.
-/// - Parameter key: The key to find.
-/// - Returns: Return the value associated with the key found in the API configuration file.
+
+/// Extracts specific values from an Api.plist configuration file located in the main application bundle.
+/// Is used to retrieve secure configurations and other critical constants required for API operations.
+/// - Parameter key: The key for which the value is to be retrieved from the Api.plist file.
+/// - Returns: The character string associated with the key specified in the Api.plist file.
 private func getValueOfKeyInApiFile(for key: String) -> String {
     guard let apiFilePath = Bundle.main.path(forResource: "Api", ofType: "plist") else {
         fatalError("error: couldn't find `Api.plist` file.")
@@ -59,13 +73,12 @@ private func getValueOfKeyInApiFile(for key: String) -> String {
     return value
 }
 
-/// Saves a value in the keychain.
-///
-/// If `newValue` is nil, then we delete the value associated with `account`.
-///
+
+/// Saves or deletes access tokens and refresh tokens in the application's keychain.
+/// Supports conditional management of tokens based on the presence or absence of a value.
 /// - Parameters:
-///   - newValue: The value to be saved.
-///   - account: The account associated with the value you wish to save.
+///   - newValue: The new value of the token to be saved. If `nil`, the function will delete the existing token associated with the account specified in the keyring.
+///   - account: The specific keychain account under which the token is to be saved or deleted.
 private func saveTokenInKeychain(newValue: String?, account: KeychainAccount) {
     if let newValue = newValue {
         try? KeychainManager.shared.save(account: account, data: newValue)

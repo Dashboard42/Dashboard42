@@ -8,11 +8,19 @@
 import Foundation
 
 extension Api {
-
+    
+    /// Defines various specific endpoints used for OAuth operations, such as user and application authentication, and access token management.
     enum OAuthEndpoints: Endpoint {
+        /// Used to obtain initial authorisation from the user.
         case authorize
+        
+        /// Used to obtain a user access token from an authorisation code obtained after the user has granted authorisation.
         case fetchUserAccessToken(code: String)
+        
+        /// Used to obtain an access token at application level, generally used for operations that do not involve a specific user.
         case fetchApplicationAccessToken
+        
+        /// Used to refresh a user's access token with a refresh token, allowing the user's session to be extended without the need to re-authenticate.
         case updateUserAccessToken(refreshToken: String)
 
         var host: String { "api.intra.42.fr" }
@@ -21,27 +29,27 @@ extension Api {
         var path: String {
             switch self {
             case .authorize:
-                return "/oauth/authorize"
+                "/oauth/authorize"
             case .fetchUserAccessToken:
-                return "/oauth/token"
+                "/oauth/token"
             case .fetchApplicationAccessToken:
-                return "/oauth/token"
+                "/oauth/token"
             case .updateUserAccessToken:
-                return "/oauth/token"
+                "/oauth/token"
             }
         }
 
         var queryItems: [String: String]? {
             switch self {
             case .authorize:
-                return [
+                [
                     "client_id": Constants.Api.clientId,
                     "redirect_uri": Constants.Api.redirectUri,
                     "response_type": "code",
                     "scope": "public+projects+profile",
                 ]
             case .fetchUserAccessToken(let code):
-                return [
+                [
                     "grant_type": "authorization_code",
                     "client_id": Constants.Api.clientId,
                     "client_secret": Constants.Api.clientSecret,
@@ -49,14 +57,14 @@ extension Api {
                     "redirect_uri": Constants.Api.redirectUri,
                 ]
             case .fetchApplicationAccessToken:
-                return [
+                [
                     "grant_type": "client_credentials",
                     "client_id": Constants.Api.clientId,
                     "client_secret": Constants.Api.clientSecret,
                     "scope": "public+projects+profile",
                 ]
             case .updateUserAccessToken(let refreshToken):
-                return [
+                [
                     "grant_type": "refresh_token",
                     "client_id": Constants.Api.clientId,
                     "client_secret": Constants.Api.clientSecret,

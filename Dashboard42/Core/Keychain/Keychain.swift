@@ -7,32 +7,42 @@
 
 import Foundation
 
-/// A type that can interact with the user's keychain.
+/// Defines a standardised interface for interacting with the keychain in an application.
+/// It specifies the methods needed to store, retrieve, delete and erase authentication data, such as access and refresh tokens.
 protocol Keychain {
-
-    /// Saves a value in the user's access keychain.
+    
+    /// Store data, typically access tokens or refresh tokens, in the device's keychain.
+    /// It encodes the data in UTF-8 and uses Apple's keychain APIs to secure the information.
     /// - Parameters:
-    ///   - account: The account (key) associated with the value you wish to store.
-    ///   - data: The value to be stored.
+    ///   - account: The account under which the data is to be saved. This determines the `kSecAttrAccount` attribute for the keychain request.
+    ///   - data: The character string to be registered. Typically, this will be an access or refresh token.
     func save(account: KeychainAccount, data: String) throws
-
-    /// Retrieve the value corresponding to an account in the user's keychain.
-    /// - Parameter account: The account (key) associated with the value you wish to fetch.
-    /// - Returns: The value corresponding to the account passed in parameter. Nil if no value is found.
+    
+    /// Retrieves data stored under a specific account in the device's keychain.
+    /// It uses Apple's keychain APIs to securely access the information.
+    /// - Parameter account: The specified account for which data is to be retrieved.
+    /// - Returns: Returns the data as a character string if found and correctly decoded, otherwise returns `nil`.
     func get(account: KeychainAccount) -> String?
-
-    /// Delete a value from the user's keychain.
-    /// - Parameter account: The account (key) associated with the value you wish to delete.
+    
+    /// Deletes data associated with a specific account from the device's keychain.
+    /// It uses Apple's keychain APIs to perform the deletion securely.
+    /// - Parameter account: The specified account for which data is to be deleted from the keychain.
     func delete(account: KeychainAccount) throws
-
-    /// Deletes all the values stored in the keychain associated with the API.
+    
+    /// Deletes all authentication data stored in the device's keychain.
+    /// It calls the `delete` method for each account type defined in the `KeychainAccount` enumeration, ensuring that all access and refresh tokens are deleted.
     func clear()
 
 }
 
-/// An object containing the various keys used to identify the values stored in the user's access keychain.
+/// Defines the different accounts under which data can be stored in the keychain.
 enum KeychainAccount: String {
+    /// Used to store the application's access token.
     case applicationAccessToken
+    
+    /// Used to store the user's access token.
     case userAccessToken
+    
+    /// Used to store the user's refresh token.
     case userRefreshToken
 }
