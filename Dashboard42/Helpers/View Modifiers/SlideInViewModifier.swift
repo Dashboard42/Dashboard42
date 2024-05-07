@@ -38,7 +38,7 @@ struct SlideInViewModifier: ViewModifier {
 // MARK: - Extensions
 
 extension View {
-    
+
     /// Applies an animation effect to "slide" a view from its initial position when it appears.
     /// This method encapsulates the use of a custom view modifier, `SlideInViewModifier`, which allows you to specify the height of the line, the duration of the animation, and a delay before the animation starts.
     /// - Parameters:

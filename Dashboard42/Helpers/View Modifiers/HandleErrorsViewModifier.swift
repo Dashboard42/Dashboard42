@@ -38,7 +38,7 @@ struct HandleErrorsViewModifier: ViewModifier {
 // MARK: - Extensions
 
 extension View {
-    
+
     /// Simplifies the process of adding error handling to a view, enabling the presentation of alerts based on specific errors and the execution of customised actions when these errors are handled.
     /// - Parameters:
     ///   - error: Error which is used to determine whether an alert should be presented and to provide the contents of the alert.

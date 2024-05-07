@@ -10,15 +10,15 @@ import Foundation
 /// Container for static constants and configurations used in the application.
 /// It is structured into sub-enumerations to organise the constants linked to the application's APIs and local storage.
 enum Constants {
-    
+
     /// Groups together constants and properties related to API configuration, including client identifiers, secrets, redirection URIs and access token managers.
     enum Api {
         /// The API client ID.
         static let clientId = getValueOfKeyInApiFile(for: "API_CLIENT_ID")
-        
+
         /// The API client secret.
         static let clientSecret = getValueOfKeyInApiFile(for: "API_CLIENT_SECRET")
-        
+
         /// The redirection URI configured for OAuth authentication.
         static let redirectUri = getValueOfKeyInApiFile(for: "API_REDIRECT_URI")
 
@@ -54,7 +54,6 @@ enum Constants {
 
 // MARK: - Private Helpers
 
-
 /// Extracts specific values from an Api.plist configuration file located in the main application bundle.
 /// Is used to retrieve secure configurations and other critical constants required for API operations.
 /// - Parameter key: The key for which the value is to be retrieved from the Api.plist file.
@@ -72,7 +71,6 @@ private func getValueOfKeyInApiFile(for key: String) -> String {
 
     return value
 }
-
 
 /// Saves or deletes access tokens and refresh tokens in the application's keychain.
 /// Supports conditional management of tokens based on the presence or absence of a value.

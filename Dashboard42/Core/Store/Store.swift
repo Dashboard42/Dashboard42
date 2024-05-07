@@ -13,7 +13,7 @@ import Observation
 final class Store {
 
     // MARK: - Properties
-    
+
     /// Represents the screen currently selected in the application.
     /// The initial value is `AppScreen.home`, indicating that the home screen is the default screen when the application is opened.
     var selection = AppScreen.home
@@ -21,7 +21,7 @@ final class Store {
     /// Contains any errors encountered in the application.
     /// It can be any of the errors defined in the `Api.Errors` enumeration, allowing errors to be managed centrally.
     var error: Api.Errors?
-    
+
     /// An optional closure that is executed in response to an error.
     var errorAction: (() -> Void)?
 

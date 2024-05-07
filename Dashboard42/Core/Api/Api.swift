@@ -14,16 +14,16 @@ import OSLog
 final class Api {
 
     // MARK: - Properties
-    
+
     /// Singleton instance of the `Api` class, allowing global and unique access to its functionality.
     static let shared = Api()
-    
+
     /// Counter to track the number of failed query attempts, used for error management and query recovery.
     private var failedQueryAttemps = 0
-    
+
     /// JSON decoder configured to decode request responses. It is pre-configured with strategies for key conversion and date formatting.
     private let decoder = JSONDecoder()
-    
+
     /// Object for logging information, errors and other types of log. It is configured with a specific sub-system and category.
     private let logger = Logger(subsystem: "Dashboard42", category: "API")
 
@@ -40,7 +40,7 @@ final class Api {
     }
 
     // MARK: - Public Methods
-    
+
     /// Makes HTTP GET requests and retrieving decoded data in a specified type that conforms to the `Decodable` protocol.
     /// - Parameters:
     ///   - endpoint: An `Endpoint` structure or object which encapsulates the details of the URL and authorisation type.
@@ -49,13 +49,13 @@ final class Api {
     func fetch<T: Decodable>(_ endpoint: Endpoint, type: T.Type) async throws -> T {
         try await request(endpoint: endpoint, methodType: "GET", type: type)
     }
-    
+
     /// Makes HTTP POST requests with no direct management of response data, apart from error handling and request validation.
     /// - Parameter endpoint: An `Endpoint` structure or object which encapsulates the details of the URL and authorisation type.
     func post(_ endpoint: Endpoint) async throws {
         try await request(endpoint: endpoint, methodType: "POST")
     }
-    
+
     /// Makes HTTP POST requests and retrieving decoded data in a specified type that conforms to the `Decodable` protocol.
     /// - Parameters:
     ///   - endpoint: An `Endpoint` structure or object which encapsulates the details of the URL and authorisation type.
@@ -64,7 +64,7 @@ final class Api {
     func post<T: Decodable>(_ endpoint: Endpoint, type: T.Type) async throws -> T {
         try await request(endpoint: endpoint, methodType: "POST", type: type)
     }
-    
+
     /// Makes HTTP UPDATE requests with no direct management of response data, apart from error handling and request validation.
     /// - Parameter endpoint: An `Endpoint` structure or object which encapsulates the details of the URL and authorisation type.
     func update(_ endpoint: Endpoint) async throws {
@@ -78,7 +78,7 @@ final class Api {
     }
 
     // MARK: - Private Methods
-    
+
     /// Makes asynchronous HTTP requests to a specified endpoint and decodes the response into a specified `Decodable` type.
     /// It also automatically handles retries in the event of specific errors such as access problems or rate limiting.
     /// - Parameters:
@@ -107,7 +107,7 @@ final class Api {
 
         return try decoder.decode(T.self, from: data)
     }
-    
+
     /// Makes asynchronous HTTP requests to a specified endpoint. It also automatically handles retries in the event of specific errors such as access problems or rate limiting.
     /// - Parameters:
     ///   - endpoint: An `Endpoint` structure or object which encapsulates the details of the URL and authorisation type.
@@ -133,7 +133,7 @@ final class Api {
     }
 
     // MARK: - Private Helpers
-    
+
     /// Creates and configures an instance of `URLRequest` based on the parameters supplied.
     /// It is used to prepare a network request with appropriate authentication information.
     /// - Parameters:
@@ -153,7 +153,7 @@ final class Api {
 
         return request
     }
-    
+
     /// Analyses and manages HTTP responses received after network requests have been sent, taking specific actions based on the HTTP status code returned.
     /// It also manages attempts to recover access tokens in the event of an authentication error.
     /// - Parameters:

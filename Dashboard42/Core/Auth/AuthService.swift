@@ -9,7 +9,7 @@ import Foundation
 
 /// Manages the user authentication process.
 final class AuthService {
-    
+
     /// Manages the process of logging in a user using a URL that contains an OAuth authentication code.
     /// This function extracts the authorisation code from the URL, then uses it to obtain both a user access token and an application access token using the corresponding OAuth endpoints.
     /// - Parameter url: The URL containing the authorisation code returned after the user has authorised the application.
