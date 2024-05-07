@@ -14,9 +14,9 @@ final class AuthService {
     /// This function extracts the authorisation code from the URL, then uses it to obtain both a user access token and an application access token using the corresponding OAuth endpoints.
     /// - Parameter url: The URL containing the authorisation code returned after the user has authorised the application.
     func signIn(using url: URL) async throws {
-        let queryItems: [URLQueryItem]? = URLComponents(string: url.absoluteString)?.queryItems
+        let queryItems = URLComponents(string: url.absoluteString)?.queryItems
 
-        guard let code: String = queryItems?.first(where: { $0.name == "code" })?.value else {
+        guard let code = queryItems?.first(where: { $0.name == "code" })?.value else {
             throw Api.Errors.invalidUrl
         }
 
