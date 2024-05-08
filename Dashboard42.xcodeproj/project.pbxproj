@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		011A978B2BEA91F90033B85D /* Api+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011A978A2BEA91F90033B85D /* Api+User.swift */; };
+		016CE0DC2BEBAD9500CE65AC /* OAuthApplication+Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016CE0DB2BEBAD9500CE65AC /* OAuthApplication+Samples.swift */; };
+		016CE0DE2BEBADD900CE65AC /* OAuthUser+Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016CE0DD2BEBADD900CE65AC /* OAuthUser+Samples.swift */; };
+		016CE0E02BEBAE2C00CE65AC /* User+Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016CE0DF2BEBAE2C00CE65AC /* User+Samples.swift */; };
 		0170E9A92BE8D5BD00D59D45 /* Api.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0170E9A82BE8D5BD00D59D45 /* Api.plist */; };
 		0170E9AE2BE8D77300D59D45 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0170E9AD2BE8D77300D59D45 /* Api.swift */; };
 		0170E9B02BE8D7D400D59D45 /* Api+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0170E9AF2BE8D7D400D59D45 /* Api+Errors.swift */; };
@@ -38,6 +41,9 @@
 
 /* Begin PBXFileReference section */
 		011A978A2BEA91F90033B85D /* Api+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+User.swift"; sourceTree = "<group>"; };
+		016CE0DB2BEBAD9500CE65AC /* OAuthApplication+Samples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OAuthApplication+Samples.swift"; sourceTree = "<group>"; };
+		016CE0DD2BEBADD900CE65AC /* OAuthUser+Samples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OAuthUser+Samples.swift"; sourceTree = "<group>"; };
+		016CE0DF2BEBAE2C00CE65AC /* User+Samples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Samples.swift"; sourceTree = "<group>"; };
 		0170E9A12BE8D39E00D59D45 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		0170E9A32BE8D46D00D59D45 /* .swift-format */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-format"; sourceTree = "<group>"; };
 		0170E9A42BE8D48300D59D45 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -84,6 +90,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		016CE0DA2BEBAD8300CE65AC /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				016CE0DB2BEBAD9500CE65AC /* OAuthApplication+Samples.swift */,
+				016CE0DD2BEBADD900CE65AC /* OAuthUser+Samples.swift */,
+				016CE0DF2BEBAE2C00CE65AC /* User+Samples.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
 		0170E9A52BE8D4D300D59D45 /* ci_scripts */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +279,7 @@
 		01D976B62BE8D0DA00DB9F30 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				016CE0DA2BEBAD8300CE65AC /* Api */,
 				01D976B72BE8D0DA00DB9F30 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -366,15 +383,18 @@
 				0176FCC22BE90F5000C41C06 /* AuthService.swift in Sources */,
 				0170E9B52BE8D85900D59D45 /* Api+OAuthEndpoints.swift in Sources */,
 				0170E9D22BE8EDC300D59D45 /* OnBoardingView+Author.swift in Sources */,
+				016CE0DC2BEBAD9500CE65AC /* OAuthApplication+Samples.swift in Sources */,
 				0170E9DB2BE9004900D59D45 /* HandleErrorsViewModifier.swift in Sources */,
 				0170E9B02BE8D7D400D59D45 /* Api+Errors.swift in Sources */,
 				0170E9BA2BE8D8C800D59D45 /* Api+OAuthUser.swift in Sources */,
 				0170E9DD2BE9037800D59D45 /* SlideInViewModifier.swift in Sources */,
+				016CE0E02BEBAE2C00CE65AC /* User+Samples.swift in Sources */,
 				01D976B32BE8D0D900DB9F30 /* ContentView.swift in Sources */,
 				0176FCBD2BE9052200C41C06 /* AppScreen.swift in Sources */,
 				0170E9CC2BE8EBF200D59D45 /* OnBoardingView+Title.swift in Sources */,
 				0176FCBF2BE905D400C41C06 /* AppTabView.swift in Sources */,
 				0170E9CE2BE8EC6700D59D45 /* OnBoardingView+Paragraph.swift in Sources */,
+				016CE0DE2BEBADD900CE65AC /* OAuthUser+Samples.swift in Sources */,
 				01D976B12BE8D0D900DB9F30 /* Dashboard42App.swift in Sources */,
 				0170E9C22BE8DE9E00D59D45 /* KeychainManager.swift in Sources */,
 				0170E9D52BE8FD1900D59D45 /* Store.swift in Sources */,
