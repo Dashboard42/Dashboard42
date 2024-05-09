@@ -13,6 +13,7 @@ struct ContentView: View {
 
     @Environment(\.store) private var store
     @AppStorage(Constants.AppStorage.userIsConnected) private var userIsConnected: Bool?
+    @State private var isLoading = false
 
     // MARK: - Body
 
@@ -23,7 +24,17 @@ struct ContentView: View {
             OnBoardingView()
         }
         else {
-            AppTabView(selection: $store.selection)
+            VStack {
+                if isLoading {
+                    ProgressView()
+                }
+                else {
+                    AppTabView(selection: $store.selection)
+                }
+            }
+            .task {
+                await fetchConnectedUserInformations()
+            }
         }
     }
 }
@@ -37,4 +48,26 @@ struct ContentView: View {
 // MARK: - Private Methods
 
 extension ContentView {
+
+    /// Retrieves full details of the logged-in user, it also handles load status and potential errors.
+    func fetchConnectedUserInformations() async {
+        isLoading = true
+
+        do {
+            let user = try await store.userService.fetchUser()
+
+            store.user = user
+        }
+        catch {
+            store.error = error as? Api.Errors
+            store.errorAction = {
+                Task {
+                    await fetchConnectedUserInformations()
+                }
+            }
+        }
+
+        isLoading = false
+    }
+
 }
