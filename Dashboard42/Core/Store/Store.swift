@@ -17,6 +17,9 @@ final class Store {
     var selection = AppScreen.home
 
     var user: Api.User?
+    var userEvents = [Api.Event]()
+
+    var campusEvents = [Api.Event]()
 
     // MARK: Errors
 

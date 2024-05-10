@@ -55,8 +55,14 @@ extension ContentView {
 
         do {
             let user = try await store.userService.fetchUser()
+            let campusId = user.mainCampus?.campusId
+            let cursusId = user.mainCursus?.cursusId
+
+            guard let campusId, let cursusId else { return }
 
             store.user = user
+            store.userEvents = try await store.eventService.fetchUserEvents(userId: user.id)
+            store.campusEvents = try await store.eventService.fetchCampusEvents(campusId: campusId, cursusId: cursusId)
         }
         catch {
             store.error = error as? Api.Errors
