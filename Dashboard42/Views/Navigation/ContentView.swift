@@ -63,6 +63,7 @@ extension ContentView {
             store.user = user
             store.userEvents = try await store.eventService.fetchUserEvents(userId: user.id)
             store.userExams = try await store.examService.fetchUserExams(userId: user.id)
+            store.userScales = try await store.correctionService.fetchUserScales()
             store.campusEvents = try await store.eventService.fetchCampusEvents(campusId: campusId, cursusId: cursusId)
             store.campusExams = try await store.examService.fetchCampusExams(campusId: campusId)
         }
