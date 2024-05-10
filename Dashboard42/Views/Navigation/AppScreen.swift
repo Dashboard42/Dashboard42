@@ -13,22 +13,12 @@ enum AppScreen: Identifiable, CaseIterable {
 
     // MARK: - Properties
 
-    /// Represents the application's home screen.
     case home
-
-    /// Represents a screen associated with information relating to the user campus.
     case campus
-
-    /// Represents a screen used to search for user profile of 42Network students.
     case search
-
-    /// Represents the user profile screen where users can view their personal information.
     case profile
-
-    /// Represents settings screen where users can adjust the application's configurations.
     case settings
 
-    /// Each instance of the enumeration returns itself as an identifier, conforming to the Identifiable protocol, which makes it easy to use in lists or collections that require unique elements.
     var id: Self { self }
 
     // MARK: - Label

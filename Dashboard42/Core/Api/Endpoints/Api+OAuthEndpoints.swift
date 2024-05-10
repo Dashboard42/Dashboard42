@@ -11,16 +11,9 @@ extension Api {
 
     /// Defines various specific endpoints used for OAuth operations, such as user and application authentication, and access token management.
     enum OAuthEndpoints: Endpoint {
-        /// Used to obtain initial authorisation from the user.
         case authorize
-
-        /// Used to obtain a user access token from an authorisation code obtained after the user has granted authorisation.
         case fetchUserAccessToken(code: String)
-
-        /// Used to obtain an access token at application level, generally used for operations that do not involve a specific user.
         case fetchApplicationAccessToken
-
-        /// Used to refresh a user's access token with a refresh token, allowing the user's session to be extended without the need to re-authenticate.
         case updateUserAccessToken(refreshToken: String)
 
         var host: String { "api.intra.42.fr" }

@@ -11,13 +11,8 @@ extension Api {
 
     /// Defines various specific endpoints used for User operations.
     enum UserEndpoints: Endpoint {
-        /// Used to obtain the current connected user.
         case fetchConnectedUser
-
-        /// Used to obtain a specific user with their id.
         case fetchUserById(id: Int)
-
-        /// Used to obtain a specific user with their login.
         case fetchUserByLogin(login: String)
 
         var host: String { "api.intra.42.fr" }

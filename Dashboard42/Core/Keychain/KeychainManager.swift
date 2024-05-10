@@ -16,8 +16,6 @@ final class KeychainManager: Keychain {
     /// A singleton instance of `KeychainManager`, allowing single global access to keychain management.
     static let shared = KeychainManager()
 
-    ///  Identifies the service under which the information is stored in the access keychain.
-    ///  This value is used to distinguish data from different applications or different contexts within the same application.
     private let service = "DASHBOARD42_API_KEYCHAIN_SERVICE"
 
     // MARK: - Initializers
@@ -28,7 +26,6 @@ final class KeychainManager: Keychain {
 
     /// Defines the potential errors that `KeychainManager` may encounter, allowing better error control and more accurate exception handling.
     enum Errors: Error {
-        /// Represents an unknown or unclassified error returned by the Keychain APIs, with OSStatus status for error details.
         case unknown(OSStatus)
     }
 

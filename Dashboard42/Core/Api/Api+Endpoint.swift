@@ -34,12 +34,7 @@ extension Api {
     /// Specifies the types of authorisation that may be required to access different endpoints in an application.
     /// This distinction makes it possible to manage different types of access, such as that reserved for authenticated users or that dedicated to applications.
     enum EndpointAuthorizationType: Encodable {
-        /// Indicates that the endpoint requires authorisation at user level.
-        /// This involves the use of user-specific access tokens, which validate the user's identity and privileges for the current request.
         case user
-
-        /// Means that the endpoint requires authorisation at application level.
-        /// This type of authorisation uses tokens which are generally less specific to an individual user and are used to authenticate the application itself to the service.
         case application
     }
 

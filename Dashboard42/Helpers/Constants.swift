@@ -13,31 +13,20 @@ enum Constants {
 
     /// Groups together constants and properties related to API configuration, including client identifiers, secrets, redirection URIs and access token managers.
     enum Api {
-        /// The API client ID.
         static let clientId = getValueOfKeyInApiFile(for: "API_CLIENT_ID")
-
-        /// The API client secret.
         static let clientSecret = getValueOfKeyInApiFile(for: "API_CLIENT_SECRET")
-
-        /// The redirection URI configured for OAuth authentication.
         static let redirectUri = getValueOfKeyInApiFile(for: "API_REDIRECT_URI")
 
-        /// An application-level access token, stored and retrieved from the keychain via `KeychainManager`.
-        /// Accessors are used to retrieve and store the token securely.
         static var applicationAccessToken: String? {
             get { KeychainManager.shared.get(account: .applicationAccessToken) }
             set { saveTokenInKeychain(newValue: newValue, account: .applicationAccessToken) }
         }
 
-        /// An user-level access token, stored and retrieved from the keychain via `KeychainManager`.
-        /// Accessors are used to retrieve and store the token securely.
         static var userAccessToken: String? {
             get { KeychainManager.shared.get(account: .userAccessToken) }
             set { saveTokenInKeychain(newValue: newValue, account: .userAccessToken) }
         }
 
-        /// An user-level refresh token, stored and retrieved from the keychain via `KeychainManager`.
-        /// Accessors are used to retrieve and store the token securely.
         static var userRefreshToken: String? {
             get { KeychainManager.shared.get(account: .userRefreshToken) }
             set { saveTokenInKeychain(newValue: newValue, account: .userRefreshToken) }
@@ -46,7 +35,6 @@ enum Constants {
 
     /// Contains the keys used to store application data in `UserDefaults` or other persistent storage mechanisms.
     enum AppStorage {
-        /// A key to store the user's connection status, used to quickly check whether the user is connected without requiring an authentication request.
         static let userIsConnected: String = "APPSTORAGE_USER_IS_CONNECTED"
     }
 

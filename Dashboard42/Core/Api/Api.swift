@@ -18,13 +18,8 @@ final class Api {
     /// Singleton instance of the `Api` class, allowing global and unique access to its functionality.
     static let shared = Api()
 
-    /// Counter to track the number of failed query attempts, used for error management and query recovery.
     private var failedQueryAttemps = 0
-
-    /// JSON decoder configured to decode request responses. It is pre-configured with strategies for key conversion and date formatting.
     private let decoder = JSONDecoder()
-
-    /// Object for logging information, errors and other types of log. It is configured with a specific sub-system and category.
     private let logger = Logger(subsystem: "Dashboard42", category: "API")
 
     // MARK: - Initializers

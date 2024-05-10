@@ -37,12 +37,7 @@ protocol Keychain {
 
 /// Defines the different accounts under which data can be stored in the keychain.
 enum KeychainAccount: String {
-    /// Used to store the application's access token.
     case applicationAccessToken
-
-    /// Used to store the user's access token.
     case userAccessToken
-
-    /// Used to store the user's refresh token.
     case userRefreshToken
 }
