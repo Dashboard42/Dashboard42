@@ -26,6 +26,7 @@ final class Store {
     // MARK: Services
 
     let authService = AuthService()
+    let eventService = EventService()
     let userService = UserService()
 
 }

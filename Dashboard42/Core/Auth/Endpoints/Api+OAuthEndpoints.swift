@@ -9,7 +9,7 @@ import Foundation
 
 extension Api {
 
-    /// Defines various specific endpoints used for OAuth operations, such as user and application authentication, and access token management.
+    /// Manages different API routes (endpoints) linked to oauth.
     enum OAuthEndpoints: Endpoint {
         case authorize
         case fetchUserAccessToken(code: String)

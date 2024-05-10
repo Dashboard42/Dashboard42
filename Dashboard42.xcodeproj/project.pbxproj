@@ -35,6 +35,10 @@
 		0176FCBF2BE905D400C41C06 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0176FCBE2BE905D400C41C06 /* AppTabView.swift */; };
 		0176FCC22BE90F5000C41C06 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0176FCC12BE90F5000C41C06 /* AuthService.swift */; };
 		01C0A4AD2BECF0AB00A3AC60 /* Api+UserEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C0A4AC2BECF0AB00A3AC60 /* Api+UserEndpoints.swift */; };
+		01D7EFD32BEE162300061112 /* Api+EventEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7EFD22BEE162300061112 /* Api+EventEndpoints.swift */; };
+		01D7EFD52BEE17BD00061112 /* Api+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7EFD42BEE17BD00061112 /* Api+Event.swift */; };
+		01D7EFD82BEE198600061112 /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7EFD72BEE198600061112 /* EventService.swift */; };
+		01D7EFDC2BEE19B400061112 /* Api+EventUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7EFDB2BEE19B400061112 /* Api+EventUser.swift */; };
 		01D976B12BE8D0D900DB9F30 /* Dashboard42App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */; };
 		01D976B32BE8D0D900DB9F30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D976B22BE8D0D900DB9F30 /* ContentView.swift */; };
 		01D976B52BE8D0DA00DB9F30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01D976B42BE8D0DA00DB9F30 /* Assets.xcassets */; };
@@ -77,6 +81,10 @@
 		0176FCC32BE9129200C41C06 /* Dashboard42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dashboard42.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0176FCC42BE9129200C41C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01C0A4AC2BECF0AB00A3AC60 /* Api+UserEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+UserEndpoints.swift"; sourceTree = "<group>"; };
+		01D7EFD22BEE162300061112 /* Api+EventEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+EventEndpoints.swift"; sourceTree = "<group>"; };
+		01D7EFD42BEE17BD00061112 /* Api+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+Event.swift"; sourceTree = "<group>"; };
+		01D7EFD72BEE198600061112 /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
+		01D7EFDB2BEE19B400061112 /* Api+EventUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+EventUser.swift"; sourceTree = "<group>"; };
 		01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard42App.swift; sourceTree = "<group>"; };
 		01D976B22BE8D0D900DB9F30 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		01D976B42BE8D0DA00DB9F30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,6 +115,8 @@
 		016CE0E12BEBAFE000CE65AC /* User */ = {
 			isa = PBXGroup;
 			children = (
+				01D7EFE02BEE19D900061112 /* Endpoints */,
+				01D7EFDF2BEE19D700061112 /* Models */,
 				016CE0E22BEBAFF300CE65AC /* UserService.swift */,
 			);
 			path = User;
@@ -134,6 +144,7 @@
 			children = (
 				0170E9AC2BE8D75A00D59D45 /* Api */,
 				0176FCC02BE90F3100C41C06 /* Auth */,
+				01D7EFD62BEE197100061112 /* Event */,
 				0170E9BE2BE8DCC800D59D45 /* Keychain */,
 				0170E9D32BE8FD1100D59D45 /* Store */,
 				016CE0E12BEBAFE000CE65AC /* User */,
@@ -144,32 +155,11 @@
 		0170E9AC2BE8D75A00D59D45 /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				0170E9B32BE8D83D00D59D45 /* Endpoints */,
-				0170E9B62BE8D89A00D59D45 /* Types */,
 				0170E9AD2BE8D77300D59D45 /* Api.swift */,
 				0170E9B12BE8D7E700D59D45 /* Api+Endpoint.swift */,
 				0170E9AF2BE8D7D400D59D45 /* Api+Errors.swift */,
 			);
 			path = Api;
-			sourceTree = "<group>";
-		};
-		0170E9B32BE8D83D00D59D45 /* Endpoints */ = {
-			isa = PBXGroup;
-			children = (
-				0170E9B42BE8D85900D59D45 /* Api+OAuthEndpoints.swift */,
-				01C0A4AC2BECF0AB00A3AC60 /* Api+UserEndpoints.swift */,
-			);
-			path = Endpoints;
-			sourceTree = "<group>";
-		};
-		0170E9B62BE8D89A00D59D45 /* Types */ = {
-			isa = PBXGroup;
-			children = (
-				0170E9B72BE8D8A800D59D45 /* Api+OAuthApplication.swift */,
-				0170E9B92BE8D8C800D59D45 /* Api+OAuthUser.swift */,
-				011A978A2BEA91F90033B85D /* Api+User.swift */,
-			);
-			path = Types;
 			sourceTree = "<group>";
 		};
 		0170E9BB2BE8D97B00D59D45 /* Helpers */ = {
@@ -258,9 +248,71 @@
 		0176FCC02BE90F3100C41C06 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				01D7EFDE2BEE19C800061112 /* Endpoints */,
+				01D7EFDD2BEE19C500061112 /* Models */,
 				0176FCC12BE90F5000C41C06 /* AuthService.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		01D7EFD62BEE197100061112 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				01D7EFDA2BEE19A100061112 /* Endpoints */,
+				01D7EFD92BEE199E00061112 /* Models */,
+				01D7EFD72BEE198600061112 /* EventService.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		01D7EFD92BEE199E00061112 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				01D7EFD42BEE17BD00061112 /* Api+Event.swift */,
+				01D7EFDB2BEE19B400061112 /* Api+EventUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		01D7EFDA2BEE19A100061112 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				01D7EFD22BEE162300061112 /* Api+EventEndpoints.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		01D7EFDD2BEE19C500061112 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0170E9B72BE8D8A800D59D45 /* Api+OAuthApplication.swift */,
+				0170E9B92BE8D8C800D59D45 /* Api+OAuthUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		01D7EFDE2BEE19C800061112 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				0170E9B42BE8D85900D59D45 /* Api+OAuthEndpoints.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		01D7EFDF2BEE19D700061112 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				011A978A2BEA91F90033B85D /* Api+User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		01D7EFE02BEE19D900061112 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				01C0A4AC2BECF0AB00A3AC60 /* Api+UserEndpoints.swift */,
+			);
+			path = Endpoints;
 			sourceTree = "<group>";
 		};
 		01D976A42BE8D0D900DB9F30 = {
@@ -393,6 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01D7EFD82BEE198600061112 /* EventService.swift in Sources */,
 				016CE0E32BEBAFF300CE65AC /* UserService.swift in Sources */,
 				0170E9AE2BE8D77300D59D45 /* Api.swift in Sources */,
 				0176FCC22BE90F5000C41C06 /* AuthService.swift in Sources */,
@@ -406,7 +459,9 @@
 				016CE0E02BEBAE2C00CE65AC /* User+Samples.swift in Sources */,
 				01D976B32BE8D0D900DB9F30 /* ContentView.swift in Sources */,
 				0176FCBD2BE9052200C41C06 /* AppScreen.swift in Sources */,
+				01D7EFD52BEE17BD00061112 /* Api+Event.swift in Sources */,
 				0170E9CC2BE8EBF200D59D45 /* OnBoardingView+Title.swift in Sources */,
+				01D7EFDC2BEE19B400061112 /* Api+EventUser.swift in Sources */,
 				0176FCBF2BE905D400C41C06 /* AppTabView.swift in Sources */,
 				0170E9CE2BE8EC6700D59D45 /* OnBoardingView+Paragraph.swift in Sources */,
 				016CE0DE2BEBADD900CE65AC /* OAuthUser+Samples.swift in Sources */,
@@ -419,6 +474,7 @@
 				01C0A4AD2BECF0AB00A3AC60 /* Api+UserEndpoints.swift in Sources */,
 				0170E9D02BE8ED4D00D59D45 /* OnBoardingView+SignInButton.swift in Sources */,
 				0170E9C92BE8E91800D59D45 /* OnBoardingView.swift in Sources */,
+				01D7EFD32BEE162300061112 /* Api+EventEndpoints.swift in Sources */,
 				011A978B2BEA91F90033B85D /* Api+User.swift in Sources */,
 				0170E9BD2BE8D98F00D59D45 /* Constants.swift in Sources */,
 				0170E9C02BE8DCDD00D59D45 /* Keychain.swift in Sources */,

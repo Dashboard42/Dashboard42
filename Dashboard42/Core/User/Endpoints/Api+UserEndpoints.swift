@@ -9,7 +9,7 @@ import Foundation
 
 extension Api {
 
-    /// Defines various specific endpoints used for User operations.
+    /// Manages different API routes (endpoints) linked to users.
     enum UserEndpoints: Endpoint {
         case fetchConnectedUser
         case fetchUserById(id: Int)
