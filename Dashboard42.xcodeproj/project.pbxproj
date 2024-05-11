@@ -45,6 +45,9 @@
 		01A3D2D92BEE405300418ACE /* Api+CorrectionPointHistorics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3D2D82BEE405300418ACE /* Api+CorrectionPointHistorics.swift */; };
 		01A3D2DB2BEE411E00418ACE /* Api+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3D2DA2BEE411E00418ACE /* Api+Scale.swift */; };
 		01C0A4AD2BECF0AB00A3AC60 /* Api+UserEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C0A4AC2BECF0AB00A3AC60 /* Api+UserEndpoints.swift */; };
+		01D5FEF22BEF98410063C7A9 /* Api+Logtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D5FEF12BEF98410063C7A9 /* Api+Logtime.swift */; };
+		01D5FEF42BEF984C0063C7A9 /* Api+LogtimeEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D5FEF32BEF984C0063C7A9 /* Api+LogtimeEndpoints.swift */; };
+		01D5FEF62BEF9A990063C7A9 /* Date+Logtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D5FEF52BEF9A990063C7A9 /* Date+Logtime.swift */; };
 		01D7EFD32BEE162300061112 /* Api+EventEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7EFD22BEE162300061112 /* Api+EventEndpoints.swift */; };
 		01D7EFD52BEE17BD00061112 /* Api+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7EFD42BEE17BD00061112 /* Api+Event.swift */; };
 		01D7EFD82BEE198600061112 /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D7EFD72BEE198600061112 /* EventService.swift */; };
@@ -101,6 +104,9 @@
 		01A3D2D82BEE405300418ACE /* Api+CorrectionPointHistorics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+CorrectionPointHistorics.swift"; sourceTree = "<group>"; };
 		01A3D2DA2BEE411E00418ACE /* Api+Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+Scale.swift"; sourceTree = "<group>"; };
 		01C0A4AC2BECF0AB00A3AC60 /* Api+UserEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+UserEndpoints.swift"; sourceTree = "<group>"; };
+		01D5FEF12BEF98410063C7A9 /* Api+Logtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+Logtime.swift"; sourceTree = "<group>"; };
+		01D5FEF32BEF984C0063C7A9 /* Api+LogtimeEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+LogtimeEndpoints.swift"; sourceTree = "<group>"; };
+		01D5FEF52BEF9A990063C7A9 /* Date+Logtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Logtime.swift"; sourceTree = "<group>"; };
 		01D7EFD22BEE162300061112 /* Api+EventEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+EventEndpoints.swift"; sourceTree = "<group>"; };
 		01D7EFD42BEE17BD00061112 /* Api+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+Event.swift"; sourceTree = "<group>"; };
 		01D7EFD72BEE198600061112 /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
@@ -271,6 +277,7 @@
 		0170E9D62BE8FE2600D59D45 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				01D5FEF52BEF9A990063C7A9 /* Date+Logtime.swift */,
 				0170E9D72BE8FE3700D59D45 /* EnvironmentValues+Store.swift */,
 			);
 			path = Extensions;
@@ -381,6 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				011A978A2BEA91F90033B85D /* Api+User.swift */,
+				01D5FEF12BEF98410063C7A9 /* Api+Logtime.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -389,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				01C0A4AC2BECF0AB00A3AC60 /* Api+UserEndpoints.swift */,
+				01D5FEF32BEF984C0063C7A9 /* Api+LogtimeEndpoints.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -556,8 +565,11 @@
 				0170E9D52BE8FD1900D59D45 /* Store.swift in Sources */,
 				0170E9B22BE8D7E700D59D45 /* Api+Endpoint.swift in Sources */,
 				0170E9B82BE8D8A800D59D45 /* Api+OAuthApplication.swift in Sources */,
+				01D5FEF62BEF9A990063C7A9 /* Date+Logtime.swift in Sources */,
 				0170E9D82BE8FE3700D59D45 /* EnvironmentValues+Store.swift in Sources */,
+				01D5FEF22BEF98410063C7A9 /* Api+Logtime.swift in Sources */,
 				01C0A4AD2BECF0AB00A3AC60 /* Api+UserEndpoints.swift in Sources */,
+				01D5FEF42BEF984C0063C7A9 /* Api+LogtimeEndpoints.swift in Sources */,
 				0116D6242BEE31900062EEE0 /* Api+Exam.swift in Sources */,
 				0170E9D02BE8ED4D00D59D45 /* OnBoardingView+SignInButton.swift in Sources */,
 				0170E9C92BE8E91800D59D45 /* OnBoardingView.swift in Sources */,
