@@ -35,7 +35,10 @@ enum Constants {
 
     /// Contains the keys used to store application data in `UserDefaults` or other persistent storage mechanisms.
     enum AppStorage {
-        static let userIsConnected: String = "APPSTORAGE_USER_IS_CONNECTED"
+        static let userIsConnected = "APPSTORAGE_USER_IS_CONNECTED"
+        static let userColorscheme = "APPSTORAGE_USER_COLORSCHEME"
+        static let userLanguage = "APPSTORAGE_USER_LANGUAGE"
+        static let userLogtime = "APPSTORAGE_USER_LOGTIME"
     }
 
 }

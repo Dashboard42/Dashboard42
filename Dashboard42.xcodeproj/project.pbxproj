@@ -49,6 +49,9 @@
 		0180426E2BF2281B00E5FA52 /* CampusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0180426D2BF2281B00E5FA52 /* CampusView.swift */; };
 		018042712BF22A2400E5FA52 /* CampusView+CategoryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018042702BF22A2400E5FA52 /* CampusView+CategoryPicker.swift */; };
 		018042732BF22E9000E5FA52 /* CampusView+FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018042722BF22E9000E5FA52 /* CampusView+FilterButton.swift */; };
+		018042762BF2337C00E5FA52 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018042752BF2337C00E5FA52 /* SettingsView.swift */; };
+		018042792BF233D100E5FA52 /* AppColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018042782BF233D100E5FA52 /* AppColorScheme.swift */; };
+		0180427B2BF2340D00E5FA52 /* AppLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0180427A2BF2340D00E5FA52 /* AppLanguage.swift */; };
 		01A3D2D52BEE3E3E00418ACE /* CorrectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3D2D42BEE3E3E00418ACE /* CorrectionService.swift */; };
 		01A3D2D72BEE3E9D00418ACE /* Api+CorrectionEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3D2D62BEE3E9D00418ACE /* Api+CorrectionEndpoints.swift */; };
 		01A3D2D92BEE405300418ACE /* Api+CorrectionPointHistorics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3D2D82BEE405300418ACE /* Api+CorrectionPointHistorics.swift */; };
@@ -120,6 +123,9 @@
 		0180426D2BF2281B00E5FA52 /* CampusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusView.swift; sourceTree = "<group>"; };
 		018042702BF22A2400E5FA52 /* CampusView+CategoryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CampusView+CategoryPicker.swift"; sourceTree = "<group>"; };
 		018042722BF22E9000E5FA52 /* CampusView+FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CampusView+FilterButton.swift"; sourceTree = "<group>"; };
+		018042752BF2337C00E5FA52 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		018042782BF233D100E5FA52 /* AppColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColorScheme.swift; sourceTree = "<group>"; };
+		0180427A2BF2340D00E5FA52 /* AppLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
 		01A3D2D42BEE3E3E00418ACE /* CorrectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectionService.swift; sourceTree = "<group>"; };
 		01A3D2D62BEE3E9D00418ACE /* Api+CorrectionEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+CorrectionEndpoints.swift"; sourceTree = "<group>"; };
 		01A3D2D82BEE405300418ACE /* Api+CorrectionPointHistorics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+CorrectionPointHistorics.swift"; sourceTree = "<group>"; };
@@ -280,6 +286,7 @@
 				01D5FEF72BEF9C700063C7A9 /* Home */,
 				0170E9DE2BE904AF00D59D45 /* Navigation */,
 				0170E9C72BE8E90A00D59D45 /* On Boarding */,
+				018042742BF2337300E5FA52 /* Settings */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -364,6 +371,24 @@
 			children = (
 				018042702BF22A2400E5FA52 /* CampusView+CategoryPicker.swift */,
 				018042722BF22E9000E5FA52 /* CampusView+FilterButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		018042742BF2337300E5FA52 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				018042772BF233C300E5FA52 /* Components */,
+				018042782BF233D100E5FA52 /* AppColorScheme.swift */,
+				0180427A2BF2340D00E5FA52 /* AppLanguage.swift */,
+				018042752BF2337C00E5FA52 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		018042772BF233C300E5FA52 /* Components */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -636,6 +661,7 @@
 				0117692F2BF20B4700BBB484 /* EventList.swift in Sources */,
 				0116D61B2BEE302E0062EEE0 /* Event+Samples.swift in Sources */,
 				01D7EFDC2BEE19B400061112 /* Api+EventUser.swift in Sources */,
+				018042792BF233D100E5FA52 /* AppColorScheme.swift in Sources */,
 				0116D6222BEE30CC0062EEE0 /* Api+ExamEndpoints.swift in Sources */,
 				015A9DEA2BEE52BE0078DBA9 /* Api+Slot.swift in Sources */,
 				0176FCBF2BE905D400C41C06 /* AppTabView.swift in Sources */,
@@ -643,6 +669,7 @@
 				016CE0DE2BEBADD900CE65AC /* OAuthUser+Samples.swift in Sources */,
 				0116D6262BEE32410062EEE0 /* Exam+Samples.swift in Sources */,
 				01A3D2DB2BEE411E00418ACE /* Api+Scale.swift in Sources */,
+				0180427B2BF2340D00E5FA52 /* AppLanguage.swift in Sources */,
 				01D5FEF92BEF9C790063C7A9 /* HomeView.swift in Sources */,
 				01D976B12BE8D0D900DB9F30 /* Dashboard42App.swift in Sources */,
 				01A3D2D72BEE3E9D00418ACE /* Api+CorrectionEndpoints.swift in Sources */,
@@ -650,6 +677,7 @@
 				0170E9C22BE8DE9E00D59D45 /* KeychainManager.swift in Sources */,
 				0170E9D52BE8FD1900D59D45 /* Store.swift in Sources */,
 				0170E9B22BE8D7E700D59D45 /* Api+Endpoint.swift in Sources */,
+				018042762BF2337C00E5FA52 /* SettingsView.swift in Sources */,
 				0170E9B82BE8D8A800D59D45 /* Api+OAuthApplication.swift in Sources */,
 				01D5FEF62BEF9A990063C7A9 /* Date+Logtime.swift in Sources */,
 				0170E9D82BE8FE3700D59D45 /* EnvironmentValues+Store.swift in Sources */,
@@ -814,7 +842,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4.0;
+				MARKETING_VERSION = 0.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.marcmosca.Dashboard42;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -846,7 +874,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4.0;
+				MARKETING_VERSION = 0.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.marcmosca.Dashboard42;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

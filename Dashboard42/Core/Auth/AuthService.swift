@@ -35,6 +35,8 @@ final class AuthService {
     }
 
     func logout() {
+        KeychainManager.shared.clear()
+        UserDefaults.standard.removeObject(forKey: Constants.AppStorage.userIsConnected)
     }
 
 }

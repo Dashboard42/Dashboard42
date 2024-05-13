@@ -55,7 +55,7 @@ enum AppScreen: Identifiable, CaseIterable {
         case .profile:
             Text("Profile")
         case .settings:
-            Text("Settings")
+            SettingsView()
         }
     }
 
