@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+/// Represents the different screens or sections of the application.
+/// It incorporates SwiftUI features to facilitate navigation and visual representation of each screen using specific icons and navigation destinations.
 enum AppScreen: Identifiable, CaseIterable {
 
     // MARK: - Properties
@@ -22,6 +24,7 @@ enum AppScreen: Identifiable, CaseIterable {
     // MARK: - Label
 
     @ViewBuilder
+    /// Depending on the enumeration, this view contains a representative icon used to display navigation elements or buttons in the user interface.
     var label: some View {
         switch self {
         case .home:
@@ -40,10 +43,11 @@ enum AppScreen: Identifiable, CaseIterable {
     // MARK: - Destination
 
     @ViewBuilder
+    /// Encapsulates the navigation logic and makes the destination view directly accessible from the current screen.
     func destination() -> some View {
         switch self {
         case .home:
-            Text("Home")
+            HomeView()
         case .campus:
             Text("Campus")
         case .search:

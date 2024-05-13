@@ -8,21 +8,18 @@
 import Foundation
 import OSLog
 
-/// An object that coordinates API-related tasks.
+/// Encapsulates the network request management logic for an application.
+/// It provides methods for performing various HTTP requests such as GET, POST, UPDATE, and DELETE.
+/// It also manages the decoding of responses, the automatic resumption of requests in the event of specific errors, and the management of network errors.
 final class Api {
 
     // MARK: - Properties
 
-    /// The shared singleton api object.
+    /// Singleton instance of the `Api` class, allowing global and unique access to its functionality.
     static let shared = Api()
 
-    /// The number of failed query attempts.
     private var failedQueryAttemps = 0
-
-    /// An object used to decode the data received from the API.
     private let decoder = JSONDecoder()
-
-    /// An object used to display the final status of the request in the console.
     private let logger = Logger(subsystem: "Dashboard42", category: "API")
 
     // MARK: - Initializers
@@ -39,44 +36,51 @@ final class Api {
 
     // MARK: - Public Methods
 
-    /// A method for executing GET requests to the API and return received data.
+    /// Makes HTTP GET requests and retrieving decoded data in a specified type that conforms to the `Decodable` protocol.
     /// - Parameters:
-    ///   - endpoint: The access point on which the request is made.
-    ///   - type: The type corresponding to the object expected in return in the case of a valid request.
-    /// - Returns: Returns data received from the API converted into a T-type object.
+    ///   - endpoint: An `Endpoint` structure or object which encapsulates the details of the URL and authorisation type.
+    ///   - type: The `Decodable` type of data model expected in response. This is used to specify the type of data you want to obtain after decoding.
+    /// - Returns: Returns an instance of type `T`, decoded from the HTTP response data.
     func fetch<T: Decodable>(_ endpoint: Endpoint, type: T.Type) async throws -> T {
         try await request(endpoint: endpoint, methodType: "GET", type: type)
     }
 
-    /// A method for executing POST requests to the API.
-    /// - Parameter endpoint: The access point on which the request is made.
+    /// Makes HTTP POST requests with no direct management of response data, apart from error handling and request validation.
+    /// - Parameter endpoint: An `Endpoint` structure or object which encapsulates the details of the URL and authorisation type.
     func post(_ endpoint: Endpoint) async throws {
         try await request(endpoint: endpoint, methodType: "POST")
     }
 
-    /// A method for executing POST requests to the API.
+    /// Makes HTTP POST requests and retrieving decoded data in a specified type that conforms to the `Decodable` protocol.
     /// - Parameters:
-    ///   - endpoint: The access point on which the request is made.
-    ///   - type: The type corresponding to the object expected in return in the case of a valid request.
-    /// - Returns: Returns data received from the API converted into a T-type object.
+    ///   - endpoint: An `Endpoint` structure or object which encapsulates the details of the URL and authorisation type.
+    ///   - type: The `Decodable` type of data model expected in response. This is used to specify the type of data you want to obtain after decoding.
+    /// - Returns: Returns an instance of type `T`, decoded from the HTTP response data.
     func post<T: Decodable>(_ endpoint: Endpoint, type: T.Type) async throws -> T {
         try await request(endpoint: endpoint, methodType: "POST", type: type)
     }
 
-    /// A method for executing UPDATE requests to the API.
-    /// - Parameter endpoint: The access point on which the request is made.
+    /// Makes HTTP UPDATE requests with no direct management of response data, apart from error handling and request validation.
+    /// - Parameter endpoint: An `Endpoint` structure or object which encapsulates the details of the URL and authorisation type.
     func update(_ endpoint: Endpoint) async throws {
         try await request(endpoint: endpoint, methodType: "UPDATE")
     }
 
-    /// A method for executing DELETE requests to the API.
-    /// - Parameter endpoint: The access point on which the request is made.
+    /// Makes HTTP DELETE requests with no direct management of response data, apart from error handling and request validation.
+    /// - Parameter endpoint: An `Endpoint` structure or object which encapsulates the details of the URL and authorisation type.
     func delete(_ endpoint: Endpoint) async throws {
         try await request(endpoint: endpoint, methodType: "DELETE")
     }
 
     // MARK: - Private Methods
 
+    /// Makes asynchronous HTTP requests to a specified endpoint and decodes the response into a specified `Decodable` type.
+    /// It also automatically handles retries in the event of specific errors such as access problems or rate limiting.
+    /// - Parameters:
+    ///   - endpoint: An `Endpoint` structure or object which encapsulates the details of the URL and authorisation type.
+    ///   - methodType: The HTTP method to be used for the request, for example "GET", "POST", etc.
+    ///   - type: The `Decodable` type of data model expected in response. This is used to specify the type of data you want to obtain after decoding.
+    /// - Returns: Returns an instance of type `T`, decoded from the HTTP response data.
     private func request<T: Decodable>(endpoint: Endpoint, methodType: String, type: T.Type) async throws -> T {
         guard let url = endpoint.url else { throw Errors.invalidUrl }
 
@@ -99,6 +103,10 @@ final class Api {
         return try decoder.decode(T.self, from: data)
     }
 
+    /// Makes asynchronous HTTP requests to a specified endpoint. It also automatically handles retries in the event of specific errors such as access problems or rate limiting.
+    /// - Parameters:
+    ///   - endpoint: An `Endpoint` structure or object which encapsulates the details of the URL and authorisation type.
+    ///   - methodType: The HTTP method to be used for the request, for example "GET", "POST", etc.
     private func request(endpoint: Endpoint, methodType: String) async throws {
         guard let url = endpoint.url else { throw Errors.invalidUrl }
 
@@ -121,6 +129,13 @@ final class Api {
 
     // MARK: - Private Helpers
 
+    /// Creates and configures an instance of `URLRequest` based on the parameters supplied.
+    /// It is used to prepare a network request with appropriate authentication information.
+    /// - Parameters:
+    ///   - url: The target URL for the HTTP request.
+    ///   - methodType: The HTTP method to be used for the request, for example "GET", "POST", etc.
+    ///   - authorization: The type of authorisation required for the endpoint.
+    /// - Returns: A configured instance of `URLRequest` ready to be used to execute a network request.
     private func buildRequest(url: URL, methodType: String, authorization: EndpointAuthorizationType) -> URLRequest {
         var request = URLRequest(url: url)
         request.httpMethod = methodType
@@ -134,6 +149,12 @@ final class Api {
         return request
     }
 
+    /// Analyses and manages HTTP responses received after network requests have been sent, taking specific actions based on the HTTP status code returned.
+    /// It also manages attempts to recover access tokens in the event of an authentication error.
+    /// - Parameters:
+    ///   - request: The HTTP request that was sent, used for detailed logs and error handling.
+    ///   - response: The response received from the server. This response must be an instance of `HTTPURLResponse` in order to process HTTP status codes.
+    ///   - authorization: Type of authorisation used for the initial request, important for managing access tokens.
     private func handleURLResponse(request: URLRequest, response: URLResponse, authorization: EndpointAuthorizationType)
         async throws
     {

@@ -9,25 +9,30 @@ import Foundation
 
 extension Api {
 
-    /// A type that can make a request to the API.
+    /// Defines an interface for configuring the details required to construct a network request URL within the `Api` class.
+    /// Objects conforming to this protocol provide all the information required to configure the components of a URL, including host, path, request parameters and authorisation type.
     protocol Endpoint {
-        /// The domain of the API.
+        /// Host address for the URL. This represents the root of the domain to which requests will be sent.
         var host: String { get }
 
-        /// The type of authorization required for the request.
+        /// The type of authorisation required to access the endpoint.
+        /// This type determines how authorisation is managed, for example, using specific application or user tokens.
         var authorization: EndpointAuthorizationType { get }
 
-        /// The API path on which to submit the request.
+        /// The specific API path for the endpoint. This path is appended to the host to form the full URL of the request.
         var path: String { get }
 
-        /// The query options.
+        /// Dictionary of keys and values that will be transformed into request components for the URL.
+        /// These elements are used to provide additional parameters to the HTTP request.
         var queryItems: [String: String]? { get }
 
-        /// The final URL is the access point to the API on which to make the request.
+        /// The full URL using the `host`, `path`, and `queryItems` properties.
+        /// Returns `nil` if the URL cannot be constructed correctly.
         var url: URL? { get }
     }
 
-    /// An object representing the different authorization types for the API request.
+    /// Specifies the types of authorisation that may be required to access different endpoints in an application.
+    /// This distinction makes it possible to manage different types of access, such as that reserved for authenticated users or that dedicated to applications.
     enum EndpointAuthorizationType: Encodable {
         case user
         case application

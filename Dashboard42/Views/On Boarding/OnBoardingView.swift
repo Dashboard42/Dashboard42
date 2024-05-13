@@ -66,6 +66,9 @@ struct OnBoardingView: View {
 
 extension OnBoardingView {
 
+    /// Orchestrates the OAuth authentication process for the application.
+    /// It uses a web authentication session to open an authorisation URL where the user can connect and grant access to the application.
+    /// It then manages the redirect response to obtain the necessary tokens and registers them using the authentication service.
     func authenticate() {
         Task {
             let authorizeUrl = Api.OAuthEndpoints.authorize.url

@@ -9,7 +9,7 @@ import Foundation
 
 extension Api {
 
-    /// An object representing a user's API access keys.
+    /// Capture and manage the access and refresh tokens obtained during user authentication via OAuth.
     struct OAuthUser: Decodable {
         let accessToken: String
         let refreshToken: String

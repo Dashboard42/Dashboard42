@@ -7,12 +7,13 @@
 
 import Foundation
 
-/// An object that coordinates keychain-related tasks.
+/// Implements the Keychain protocol to provide secure management of sensitive data such as access tokens and refresh tokens, using the iOS keychain.
+/// It enables authentication information to be stored, retrieved, deleted and cleaned.
 final class KeychainManager: Keychain {
 
     // MARK: - Properties
 
-    /// The shared singleton keychain object.
+    /// A singleton instance of `KeychainManager`, allowing single global access to keychain management.
     static let shared = KeychainManager()
 
     private let service = "DASHBOARD42_API_KEYCHAIN_SERVICE"
@@ -23,6 +24,7 @@ final class KeychainManager: Keychain {
 
     // MARK: - Errors
 
+    /// Defines the potential errors that `KeychainManager` may encounter, allowing better error control and more accurate exception handling.
     enum Errors: Error {
         case unknown(OSStatus)
     }

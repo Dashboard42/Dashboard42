@@ -39,11 +39,11 @@ struct HandleErrorsViewModifier: ViewModifier {
 
 extension View {
 
-    /// Presents an alert when an error occurs in the application.
+    /// Simplifies the process of adding error handling to a view, enabling the presentation of alerts based on specific errors and the execution of customised actions when these errors are handled.
     /// - Parameters:
-    ///   - error: An ErrorType value indicating the type of error.
-    ///   - actions: Actions to be triggered when the button in the error alert is validated.
-    /// - Returns: A view with a new error alert.
+    ///   - error: Error which is used to determine whether an alert should be presented and to provide the contents of the alert.
+    ///   - actions: A closure executed when the user presses the "OK" button on the alert.
+    /// - Returns: Returns a modified view with the `HandleErrorsViewModifier` modifier applied, configured with the `error` and `actions` parameters supplied.
     func handleError(error: Api.Errors?, actions: (() -> Void)? = nil) -> some View {
         modifier(HandleErrorsViewModifier(error: error, actions: actions))
     }

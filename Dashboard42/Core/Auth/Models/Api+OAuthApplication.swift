@@ -9,7 +9,7 @@ import Foundation
 
 extension Api {
 
-    /// An object representing the application's API access keys.
+    /// Defined to encapsulate data specific to an OAuth response for an application.
     struct OAuthApplication: Decodable {
         let accessToken: String
     }
