@@ -40,6 +40,9 @@ struct HomeView: View {
                     }
                     .padding()
                 }
+                .refreshable {
+                    await refresh(user: user)
+                }
             }
             else {
                 ProgressView()
@@ -57,4 +60,20 @@ struct HomeView: View {
 // MARK: - Private Methods
 
 extension HomeView {
+    
+    private func refresh(user: Api.User) async {
+        isLoading = true
+        
+        do {
+            store.userEvents = try await store.eventService.fetchUserEvents(userId: user.id)
+            store.userExams = try await store.examService.fetchUserExams(userId: user.id)
+            store.userScales = try await store.correctionService.fetchUserScales()
+        }
+        catch {
+            store.error = error as? Api.Errors
+        }
+        
+        isLoading = false
+    }
+    
 }
