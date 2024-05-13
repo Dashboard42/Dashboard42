@@ -47,7 +47,7 @@ enum AppScreen: Identifiable, CaseIterable {
     func destination() -> some View {
         switch self {
         case .home:
-            Text("Home")
+            HomeView()
         case .campus:
             Text("Campus")
         case .search:

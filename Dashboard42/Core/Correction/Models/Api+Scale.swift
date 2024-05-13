@@ -66,6 +66,16 @@ extension Api {
             }
         }
 
+        var correctorName: String {
+            guard case .user(let user) = corrector else { return "quelqu'un" }
+            return user.login
+        }
+
+        var teamName: String {
+            guard let team = teams else { return "quelqu'un" }
+            return team.name
+        }
+
         // MARK: - Types
 
         enum CorrectedsType: Codable {

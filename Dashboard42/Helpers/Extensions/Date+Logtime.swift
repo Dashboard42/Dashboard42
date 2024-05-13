@@ -49,4 +49,31 @@ extension Date {
         return count
     }
 
+    /// Calculates the duration between two given dates as a readable string.
+    /// - Parameters:
+    ///   - beginAt: The start date.
+    ///   - endAt: The end date.
+    /// - Returns: A string representing the time between the two dates.
+    static func duration(beginAt: Date, endAt: Date) -> String {
+        let dateComponents = Calendar.current.dateComponents([.minute, .hour, .day], from: beginAt, to: endAt)
+
+        if let days = dateComponents.day, days > 0 {
+            return "\(days) jours"
+        }
+
+        if let hours = dateComponents.hour, hours > 0 {
+            if let minutes = dateComponents.minute, minutes > 0 {
+                return "\(hours) heures \(minutes) minutes"
+            }
+
+            return "\(hours) heures"
+        }
+
+        if let minutes = dateComponents.minute, minutes > 0 {
+            return "\(minutes) minutes"
+        }
+
+        return "Indéfinie"
+    }
+
 }
