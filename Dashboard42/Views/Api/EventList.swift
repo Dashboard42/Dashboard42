@@ -180,7 +180,6 @@ extension EventList {
                     store.error = error as? Api.Errors
                 }
             }
-            dismiss()
         }
 
     }
