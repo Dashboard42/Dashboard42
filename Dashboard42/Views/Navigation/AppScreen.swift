@@ -49,7 +49,7 @@ enum AppScreen: Identifiable, CaseIterable {
         case .home:
             HomeView()
         case .campus:
-            Text("Campus")
+            CampusView()
         case .search:
             Text("Search")
         case .profile:

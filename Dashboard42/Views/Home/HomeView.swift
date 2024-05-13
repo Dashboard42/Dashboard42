@@ -60,10 +60,10 @@ struct HomeView: View {
 // MARK: - Private Methods
 
 extension HomeView {
-    
+
     private func refresh(user: Api.User) async {
         isLoading = true
-        
+
         do {
             store.userEvents = try await store.eventService.fetchUserEvents(userId: user.id)
             store.userExams = try await store.examService.fetchUserExams(userId: user.id)
@@ -72,8 +72,8 @@ extension HomeView {
         catch {
             store.error = error as? Api.Errors
         }
-        
+
         isLoading = false
     }
-    
+
 }
