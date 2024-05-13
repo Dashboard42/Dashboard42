@@ -21,7 +21,7 @@ To run the app, you first need to [create an app for 42's API](https://profile.i
 Then create a file in Dashboard42 folder named `Api.plist` and add your credentials, like that :
 
 - `API_CLIENT_ID` : Correspond to your app client id.
-- `API_SECRET_ID` : Correspond to your app secret id.
+- `API_CLIENT_SECRET` : Correspond to your app secret id.
 - `API_REDIRECT_URI` : Correspond to your app redirect uri (so `fr.marcmosca.Dashboard42://oauth2callback`).
 
 ## Disclaimer
