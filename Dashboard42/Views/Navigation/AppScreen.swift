@@ -44,7 +44,7 @@ enum AppScreen: Identifiable, CaseIterable {
 
     @ViewBuilder
     /// Encapsulates the navigation logic and makes the destination view directly accessible from the current screen.
-    func destination() -> some View {
+    var destination: some View {
         switch self {
         case .home:
             HomeView()
@@ -53,7 +53,7 @@ enum AppScreen: Identifiable, CaseIterable {
         case .search:
             Text("Search")
         case .profile:
-            Text("Profile")
+            ProfileView()
         case .settings:
             SettingsView()
         }

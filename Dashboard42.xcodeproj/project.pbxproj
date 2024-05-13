@@ -52,6 +52,11 @@
 		018042762BF2337C00E5FA52 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018042752BF2337C00E5FA52 /* SettingsView.swift */; };
 		018042792BF233D100E5FA52 /* AppColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018042782BF233D100E5FA52 /* AppColorScheme.swift */; };
 		0180427B2BF2340D00E5FA52 /* AppLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0180427A2BF2340D00E5FA52 /* AppLanguage.swift */; };
+		018042802BF23A2000E5FA52 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0180427F2BF23A2000E5FA52 /* ProfileView.swift */; };
+		018042822BF23B3E00E5FA52 /* ProfileView+Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018042812BF23B3E00E5FA52 /* ProfileView+Avatar.swift */; };
+		018042842BF23BA000E5FA52 /* ProfileView+Informations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018042832BF23BA000E5FA52 /* ProfileView+Informations.swift */; };
+		018042862BF23C4F00E5FA52 /* ProfileView+GridInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018042852BF23C4F00E5FA52 /* ProfileView+GridInformations.swift */; };
+		018042882BF23C7F00E5FA52 /* ProfileView+Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018042872BF23C7F00E5FA52 /* ProfileView+Dashboard.swift */; };
 		01A3D2D52BEE3E3E00418ACE /* CorrectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3D2D42BEE3E3E00418ACE /* CorrectionService.swift */; };
 		01A3D2D72BEE3E9D00418ACE /* Api+CorrectionEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3D2D62BEE3E9D00418ACE /* Api+CorrectionEndpoints.swift */; };
 		01A3D2D92BEE405300418ACE /* Api+CorrectionPointHistorics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3D2D82BEE405300418ACE /* Api+CorrectionPointHistorics.swift */; };
@@ -126,6 +131,11 @@
 		018042752BF2337C00E5FA52 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		018042782BF233D100E5FA52 /* AppColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColorScheme.swift; sourceTree = "<group>"; };
 		0180427A2BF2340D00E5FA52 /* AppLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
+		0180427F2BF23A2000E5FA52 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		018042812BF23B3E00E5FA52 /* ProfileView+Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+Avatar.swift"; sourceTree = "<group>"; };
+		018042832BF23BA000E5FA52 /* ProfileView+Informations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+Informations.swift"; sourceTree = "<group>"; };
+		018042852BF23C4F00E5FA52 /* ProfileView+GridInformations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+GridInformations.swift"; sourceTree = "<group>"; };
+		018042872BF23C7F00E5FA52 /* ProfileView+Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+Dashboard.swift"; sourceTree = "<group>"; };
 		01A3D2D42BEE3E3E00418ACE /* CorrectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectionService.swift; sourceTree = "<group>"; };
 		01A3D2D62BEE3E9D00418ACE /* Api+CorrectionEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+CorrectionEndpoints.swift"; sourceTree = "<group>"; };
 		01A3D2D82BEE405300418ACE /* Api+CorrectionPointHistorics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+CorrectionPointHistorics.swift"; sourceTree = "<group>"; };
@@ -286,6 +296,7 @@
 				01D5FEF72BEF9C700063C7A9 /* Home */,
 				0170E9DE2BE904AF00D59D45 /* Navigation */,
 				0170E9C72BE8E90A00D59D45 /* On Boarding */,
+				0180427C2BF23A0B00E5FA52 /* Profile */,
 				018042742BF2337300E5FA52 /* Settings */,
 			);
 			path = Views;
@@ -391,6 +402,34 @@
 			children = (
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		0180427C2BF23A0B00E5FA52 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0180427D2BF23A1200E5FA52 /* Components */,
+				0180427E2BF23A1500E5FA52 /* Pages */,
+				0180427F2BF23A2000E5FA52 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		0180427D2BF23A1200E5FA52 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				018042812BF23B3E00E5FA52 /* ProfileView+Avatar.swift */,
+				018042832BF23BA000E5FA52 /* ProfileView+Informations.swift */,
+				018042852BF23C4F00E5FA52 /* ProfileView+GridInformations.swift */,
+				018042872BF23C7F00E5FA52 /* ProfileView+Dashboard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0180427E2BF23A1500E5FA52 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pages;
 			sourceTree = "<group>";
 		};
 		01A3D2D12BEE3DF400418ACE /* Correction */ = {
@@ -642,15 +681,19 @@
 				0170E9D22BE8EDC300D59D45 /* OnBoardingView+Author.swift in Sources */,
 				01D598A62BF1FAC4006B500E /* HomeView+Shortcut.swift in Sources */,
 				011769332BF215D800BBB484 /* Scale+Samples.swift in Sources */,
+				018042882BF23C7F00E5FA52 /* ProfileView+Dashboard.swift in Sources */,
+				018042842BF23BA000E5FA52 /* ProfileView+Informations.swift in Sources */,
 				018042732BF22E9000E5FA52 /* CampusView+FilterButton.swift in Sources */,
 				016CE0DC2BEBAD9500CE65AC /* OAuthApplication+Samples.swift in Sources */,
 				0170E9DB2BE9004900D59D45 /* HandleErrorsViewModifier.swift in Sources */,
 				01A3D2D92BEE405300418ACE /* Api+CorrectionPointHistorics.swift in Sources */,
 				01D598A82BF1FC19006B500E /* HomeView+UpcomingActivities.swift in Sources */,
 				0170E9B02BE8D7D400D59D45 /* Api+Errors.swift in Sources */,
+				018042862BF23C4F00E5FA52 /* ProfileView+GridInformations.swift in Sources */,
 				0170E9BA2BE8D8C800D59D45 /* Api+OAuthUser.swift in Sources */,
 				0170E9DD2BE9037800D59D45 /* SlideInViewModifier.swift in Sources */,
 				016CE0E02BEBAE2C00CE65AC /* User+Samples.swift in Sources */,
+				018042802BF23A2000E5FA52 /* ProfileView.swift in Sources */,
 				01D976B32BE8D0D900DB9F30 /* ContentView.swift in Sources */,
 				0176FCBD2BE9052200C41C06 /* AppScreen.swift in Sources */,
 				018042712BF22A2400E5FA52 /* CampusView+CategoryPicker.swift in Sources */,
@@ -664,6 +707,7 @@
 				018042792BF233D100E5FA52 /* AppColorScheme.swift in Sources */,
 				0116D6222BEE30CC0062EEE0 /* Api+ExamEndpoints.swift in Sources */,
 				015A9DEA2BEE52BE0078DBA9 /* Api+Slot.swift in Sources */,
+				018042822BF23B3E00E5FA52 /* ProfileView+Avatar.swift in Sources */,
 				0176FCBF2BE905D400C41C06 /* AppTabView.swift in Sources */,
 				0170E9CE2BE8EC6700D59D45 /* OnBoardingView+Paragraph.swift in Sources */,
 				016CE0DE2BEBADD900CE65AC /* OAuthUser+Samples.swift in Sources */,
