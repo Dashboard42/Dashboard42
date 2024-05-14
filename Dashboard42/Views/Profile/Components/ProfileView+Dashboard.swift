@@ -51,8 +51,8 @@ extension ProfileView {
                         UserSkills(skills: user.mainCursus?.skills ?? [])
                     }
 
-                    DashboardLink(image: "graduationcap", title: "Succès") {
-                        EmptyView()
+                    DashboardLink(image: "graduationcap", title: "Accomplissements") {
+                        UserAchievements(achievements: user.achievements)
                     }
 
                     DashboardLink(image: "person.2", title: "Parrainages") {

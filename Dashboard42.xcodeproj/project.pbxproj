@@ -21,6 +21,7 @@
 		011A978B2BEA91F90033B85D /* Api+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011A978A2BEA91F90033B85D /* Api+User.swift */; };
 		011D96D42BF355AB0083D6ED /* ProfileView+UserEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011D96D32BF355AB0083D6ED /* ProfileView+UserEvents.swift */; };
 		011D96D62BF363F90083D6ED /* ProfileView+UserSkills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011D96D52BF363F90083D6ED /* ProfileView+UserSkills.swift */; };
+		011D96D82BF3656E0083D6ED /* ProfileView+UserAchievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011D96D72BF3656E0083D6ED /* ProfileView+UserAchievements.swift */; };
 		015A9DEA2BEE52BE0078DBA9 /* Api+Slot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015A9DE92BEE52BE0078DBA9 /* Api+Slot.swift */; };
 		016CE0DC2BEBAD9500CE65AC /* OAuthApplication+Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016CE0DB2BEBAD9500CE65AC /* OAuthApplication+Samples.swift */; };
 		016CE0DE2BEBADD900CE65AC /* OAuthUser+Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016CE0DD2BEBADD900CE65AC /* OAuthUser+Samples.swift */; };
@@ -97,6 +98,7 @@
 		011A978A2BEA91F90033B85D /* Api+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+User.swift"; sourceTree = "<group>"; };
 		011D96D32BF355AB0083D6ED /* ProfileView+UserEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+UserEvents.swift"; sourceTree = "<group>"; };
 		011D96D52BF363F90083D6ED /* ProfileView+UserSkills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+UserSkills.swift"; sourceTree = "<group>"; };
+		011D96D72BF3656E0083D6ED /* ProfileView+UserAchievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+UserAchievements.swift"; sourceTree = "<group>"; };
 		015A9DE92BEE52BE0078DBA9 /* Api+Slot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+Slot.swift"; sourceTree = "<group>"; };
 		016CE0DB2BEBAD9500CE65AC /* OAuthApplication+Samples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OAuthApplication+Samples.swift"; sourceTree = "<group>"; };
 		016CE0DD2BEBADD900CE65AC /* OAuthUser+Samples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OAuthUser+Samples.swift"; sourceTree = "<group>"; };
@@ -436,6 +438,7 @@
 		0180427E2BF23A1500E5FA52 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				011D96D72BF3656E0083D6ED /* ProfileView+UserAchievements.swift */,
 				011D96D32BF355AB0083D6ED /* ProfileView+UserEvents.swift */,
 				018042892BF23D3300E5FA52 /* ProfileView+UserInformations.swift */,
 				0180428B2BF23D8B00E5FA52 /* ProfileView+UserProjects.swift */,
@@ -665,6 +668,7 @@
 				01D7EFD82BEE198600061112 /* EventService.swift in Sources */,
 				016CE0E32BEBAFF300CE65AC /* UserService.swift in Sources */,
 				0170E9AE2BE8D77300D59D45 /* Api.swift in Sources */,
+				011D96D82BF3656E0083D6ED /* ProfileView+UserAchievements.swift in Sources */,
 				0176FCC22BE90F5000C41C06 /* AuthService.swift in Sources */,
 				01A3D2D52BEE3E3E00418ACE /* CorrectionService.swift in Sources */,
 				0170E9B52BE8D85900D59D45 /* Api+OAuthEndpoints.swift in Sources */,

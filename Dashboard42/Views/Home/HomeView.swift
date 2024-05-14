@@ -34,8 +34,11 @@ struct HomeView: View {
                                     cursus: user.cursusUsers
                                 )
                             )
-                            Shortcut(image: "graduationcap.fill", destination: EmptyView())
-                                .frame(maxWidth: .infinity)
+                            Shortcut(
+                                image: "graduationcap.fill",
+                                destination: ProfileView.UserAchievements(achievements: user.achievements)
+                            )
+                            .frame(maxWidth: .infinity)
                             Shortcut(image: "calendar", destination: ProfileView.UserEvents())
                             Shortcut(image: "scroll.fill", destination: EmptyView())
                                 .frame(maxWidth: .infinity)
