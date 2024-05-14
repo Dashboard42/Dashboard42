@@ -23,6 +23,7 @@
 		011D96D62BF363F90083D6ED /* ProfileView+UserSkills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011D96D52BF363F90083D6ED /* ProfileView+UserSkills.swift */; };
 		011D96D82BF3656E0083D6ED /* ProfileView+UserAchievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011D96D72BF3656E0083D6ED /* ProfileView+UserAchievements.swift */; };
 		011D96DA2BF36A140083D6ED /* ProfileView+UserPatronages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011D96D92BF36A140083D6ED /* ProfileView+UserPatronages.swift */; };
+		011DDBEF2BF37E57000C7C74 /* ProfileView+UserLogtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011DDBEE2BF37E57000C7C74 /* ProfileView+UserLogtime.swift */; };
 		015A9DEA2BEE52BE0078DBA9 /* Api+Slot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015A9DE92BEE52BE0078DBA9 /* Api+Slot.swift */; };
 		016CE0DC2BEBAD9500CE65AC /* OAuthApplication+Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016CE0DB2BEBAD9500CE65AC /* OAuthApplication+Samples.swift */; };
 		016CE0DE2BEBADD900CE65AC /* OAuthUser+Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016CE0DD2BEBADD900CE65AC /* OAuthUser+Samples.swift */; };
@@ -101,6 +102,7 @@
 		011D96D52BF363F90083D6ED /* ProfileView+UserSkills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+UserSkills.swift"; sourceTree = "<group>"; };
 		011D96D72BF3656E0083D6ED /* ProfileView+UserAchievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+UserAchievements.swift"; sourceTree = "<group>"; };
 		011D96D92BF36A140083D6ED /* ProfileView+UserPatronages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+UserPatronages.swift"; sourceTree = "<group>"; };
+		011DDBEE2BF37E57000C7C74 /* ProfileView+UserLogtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+UserLogtime.swift"; sourceTree = "<group>"; };
 		015A9DE92BEE52BE0078DBA9 /* Api+Slot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+Slot.swift"; sourceTree = "<group>"; };
 		016CE0DB2BEBAD9500CE65AC /* OAuthApplication+Samples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OAuthApplication+Samples.swift"; sourceTree = "<group>"; };
 		016CE0DD2BEBADD900CE65AC /* OAuthUser+Samples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OAuthUser+Samples.swift"; sourceTree = "<group>"; };
@@ -443,6 +445,7 @@
 				011D96D72BF3656E0083D6ED /* ProfileView+UserAchievements.swift */,
 				011D96D32BF355AB0083D6ED /* ProfileView+UserEvents.swift */,
 				018042892BF23D3300E5FA52 /* ProfileView+UserInformations.swift */,
+				011DDBEE2BF37E57000C7C74 /* ProfileView+UserLogtime.swift */,
 				011D96D92BF36A140083D6ED /* ProfileView+UserPatronages.swift */,
 				0180428B2BF23D8B00E5FA52 /* ProfileView+UserProjects.swift */,
 				011D96D52BF363F90083D6ED /* ProfileView+UserSkills.swift */,
@@ -720,6 +723,7 @@
 				0170E9C22BE8DE9E00D59D45 /* KeychainManager.swift in Sources */,
 				0170E9D52BE8FD1900D59D45 /* Store.swift in Sources */,
 				011D96D62BF363F90083D6ED /* ProfileView+UserSkills.swift in Sources */,
+				011DDBEF2BF37E57000C7C74 /* ProfileView+UserLogtime.swift in Sources */,
 				0170E9B22BE8D7E700D59D45 /* Api+Endpoint.swift in Sources */,
 				018042762BF2337C00E5FA52 /* SettingsView.swift in Sources */,
 				0170E9B82BE8D8A800D59D45 /* Api+OAuthApplication.swift in Sources */,

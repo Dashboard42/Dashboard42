@@ -39,7 +39,7 @@ extension ProfileView {
                         }
 
                         DashboardLink(image: "clock", title: "Logtime") {
-                            EmptyView()
+                            UserLogtime()
                         }
 
                         DashboardLink(image: "scroll", title: "Corrections") {
