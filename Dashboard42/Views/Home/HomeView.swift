@@ -27,7 +27,13 @@ struct HomeView: View {
                         }
 
                         HStack {
-                            Shortcut(image: "briefcase.fill", destination: EmptyView())
+                            Shortcut(
+                                image: "briefcase.fill",
+                                destination: ProfileView.UserProjects(
+                                    projects: user.projectsUsers,
+                                    cursus: user.cursusUsers
+                                )
+                            )
                             Shortcut(image: "graduationcap.fill", destination: EmptyView())
                                 .frame(maxWidth: .infinity)
                             Shortcut(image: "calendar", destination: EmptyView())

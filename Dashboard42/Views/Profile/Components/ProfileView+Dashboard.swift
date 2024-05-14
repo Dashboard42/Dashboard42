@@ -26,11 +26,11 @@ extension ProfileView {
 
                 List {
                     DashboardLink(image: "info.circle", title: "Informations") {
-                        EmptyView()
+                        UserInformations(user: user)
                     }
 
                     DashboardLink(image: "briefcase", title: "Projets") {
-                        EmptyView()
+                        UserProjects(projects: user.projectsUsers, cursus: user.cursusUsers)
                     }
 
                     if !isSearchedProfile {

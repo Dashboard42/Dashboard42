@@ -57,6 +57,8 @@
 		018042842BF23BA000E5FA52 /* ProfileView+Informations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018042832BF23BA000E5FA52 /* ProfileView+Informations.swift */; };
 		018042862BF23C4F00E5FA52 /* ProfileView+GridInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018042852BF23C4F00E5FA52 /* ProfileView+GridInformations.swift */; };
 		018042882BF23C7F00E5FA52 /* ProfileView+Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018042872BF23C7F00E5FA52 /* ProfileView+Dashboard.swift */; };
+		0180428A2BF23D3300E5FA52 /* ProfileView+UserInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018042892BF23D3300E5FA52 /* ProfileView+UserInformations.swift */; };
+		0180428C2BF23D8B00E5FA52 /* ProfileView+UserProjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0180428B2BF23D8B00E5FA52 /* ProfileView+UserProjects.swift */; };
 		01A3D2D52BEE3E3E00418ACE /* CorrectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3D2D42BEE3E3E00418ACE /* CorrectionService.swift */; };
 		01A3D2D72BEE3E9D00418ACE /* Api+CorrectionEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3D2D62BEE3E9D00418ACE /* Api+CorrectionEndpoints.swift */; };
 		01A3D2D92BEE405300418ACE /* Api+CorrectionPointHistorics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3D2D82BEE405300418ACE /* Api+CorrectionPointHistorics.swift */; };
@@ -136,6 +138,8 @@
 		018042832BF23BA000E5FA52 /* ProfileView+Informations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+Informations.swift"; sourceTree = "<group>"; };
 		018042852BF23C4F00E5FA52 /* ProfileView+GridInformations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+GridInformations.swift"; sourceTree = "<group>"; };
 		018042872BF23C7F00E5FA52 /* ProfileView+Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+Dashboard.swift"; sourceTree = "<group>"; };
+		018042892BF23D3300E5FA52 /* ProfileView+UserInformations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+UserInformations.swift"; sourceTree = "<group>"; };
+		0180428B2BF23D8B00E5FA52 /* ProfileView+UserProjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+UserProjects.swift"; sourceTree = "<group>"; };
 		01A3D2D42BEE3E3E00418ACE /* CorrectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectionService.swift; sourceTree = "<group>"; };
 		01A3D2D62BEE3E9D00418ACE /* Api+CorrectionEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+CorrectionEndpoints.swift"; sourceTree = "<group>"; };
 		01A3D2D82BEE405300418ACE /* Api+CorrectionPointHistorics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+CorrectionPointHistorics.swift"; sourceTree = "<group>"; };
@@ -418,9 +422,9 @@
 			isa = PBXGroup;
 			children = (
 				018042812BF23B3E00E5FA52 /* ProfileView+Avatar.swift */,
-				018042832BF23BA000E5FA52 /* ProfileView+Informations.swift */,
-				018042852BF23C4F00E5FA52 /* ProfileView+GridInformations.swift */,
 				018042872BF23C7F00E5FA52 /* ProfileView+Dashboard.swift */,
+				018042852BF23C4F00E5FA52 /* ProfileView+GridInformations.swift */,
+				018042832BF23BA000E5FA52 /* ProfileView+Informations.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -428,6 +432,8 @@
 		0180427E2BF23A1500E5FA52 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				018042892BF23D3300E5FA52 /* ProfileView+UserInformations.swift */,
+				0180428B2BF23D8B00E5FA52 /* ProfileView+UserProjects.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -713,6 +719,7 @@
 				016CE0DE2BEBADD900CE65AC /* OAuthUser+Samples.swift in Sources */,
 				0116D6262BEE32410062EEE0 /* Exam+Samples.swift in Sources */,
 				01A3D2DB2BEE411E00418ACE /* Api+Scale.swift in Sources */,
+				0180428C2BF23D8B00E5FA52 /* ProfileView+UserProjects.swift in Sources */,
 				0180427B2BF2340D00E5FA52 /* AppLanguage.swift in Sources */,
 				01D5FEF92BEF9C790063C7A9 /* HomeView.swift in Sources */,
 				01D976B12BE8D0D900DB9F30 /* Dashboard42App.swift in Sources */,
@@ -729,6 +736,7 @@
 				01C0A4AD2BECF0AB00A3AC60 /* Api+UserEndpoints.swift in Sources */,
 				01D5FEF42BEF984C0063C7A9 /* Api+LogtimeEndpoints.swift in Sources */,
 				0116D6242BEE31900062EEE0 /* Api+Exam.swift in Sources */,
+				0180428A2BF23D3300E5FA52 /* ProfileView+UserInformations.swift in Sources */,
 				0170E9D02BE8ED4D00D59D45 /* OnBoardingView+SignInButton.swift in Sources */,
 				0170E9C92BE8E91800D59D45 /* OnBoardingView.swift in Sources */,
 				01D7EFD32BEE162300061112 /* Api+EventEndpoints.swift in Sources */,
