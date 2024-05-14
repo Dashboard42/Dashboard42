@@ -56,7 +56,7 @@ extension ProfileView {
                     }
 
                     DashboardLink(image: "person.2", title: "Parrainages") {
-                        EmptyView()
+                        UserPatronages(patroned: user.patroned, patroning: user.patroning)
                     }
                 }
                 .listStyle(.plain)

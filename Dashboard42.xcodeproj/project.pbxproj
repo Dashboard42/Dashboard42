@@ -22,6 +22,7 @@
 		011D96D42BF355AB0083D6ED /* ProfileView+UserEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011D96D32BF355AB0083D6ED /* ProfileView+UserEvents.swift */; };
 		011D96D62BF363F90083D6ED /* ProfileView+UserSkills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011D96D52BF363F90083D6ED /* ProfileView+UserSkills.swift */; };
 		011D96D82BF3656E0083D6ED /* ProfileView+UserAchievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011D96D72BF3656E0083D6ED /* ProfileView+UserAchievements.swift */; };
+		011D96DA2BF36A140083D6ED /* ProfileView+UserPatronages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011D96D92BF36A140083D6ED /* ProfileView+UserPatronages.swift */; };
 		015A9DEA2BEE52BE0078DBA9 /* Api+Slot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015A9DE92BEE52BE0078DBA9 /* Api+Slot.swift */; };
 		016CE0DC2BEBAD9500CE65AC /* OAuthApplication+Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016CE0DB2BEBAD9500CE65AC /* OAuthApplication+Samples.swift */; };
 		016CE0DE2BEBADD900CE65AC /* OAuthUser+Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016CE0DD2BEBADD900CE65AC /* OAuthUser+Samples.swift */; };
@@ -99,6 +100,7 @@
 		011D96D32BF355AB0083D6ED /* ProfileView+UserEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+UserEvents.swift"; sourceTree = "<group>"; };
 		011D96D52BF363F90083D6ED /* ProfileView+UserSkills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+UserSkills.swift"; sourceTree = "<group>"; };
 		011D96D72BF3656E0083D6ED /* ProfileView+UserAchievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+UserAchievements.swift"; sourceTree = "<group>"; };
+		011D96D92BF36A140083D6ED /* ProfileView+UserPatronages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+UserPatronages.swift"; sourceTree = "<group>"; };
 		015A9DE92BEE52BE0078DBA9 /* Api+Slot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+Slot.swift"; sourceTree = "<group>"; };
 		016CE0DB2BEBAD9500CE65AC /* OAuthApplication+Samples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OAuthApplication+Samples.swift"; sourceTree = "<group>"; };
 		016CE0DD2BEBADD900CE65AC /* OAuthUser+Samples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OAuthUser+Samples.swift"; sourceTree = "<group>"; };
@@ -441,6 +443,7 @@
 				011D96D72BF3656E0083D6ED /* ProfileView+UserAchievements.swift */,
 				011D96D32BF355AB0083D6ED /* ProfileView+UserEvents.swift */,
 				018042892BF23D3300E5FA52 /* ProfileView+UserInformations.swift */,
+				011D96D92BF36A140083D6ED /* ProfileView+UserPatronages.swift */,
 				0180428B2BF23D8B00E5FA52 /* ProfileView+UserProjects.swift */,
 				011D96D52BF363F90083D6ED /* ProfileView+UserSkills.swift */,
 			);
@@ -699,6 +702,7 @@
 				0116D61B2BEE302E0062EEE0 /* Event+Samples.swift in Sources */,
 				01D7EFDC2BEE19B400061112 /* Api+EventUser.swift in Sources */,
 				018042792BF233D100E5FA52 /* AppColorScheme.swift in Sources */,
+				011D96DA2BF36A140083D6ED /* ProfileView+UserPatronages.swift in Sources */,
 				0116D6222BEE30CC0062EEE0 /* Api+ExamEndpoints.swift in Sources */,
 				015A9DEA2BEE52BE0078DBA9 /* Api+Slot.swift in Sources */,
 				018042822BF23B3E00E5FA52 /* ProfileView+Avatar.swift in Sources */,
