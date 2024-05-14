@@ -35,7 +35,7 @@ extension ProfileView {
 
                     if !isSearchedProfile {
                         DashboardLink(image: "calendar", title: "Événements") {
-                            EmptyView()
+                            UserEvents()
                         }
 
                         DashboardLink(image: "clock", title: "Logtime") {

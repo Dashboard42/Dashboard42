@@ -36,7 +36,7 @@ struct HomeView: View {
                             )
                             Shortcut(image: "graduationcap.fill", destination: EmptyView())
                                 .frame(maxWidth: .infinity)
-                            Shortcut(image: "calendar", destination: EmptyView())
+                            Shortcut(image: "calendar", destination: ProfileView.UserEvents())
                             Shortcut(image: "scroll.fill", destination: EmptyView())
                                 .frame(maxWidth: .infinity)
                             Shortcut(image: "clock.fill", destination: EmptyView())
