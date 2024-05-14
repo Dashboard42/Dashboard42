@@ -48,7 +48,7 @@ extension ProfileView {
                     }
 
                     DashboardLink(image: "list.bullet.clipboard", title: "Compétences") {
-                        EmptyView()
+                        UserSkills(skills: user.mainCursus?.skills ?? [])
                     }
 
                     DashboardLink(image: "graduationcap", title: "Succès") {
