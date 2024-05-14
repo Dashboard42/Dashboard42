@@ -25,7 +25,7 @@ extension Api {
 
         var queryItems: [String: String]? {
             switch self {
-            case .fetchLogtime(let login, let entryDate):
+            case .fetchLogtime(_, let entryDate):
                 ["begin_at": entryDate]
             }
         }
