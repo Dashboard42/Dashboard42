@@ -20,6 +20,9 @@ final class Store {
     var userEvents = [Api.Event]()
     var userExams = [Api.Exam]()
     var userScales = [Api.Scale]()
+    var userLogtimes = [Api.Logtime]()
+    var userPatroned = [Api.User]()
+    var userPatroning = [Api.User]()
 
     var campusEvents = [Api.Event]()
     var campusExams = [Api.Exam]()
