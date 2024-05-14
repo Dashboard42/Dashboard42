@@ -52,6 +52,9 @@ extension ScaleList {
 
         private var isCorrector: Bool { store.user?.login == scale.correctorName }
         private var projectId: Int { scale.teams?.projectId ?? -1 }
+        private var projectName: String {
+            store.user?.projectsUsers.first(where: { $0.project.id == projectId })?.project.name ?? "\(projectId)"
+        }
 
         // MARK: - Body
 
@@ -65,8 +68,8 @@ extension ScaleList {
                 VStack(alignment: .leading, spacing: 2) {
                     Text(
                         isCorrector
-                            ? "Vous corrigez \(scale.teamName) sur \(projectId)."
-                            : "Vous êtes corrigé par \(scale.correctorName) sur \(projectId)."
+                            ? "Vous corrigez \(scale.teamName) sur \(projectName)."
+                            : "Vous êtes corrigé par \(scale.correctorName) sur \(projectName)."
                     )
                     .font(.subheadline)
                     .fontWeight(.semibold)
