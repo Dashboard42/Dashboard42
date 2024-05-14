@@ -21,6 +21,8 @@ final class Store {
     var userExams = [Api.Exam]()
     var userScales = [Api.Scale]()
     var userLogtimes = [Api.Logtime]()
+    var userSlots = [Api.Slot]()
+    var userCorrectionPointHistorics = [Api.CorrectionPointHistorics]()
 
     var campusEvents = [Api.Event]()
     var campusExams = [Api.Exam]()

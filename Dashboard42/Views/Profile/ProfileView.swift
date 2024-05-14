@@ -56,7 +56,7 @@ struct ProfileView: View {
                         .padding()
                     }
                     .refreshable {
-                        await refresh()
+                        await refresh(user: user)
                     }
                 }
                 else {
@@ -68,8 +68,21 @@ struct ProfileView: View {
 
     // MARK: - Private Methods
 
-    private func refresh() async {
+    private func refresh(user: Api.User) async {
         isLoading = true
+
+        do {
+            store.userEvents = try await store.eventService.fetchUserEvents(userId: user.id)
+            store.userLogtimes = try await store.userService.fetchLogtime(for: user.login, entryDate: user.entryDate)
+            store.userSlots = try await store.correctionService.fetchUserSlots()
+            store.userCorrectionPointHistorics = try await store.correctionService.fetchCorrectionPointHistorics(
+                userId: user.id
+            )
+        }
+        catch {
+            store.error = error as? Api.Errors
+        }
+
         isLoading = false
     }
 

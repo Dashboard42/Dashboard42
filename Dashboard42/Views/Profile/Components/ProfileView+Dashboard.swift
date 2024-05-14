@@ -43,7 +43,7 @@ extension ProfileView {
                         }
 
                         DashboardLink(image: "scroll", title: "Corrections") {
-                            EmptyView()
+                            UserCorrections()
                         }
                     }
 

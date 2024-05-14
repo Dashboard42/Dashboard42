@@ -40,7 +40,7 @@ struct HomeView: View {
                             )
                             .frame(maxWidth: .infinity)
                             Shortcut(image: "calendar", destination: ProfileView.UserEvents())
-                            Shortcut(image: "scroll.fill", destination: EmptyView())
+                            Shortcut(image: "scroll.fill", destination: ProfileView.UserCorrections())
                                 .frame(maxWidth: .infinity)
                             Shortcut(image: "clock.fill", destination: ProfileView.UserLogtime())
                         }

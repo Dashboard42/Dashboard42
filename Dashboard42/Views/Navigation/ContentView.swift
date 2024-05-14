@@ -65,6 +65,10 @@ extension ContentView {
             store.userExams = try await store.examService.fetchUserExams(userId: user.id)
             store.userScales = try await store.correctionService.fetchUserScales()
             store.userLogtimes = try await store.userService.fetchLogtime(for: user.login, entryDate: user.entryDate)
+            store.userSlots = try await store.correctionService.fetchUserSlots()
+            store.userCorrectionPointHistorics = try await store.correctionService.fetchCorrectionPointHistorics(
+                userId: user.id
+            )
             store.campusEvents = try await store.eventService.fetchCampusEvents(campusId: campusId, cursusId: cursusId)
             store.campusExams = try await store.examService.fetchCampusExams(campusId: campusId)
         }
