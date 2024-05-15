@@ -66,6 +66,9 @@ struct CampusView: View {
                         }
                         .padding()
                     }
+                    .refreshable {
+                        await refresh()
+                    }
                 }
                 else {
                     ProgressView()
@@ -73,9 +76,6 @@ struct CampusView: View {
             }
             .navigationTitle("Mon campus")
             .searchable(text: $searched)
-            .refreshable {
-                await refresh()
-            }
             .toolbar {
                 if selection == .events {
                     FilterButton(selection: $selectedFilter, events: store.campusEvents)

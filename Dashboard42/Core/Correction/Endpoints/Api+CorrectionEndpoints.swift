@@ -37,7 +37,7 @@ extension Api {
 
         var queryItems: [String: String]? {
             switch self {
-            case .fetchCorrectionPointHistorics(let userId):
+            case .fetchCorrectionPointHistorics:
                 ["sort": "-created_at"]
             case .fetchUserScales:
                 ["sort": "-begin_at", "page[size]": "100"]
@@ -45,7 +45,7 @@ extension Api {
                 ["filter[future]": "true", "sort": "-begin_at", "page[size]": "100"]
             case .createUserSlot(let userId, let beginAt, let endAt):
                 ["slot[user_id]": "\(userId)", "slot[begin_at]": "\(beginAt)", "slot[end_at]": "\(endAt)"]
-            case .deleteUserSlot(let slotId):
+            case .deleteUserSlot:
                 [:]
             }
         }

@@ -20,7 +20,7 @@ struct AppTabView: View {
         VStack {
             TabView(selection: $selection) {
                 ForEach(AppScreen.allCases) { screen in
-                    screen.destination()
+                    screen.destination
                         .tag(screen as AppScreen?)
                         .tabItem { screen.label }
                 }

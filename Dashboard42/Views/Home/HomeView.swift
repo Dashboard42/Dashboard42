@@ -27,13 +27,22 @@ struct HomeView: View {
                         }
 
                         HStack {
-                            Shortcut(image: "briefcase.fill", destination: EmptyView())
-                            Shortcut(image: "graduationcap.fill", destination: EmptyView())
+                            Shortcut(
+                                image: "briefcase.fill",
+                                destination: ProfileView.UserProjects(
+                                    projects: user.projectsUsers,
+                                    cursus: user.cursusUsers
+                                )
+                            )
+                            Shortcut(
+                                image: "graduationcap.fill",
+                                destination: ProfileView.UserAchievements(achievements: user.achievements)
+                            )
+                            .frame(maxWidth: .infinity)
+                            Shortcut(image: "calendar", destination: ProfileView.UserEvents())
+                            Shortcut(image: "scroll.fill", destination: ProfileView.UserCorrections())
                                 .frame(maxWidth: .infinity)
-                            Shortcut(image: "calendar", destination: EmptyView())
-                            Shortcut(image: "scroll.fill", destination: EmptyView())
-                                .frame(maxWidth: .infinity)
-                            Shortcut(image: "clock.fill", destination: EmptyView())
+                            Shortcut(image: "clock.fill", destination: ProfileView.UserLogtime())
                         }
 
                         UpcomingActivities()
