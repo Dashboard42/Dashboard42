@@ -29,5 +29,6 @@ struct Dashboard42App: App {
                 .preferredColorScheme(colorscheme)
                 .handleError(error: store.error, actions: store.errorAction)
         }
+        .modelContainer(for: HistorySearch.self)
     }
 }

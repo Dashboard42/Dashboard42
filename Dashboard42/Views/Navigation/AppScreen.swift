@@ -51,7 +51,7 @@ enum AppScreen: Identifiable, CaseIterable {
         case .campus:
             CampusView()
         case .search:
-            Text("Search")
+            SearchView()
         case .profile:
             ProfileView()
         case .settings:
