@@ -67,6 +67,7 @@ extension ProfileView {
                                         }
                                     }
                                 }
+                                .frame(maxHeight: 450)
 
                                 HStack {
                                     GroupBox("Total") {
