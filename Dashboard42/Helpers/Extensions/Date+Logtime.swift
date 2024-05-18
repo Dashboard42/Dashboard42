@@ -54,7 +54,7 @@ extension Date {
     ///   - beginAt: The start date.
     ///   - endAt: The end date.
     /// - Returns: A string representing the time between the two dates.
-    static func duration(beginAt: Date, endAt: Date) -> String {
+    static func duration(beginAt: Date, endAt: Date) -> LocalizedStringResource {
         let dateComponents = Calendar.current.dateComponents([.minute, .hour, .day], from: beginAt, to: endAt)
 
         if let days = dateComponents.day, days > 0 {

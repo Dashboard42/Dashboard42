@@ -14,7 +14,7 @@ struct SlotRow: View {
     let slot: Api.GroupedSlots
 
     private var isSameDay: Bool { slot.beginAt != slot.endAt }
-    private var duration: String { Date.duration(beginAt: slot.beginAt, endAt: slot.endAt) }
+    private var duration: LocalizedStringResource { Date.duration(beginAt: slot.beginAt, endAt: slot.endAt) }
 
     // MARK: - Body
 

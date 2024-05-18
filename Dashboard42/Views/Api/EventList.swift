@@ -97,20 +97,20 @@ extension EventList {
         let event: Api.Event
 
         private var userIsSubscribe: Bool { store.userEvents.contains(where: { $0.id == event.id }) }
+        private var locale: Locale {
+            Locale(identifier: UserDefaults.standard.string(forKey: Constants.AppStorage.userLanguage) ?? "fr")
+        }
 
         // MARK: - Body
 
         var body: some View {
             List {
                 Section("Informations") {
-                    HorizontalRow(
-                        title: "Date",
-                        value: event.beginAt.formatted(.dateTime.day().month().year().hour().minute())
-                    )
+                    HorizontalRow(title: "Date", value: "\(event.beginAt.formatted(.dateTime.day().month().year().hour().minute().locale(locale)))")
                     HorizontalRow(title: "Durée", value: Date.duration(beginAt: event.beginAt, endAt: event.endAt))
                     HorizontalRow(title: "Inscrit", value: userIsSubscribe ? "Oui" : "Non")
-                    HorizontalRow(title: "Participants", value: event.numberOfSubscribers)
-                    HorizontalRow(title: "Lieu", value: event.location)
+                    HorizontalRow(title: "Participants", value: "\(event.numberOfSubscribers)")
+                    HorizontalRow(title: "Lieu", value: "\(event.location)")
                 }
 
                 Section("Description") {
@@ -143,7 +143,7 @@ extension EventList {
 
         // MARK: - Private Components
 
-        private func HorizontalRow(title: String, value: String) -> some View {
+        private func HorizontalRow(title: LocalizedStringResource, value: LocalizedStringResource) -> some View {
             HStack {
                 Text(title)
                     .foregroundStyle(.primary)

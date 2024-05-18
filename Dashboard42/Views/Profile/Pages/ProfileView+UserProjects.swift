@@ -13,7 +13,7 @@ extension ProfileView {
 
         // MARK: - Properties
 
-        @State private var selectedFilter = "Tous"
+        @State private var selectedFilter = String(localized: "Tous")
         @State private var searched = ""
 
         let projects: [Api.User.Projects]
@@ -22,7 +22,7 @@ extension ProfileView {
         private var filteredProjects: [Api.User.Projects] {
             let cursusId = cursus.first(where: { $0.cursus.name.capitalized == selectedFilter })?.cursus.id
             var filteredProjects =
-                selectedFilter == "Tous" ? projects : projects.filter { $0.cursusIds.first == cursusId }
+                selectedFilter == String(localized: "Tous") ? projects : projects.filter { $0.cursusIds.first == cursusId }
             filteredProjects =
                 searched.isEmpty
                 ? filteredProjects
@@ -95,7 +95,7 @@ extension ProfileView.UserProjects {
             return validated ? .green : .red
         }
 
-        private var status: String { project.validated == nil ? "En cours" : "Terminé" }
+        private var status: LocalizedStringResource { project.validated == nil ? "En cours" : "Terminé" }
 
         private var cursusName: String {
             cursus.first(where: { $0.cursus.id == project.cursusIds.first })?.cursus.name ?? "Indéfinie"
@@ -151,7 +151,7 @@ extension ProfileView.UserProjects {
 
         var body: some View {
             Menu {
-                Picker("Select a filter", selection: $selection) {
+                Picker("Sélectionner un filtre", selection: $selection) {
                     ForEach(filters, id: \.self, content: Text.init)
                 }
             } label: {

@@ -53,7 +53,7 @@ extension ProfileView {
                             .font(.subheadline)
                             .fontWeight(.medium)
 
-                        Text("Level - \(cursus?.level.formatted() ?? "0")")
+                        Text("Niveau - \(cursus?.level.formatted() ?? "0")")
                             .font(.footnote)
                             .fontWeight(.medium)
                             .frame(maxWidth: .infinity, alignment: .leading)

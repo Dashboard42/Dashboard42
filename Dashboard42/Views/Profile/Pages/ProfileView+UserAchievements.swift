@@ -13,14 +13,14 @@ extension ProfileView {
 
         // MARK: - Properties
 
-        @State private var selectedFilter = "Tous"
+        @State private var selectedFilter = String(localized: "Tous")
         @State private var searched = ""
 
         let achievements: [Api.User.Achievements]
 
         private var filteredAchievements: [Api.User.Achievements] {
             let filteredAchievements =
-                selectedFilter == "Tous"
+                selectedFilter == String(localized: "Tous")
                 ? achievements : achievements.filter { $0.kind.capitalized == selectedFilter }
 
             guard !searched.isEmpty else { return filteredAchievements }
@@ -86,7 +86,7 @@ extension ProfileView.UserAchievements {
             self._selection = selection
 
             var filters: Set<String> = Set(achievements.map(\.kind.capitalized))
-            filters.insert("Tous")
+            filters.insert(String(localized: "Tous"))
 
             self.filters = Array(filters).sorted()
         }
@@ -95,7 +95,7 @@ extension ProfileView.UserAchievements {
 
         var body: some View {
             Menu {
-                Picker("Select a filter", selection: $selection) {
+                Picker("Sélectionner un filtre", selection: $selection) {
                     ForEach(filters, id: \.self, content: Text.init)
                 }
             } label: {

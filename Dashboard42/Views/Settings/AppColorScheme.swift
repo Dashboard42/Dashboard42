@@ -14,7 +14,7 @@ enum AppColorScheme: Int, Identifiable, CaseIterable {
 
     var id: Int { rawValue }
 
-    var title: String {
+    var title: LocalizedStringResource {
         switch self
         {
         case .system:

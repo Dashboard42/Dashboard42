@@ -137,7 +137,7 @@ extension ProfileView {
         var body: some View {
             Chart(logtimeChartData, id: \.type) {
                 SectorMark(
-                    angle: .value("Value", $1),
+                    angle: .value("Valeur", $1),
                     innerRadius: .ratio(0.618),
                     outerRadius: .inset(10),
                     angularInset: 1
@@ -207,7 +207,7 @@ extension ProfileView {
 
             let newDateFormatter = DateFormatter()
             newDateFormatter.dateFormat = "EE dd MMM yyyy"
-            newDateFormatter.locale = Locale.current
+            newDateFormatter.locale = Locale(identifier: UserDefaults.standard.string(forKey: Constants.AppStorage.userLanguage) ?? "fr")
 
             return newDateFormatter.string(from: date).capitalized
         }

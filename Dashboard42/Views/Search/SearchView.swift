@@ -86,7 +86,7 @@ struct SearchView: View {
             modelContext.insert(HistorySearch(login: result.login, email: result.email, image: result.image.link))
         }
         catch {
-            store.error = error as? Api.Errors
+            isSearchedSucceded = false
         }
     }
 

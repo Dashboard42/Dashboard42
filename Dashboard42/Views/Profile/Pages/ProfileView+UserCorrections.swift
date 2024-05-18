@@ -40,7 +40,7 @@ extension ProfileView {
                 Button {
                     showCorrectionSheet = true
                 } label: {
-                    Label("Add a correction slot", systemImage: "plus")
+                    Label("Ajouter un créneau de correction", systemImage: "plus")
                         .labelStyle(.iconOnly)
                         .imageScale(.small)
                 }
@@ -198,30 +198,30 @@ extension ProfileView.UserCorrections {
             NavigationStack {
                 VStack {
                     Text(
-                        "A slot is an interval of time during which you declare yourself available to assess other users. A slot can be defined each day between 45 minutes and 2 weeks in advance and must last at least one hour."
+                        "Un créneau est un intervalle de temps pendant lequel vous vous déclarez disponible pour évaluer les autres étudiants. Un créneau peut être défini chaque jour entre 45 minutes et 2 semaines à l'avance et doit durer au moins une heure."
                     )
                     .foregroundStyle(.secondary)
                     .font(.subheadline)
                     .padding(.horizontal, 14)
 
                     Form {
-                        DatePicker("Begin", selection: $beginAt, in: defaultBeginAt...defaultEndBeginAt)
+                        DatePicker("Début", selection: $beginAt, in: defaultBeginAt...defaultEndBeginAt)
                         DatePicker(
-                            "End",
+                            "Fin",
                             selection: $endAt,
                             in: Date(timeInterval: 3_600, since: beginAt)...defaultEndAt
                         )
                     }
                     .onChange(of: beginAt, onBeginAtChange)
                 }
-                .navigationTitle("New correction slot")
+                .navigationTitle("Nouveau créneau de correction")
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
-                        Button("Cancel", role: .cancel) { showCorrectionSheet = false }
+                        Button("Annuler", role: .cancel) { showCorrectionSheet = false }
                     }
 
                     ToolbarItem {
-                        Button("Add", action: createSlot)
+                        Button("Ajouter", action: createSlot)
                     }
                 }
             }

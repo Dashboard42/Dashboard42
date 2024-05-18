@@ -14,12 +14,12 @@ struct CampusView: View {
     @Environment(\.store) private var store
     @State private var isLoading = false
     @State private var selection = CategoryPicker.CampusCategoryPicker.events
-    @State private var selectedFilter = "Tous"
+    @State private var selectedFilter = String(localized: "Tous")
     @State private var searched = ""
 
     private var events: [Api.Event] {
         let filteredEvents =
-            selectedFilter == "Tous"
+            selectedFilter == String(localized: "Tous")
             ? store.campusEvents : store.campusEvents.filter { $0.kind.capitalized == selectedFilter }
 
         guard !searched.isEmpty else { return filteredEvents }

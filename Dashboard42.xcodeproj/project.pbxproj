@@ -73,6 +73,7 @@
 		01A3D2D92BEE405300418ACE /* Api+CorrectionPointHistorics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3D2D82BEE405300418ACE /* Api+CorrectionPointHistorics.swift */; };
 		01A3D2DB2BEE411E00418ACE /* Api+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3D2DA2BEE411E00418ACE /* Api+Scale.swift */; };
 		01C0A4AD2BECF0AB00A3AC60 /* Api+UserEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C0A4AC2BECF0AB00A3AC60 /* Api+UserEndpoints.swift */; };
+		01CEAB3C2BF4DE500056A97E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 01CEAB3B2BF4DE500056A97E /* Localizable.xcstrings */; };
 		01D598A62BF1FAC4006B500E /* HomeView+Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D598A52BF1FAC4006B500E /* HomeView+Shortcut.swift */; };
 		01D598A82BF1FC19006B500E /* HomeView+UpcomingActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D598A72BF1FC19006B500E /* HomeView+UpcomingActivities.swift */; };
 		01D5FEF22BEF98410063C7A9 /* Api+Logtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D5FEF12BEF98410063C7A9 /* Api+Logtime.swift */; };
@@ -163,6 +164,7 @@
 		01A3D2D82BEE405300418ACE /* Api+CorrectionPointHistorics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+CorrectionPointHistorics.swift"; sourceTree = "<group>"; };
 		01A3D2DA2BEE411E00418ACE /* Api+Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+Scale.swift"; sourceTree = "<group>"; };
 		01C0A4AC2BECF0AB00A3AC60 /* Api+UserEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+UserEndpoints.swift"; sourceTree = "<group>"; };
+		01CEAB3B2BF4DE500056A97E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		01D598A52BF1FAC4006B500E /* HomeView+Shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+Shortcut.swift"; sourceTree = "<group>"; };
 		01D598A72BF1FC19006B500E /* HomeView+UpcomingActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+UpcomingActivities.swift"; sourceTree = "<group>"; };
 		01D5FEF12BEF98410063C7A9 /* Api+Logtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+Logtime.swift"; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				01D976B42BE8D0DA00DB9F30 /* Assets.xcassets */,
+				01CEAB3B2BF4DE500056A97E /* Localizable.xcstrings */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -414,19 +417,11 @@
 		018042742BF2337300E5FA52 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				018042772BF233C300E5FA52 /* Components */,
 				018042782BF233D100E5FA52 /* AppColorScheme.swift */,
 				0180427A2BF2340D00E5FA52 /* AppLanguage.swift */,
 				018042752BF2337C00E5FA52 /* SettingsView.swift */,
 			);
 			path = Settings;
-			sourceTree = "<group>";
-		};
-		018042772BF233C300E5FA52 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		0180427C2BF23A0B00E5FA52 /* Profile */ = {
@@ -688,6 +683,7 @@
 			files = (
 				0170E9A92BE8D5BD00D59D45 /* Api.plist in Resources */,
 				01D976B82BE8D0DA00DB9F30 /* Preview Assets.xcassets in Resources */,
+				01CEAB3C2BF4DE500056A97E /* Localizable.xcstrings in Resources */,
 				01D976B52BE8D0DA00DB9F30 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -907,7 +903,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Dashboard42/Preview Content\"";
 				DEVELOPMENT_TEAM = BHH429N5DK;
 				ENABLE_PREVIEWS = YES;
@@ -918,7 +914,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -939,7 +935,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Dashboard42/Preview Content\"";
 				DEVELOPMENT_TEAM = BHH429N5DK;
 				ENABLE_PREVIEWS = YES;
@@ -950,7 +946,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

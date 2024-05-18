@@ -34,10 +34,10 @@ extension CampusView {
 
             var id: Self { self }
 
-            var title: String {
+            var title: LocalizedStringResource {
                 switch self {
                 case .events:
-                    return "Évènenents"
+                    return "Évènements"
                 case .exams:
                     return "Examens"
                 }

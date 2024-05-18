@@ -10,26 +10,31 @@ import SwiftUI
 extension ProfileView {
 
     struct UserInformations: View {
-
+        
         // MARK: - Properties
-
+        
         let user: Api.User
+        
+        private var grade: String? { user.mainCursus?.grade }
+        private var level: String? { user.mainCursus?.level.formatted() }
+        private var correctionPoints: String { user.correctionPoint.formatted() }
+        private var wallets: String { user.wallet.formatted() }
 
         // MARK: - Body
 
         var body: some View {
             List {
                 Section("Général") {
-                    HorizontalRow(title: "Nom", value: user.displayname)
-                    HorizontalRow(title: "Email", value: user.email)
-                    HorizontalRow(title: "Numéro de téléphone", value: user.phone)
+                    HorizontalRow(title: "Nom", value: "\(user.displayname)")
+                    HorizontalRow(title: "Email", value: "\(user.email)")
+                    HorizontalRow(title: "Numéro de téléphone", value: "\(user.phone)")
                 }
 
                 Section("Cursus") {
-                    HorizontalRow(title: "Grade", value: user.mainCursus?.grade ?? "Indéfinie")
-                    HorizontalRow(title: "Niveau", value: user.mainCursus?.level.formatted() ?? "Indéfinie")
-                    HorizontalRow(title: "Points de correction", value: user.correctionPoint.formatted())
-                    HorizontalRow(title: "Wallets", value: user.wallet.formatted())
+                    HorizontalRow(title: "Grade", value: grade != nil ? "\(grade!)" : "Indéfinie")
+                    HorizontalRow(title: "Niveau", value: level != nil ? "\(level!)" : "Indéfinie")
+                    HorizontalRow(title: "Points de corrections", value: "\(correctionPoints)")
+                    HorizontalRow(title: "Wallets", value: "\(wallets)")
                     HorizontalRow(title: "Promotion", value: "\(user.poolMonth.capitalized) \(user.poolYear)")
                 }
             }
@@ -53,8 +58,8 @@ extension ProfileView.UserInformations {
 
         // MARK: - Properties
 
-        let title: String
-        let value: String
+        let title: LocalizedStringResource
+        let value: LocalizedStringResource
 
         // MARK: - Body
 

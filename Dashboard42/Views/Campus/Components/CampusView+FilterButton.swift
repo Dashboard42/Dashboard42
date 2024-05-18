@@ -20,7 +20,7 @@ extension CampusView {
             self._selection = selection
 
             var filters: Set<String> = Set(events.map(\.kind.capitalized))
-            filters.insert("Tous")
+            filters.insert(String(localized: "Tous"))
 
             self.filters = Array(filters).sorted()
         }
@@ -29,7 +29,7 @@ extension CampusView {
 
         var body: some View {
             Menu {
-                Picker("Select a filter", selection: $selection) {
+                Picker("Sélectionner un filtre", selection: $selection) {
                     ForEach(filters, id: \.self, content: Text.init)
                 }
             } label: {

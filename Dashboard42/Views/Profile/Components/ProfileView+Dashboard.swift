@@ -20,7 +20,7 @@ extension ProfileView {
 
         var body: some View {
             VStack(alignment: .leading, spacing: 20) {
-                Text("Dashboard")
+                Text("Tableau de bord")
                     .foregroundStyle(.primary)
                     .font(.headline)
 
@@ -34,7 +34,7 @@ extension ProfileView {
                     }
 
                     if !isSearchedProfile {
-                        DashboardLink(image: "calendar", title: "Événements") {
+                        DashboardLink(image: "calendar", title: "Évènements") {
                             UserEvents()
                         }
 
@@ -76,7 +76,7 @@ extension ProfileView.Dashboard {
         // MARK: - Properties
 
         let image: String
-        let title: String
+        let title: LocalizedStringResource
         let destination: () -> T
 
         // MARK: - Body

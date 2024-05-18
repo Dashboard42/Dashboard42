@@ -30,7 +30,7 @@ struct SettingsView: View {
         NavigationStack {
             List {
                 Section {
-                    Picker("Theme", selection: $colorscheme) {
+                    Picker("Thème", selection: $colorscheme) {
                         ForEach(AppColorScheme.allCases) {
                             Text($0.title)
                                 .tag($0.rawValue)
@@ -44,7 +44,7 @@ struct SettingsView: View {
                 }
 
                 Section {
-                    Picker("Language", selection: $language) {
+                    Picker("Langue", selection: $language) {
                         ForEach(AppLanguages.allCases) {
                             Text($0.title)
                                 .tag($0.rawValue)
@@ -59,7 +59,7 @@ struct SettingsView: View {
 
                 Section {
                     Picker("Logtime", selection: $logtime) {
-                        Text("Default")
+                        Text("Par défaut")
                             .tag(0)
 
                         ForEach(1...24, id: \.self) {

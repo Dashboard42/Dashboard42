@@ -14,12 +14,12 @@ extension ProfileView {
         // MARK: - Properties
 
         @Environment(\.store) private var store
-        @State private var selectedFilter = "Tous"
+        @State private var selectedFilter = String(localized: "Tous")
         @State private var searched = ""
 
         private var events: [Api.Event] {
             let filteredEvents =
-                selectedFilter == "Tous"
+                selectedFilter == String(localized: "Tous")
                 ? store.userEvents : store.userEvents.filter { $0.kind.capitalized == selectedFilter }
 
             guard !searched.isEmpty else { return filteredEvents }
@@ -66,7 +66,7 @@ extension ProfileView.UserEvents {
             self._selection = selection
 
             var filters: Set<String> = Set(events.map(\.kind.capitalized))
-            filters.insert("Tous")
+            filters.insert(String(localized: "Tous"))
 
             self.filters = Array(filters).sorted()
         }
@@ -75,7 +75,7 @@ extension ProfileView.UserEvents {
 
         var body: some View {
             Menu {
-                Picker("Select a filter", selection: $selection) {
+                Picker("Sélectionner un filtre", selection: $selection) {
                     ForEach(filters, id: \.self, content: Text.init)
                 }
             } label: {
