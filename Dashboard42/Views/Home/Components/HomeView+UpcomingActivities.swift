@@ -44,9 +44,9 @@ extension HomeView {
                         ExamList(exams: store.userExams, maxLength: 3)
                     }
 
-//                    if !store.userScales.isEmpty {
-//                        ScaleList(scales: store.userScales, maxLength: 3)
-//                    }
+                    //                    if !store.userScales.isEmpty {
+                    //                        ScaleList(scales: store.userScales, maxLength: 3)
+                    //                    }
 
                     if !store.userEvents.isEmpty {
                         EventList(events: userEvents, maxLength: 3)
@@ -103,9 +103,9 @@ extension HomeView.UpcomingActivities {
                     if selection == .events && !events.isEmpty {
                         EventList(events: events)
                     }
-//                    else if selection == .scales && !scales.isEmpty {
-//                        ScaleList(scales: scales)
-//                    }
+                    //                    else if selection == .scales && !scales.isEmpty {
+                    //                        ScaleList(scales: scales)
+                    //                    }
                     else {
                         ContentUnavailableView(
                             selection.unavailableTitle,

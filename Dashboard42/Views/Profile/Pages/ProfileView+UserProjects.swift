@@ -22,7 +22,8 @@ extension ProfileView {
         private var filteredProjects: [Api.User.Projects] {
             let cursusId = cursus.first(where: { $0.cursus.name.capitalized == selectedFilter })?.cursus.id
             var filteredProjects =
-                selectedFilter == String(localized: "Tous") ? projects : projects.filter { $0.cursusIds.first == cursusId }
+                selectedFilter == String(localized: "Tous")
+                ? projects : projects.filter { $0.cursusIds.first == cursusId }
             filteredProjects =
                 searched.isEmpty
                 ? filteredProjects

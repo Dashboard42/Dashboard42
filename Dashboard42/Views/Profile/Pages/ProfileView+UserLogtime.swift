@@ -207,7 +207,9 @@ extension ProfileView {
 
             let newDateFormatter = DateFormatter()
             newDateFormatter.dateFormat = "EE dd MMM yyyy"
-            newDateFormatter.locale = Locale(identifier: UserDefaults.standard.string(forKey: Constants.AppStorage.userLanguage) ?? "fr")
+            newDateFormatter.locale = Locale(
+                identifier: UserDefaults.standard.string(forKey: Constants.AppStorage.userLanguage) ?? "fr"
+            )
 
             return newDateFormatter.string(from: date).capitalized
         }

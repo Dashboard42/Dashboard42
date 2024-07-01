@@ -13,7 +13,9 @@ extension Date {
     static var currentMonthDate: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM yyyy"
-        dateFormatter.locale = Locale(identifier: UserDefaults.standard.string(forKey: Constants.AppStorage.userLanguage) ?? "fr")
+        dateFormatter.locale = Locale(
+            identifier: UserDefaults.standard.string(forKey: Constants.AppStorage.userLanguage) ?? "fr"
+        )
 
         return dateFormatter.string(from: .now).capitalized
     }

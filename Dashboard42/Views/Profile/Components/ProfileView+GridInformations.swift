@@ -21,7 +21,10 @@ extension ProfileView {
 
         var body: some View {
             HStack {
-                GridInformationsItem(title: "Emplacement", value: location != nil ? "\(location!.uppercased())" : "Indéfinie")
+                GridInformationsItem(
+                    title: "Emplacement",
+                    value: location != nil ? "\(location!.uppercased())" : "Indéfinie"
+                )
                 GridInformationsItem(title: "Grade", value: grade != nil ? "\(grade!)" : "Indéfinie")
                 GridInformationsItem(title: "Promotion", value: "\(poolYear)")
             }

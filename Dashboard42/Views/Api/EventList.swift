@@ -106,7 +106,11 @@ extension EventList {
         var body: some View {
             List {
                 Section("Informations") {
-                    HorizontalRow(title: "Date", value: "\(event.beginAt.formatted(.dateTime.day().month().year().hour().minute().locale(locale)))")
+                    HorizontalRow(
+                        title: "Date",
+                        value:
+                            "\(event.beginAt.formatted(.dateTime.day().month().year().hour().minute().locale(locale)))"
+                    )
                     HorizontalRow(title: "Durée", value: Date.duration(beginAt: event.beginAt, endAt: event.endAt))
                     HorizontalRow(title: "Inscrit", value: userIsSubscribe ? "Oui" : "Non")
                     HorizontalRow(title: "Participants", value: "\(event.numberOfSubscribers)")

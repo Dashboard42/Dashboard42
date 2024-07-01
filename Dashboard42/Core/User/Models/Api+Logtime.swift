@@ -23,7 +23,9 @@ extension Api {
         var fullmonth: String {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM"
-            dateFormatter.locale = Locale(identifier: UserDefaults.standard.string(forKey: Constants.AppStorage.userLanguage) ?? "fr")
+            dateFormatter.locale = Locale(
+                identifier: UserDefaults.standard.string(forKey: Constants.AppStorage.userLanguage) ?? "fr"
+            )
 
             guard let date = dateFormatter.date(from: month) else { return "Indéfinie" }
 

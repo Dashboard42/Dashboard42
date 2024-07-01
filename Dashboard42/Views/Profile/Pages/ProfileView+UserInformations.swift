@@ -10,11 +10,11 @@ import SwiftUI
 extension ProfileView {
 
     struct UserInformations: View {
-        
+
         // MARK: - Properties
-        
+
         let user: Api.User
-        
+
         private var grade: String? { user.mainCursus?.grade }
         private var level: String? { user.mainCursus?.level.formatted() }
         private var correctionPoints: String { user.correctionPoint.formatted() }

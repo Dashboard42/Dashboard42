@@ -47,7 +47,7 @@ extension ExamList {
         // MARK: - Properties
 
         let exam: Api.Exam
-        
+
         private var locale: Locale {
             Locale(identifier: UserDefaults.standard.string(forKey: Constants.AppStorage.userLanguage) ?? "fr")
         }
@@ -60,7 +60,8 @@ extension ExamList {
                     Section("Informations") {
                         HorizontalRow(
                             title: "Date",
-                            value: "\(exam.beginAt.formatted(.dateTime.day().month().year().hour().minute().locale(locale)))"
+                            value:
+                                "\(exam.beginAt.formatted(.dateTime.day().month().year().hour().minute().locale(locale)))"
                         )
                         HorizontalRow(title: "Durée", value: Date.duration(beginAt: exam.beginAt, endAt: exam.endAt))
                         HorizontalRow(title: "Participants", value: "\(exam.numberOfSubscribers)")

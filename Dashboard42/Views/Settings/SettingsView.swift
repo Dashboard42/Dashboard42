@@ -20,7 +20,9 @@ struct SettingsView: View {
 
     @State private var colorscheme = UserDefaults.standard.integer(forKey: Constants.AppStorage.userColorscheme)
     @State private var language =
-        UserDefaults.standard.string(forKey: Constants.AppStorage.userLanguage) ?? Locale.current.identifier
+        UserDefaults.standard.string(forKey: Constants.AppStorage.userLanguage) ?? Locale.current.identifier.components(
+            separatedBy: "_"
+        ).first ?? "en"
     @State private var logtime = UserDefaults.standard.integer(forKey: Constants.AppStorage.userLogtime)
     @State private var showLogoutAlert = false
 
