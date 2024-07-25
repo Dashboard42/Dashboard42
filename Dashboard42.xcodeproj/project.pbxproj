@@ -10,6 +10,8 @@
 		01454F162C52A2E300AC5B12 /* Dashboard42Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01454F152C52A2E300AC5B12 /* Dashboard42Tests.swift */; };
 		01454F232C52A36200AC5B12 /* Dashboard42UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01454F222C52A36200AC5B12 /* Dashboard42UITests.swift */; };
 		01454F252C52A36200AC5B12 /* Dashboard42UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01454F242C52A36200AC5B12 /* Dashboard42UITestsLaunchTests.swift */; };
+		01454F392C52A9FE00AC5B12 /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01454F382C52A9FE00AC5B12 /* AsyncButton.swift */; };
+		01454F3D2C52AA3000AC5B12 /* AsyncButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01454F3C2C52AA3000AC5B12 /* AsyncButtonTests.swift */; };
 		01D976B12BE8D0D900DB9F30 /* Dashboard42App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */; };
 		01D976B32BE8D0D900DB9F30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D976B22BE8D0D900DB9F30 /* ContentView.swift */; };
 		01D976B52BE8D0DA00DB9F30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01D976B42BE8D0DA00DB9F30 /* Assets.xcassets */; };
@@ -39,11 +41,14 @@
 		01454F242C52A36200AC5B12 /* Dashboard42UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard42UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		01454F2B2C52A39E00AC5B12 /* Dashboard42.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Dashboard42.xctestplan; sourceTree = "<group>"; };
 		01454F2C2C52A40900AC5B12 /* XcodeWarnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = XcodeWarnings.xcconfig; sourceTree = "<group>"; };
-		01454F302C52A7A300AC5B12 /* Dashboard42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dashboard42.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01454F312C52A85700AC5B12 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		01454F322C52A86000AC5B12 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
-		01454F332C52A8FF00AC5B12 /* Dashboard42Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dashboard42Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		01454F342C52A8FF00AC5B12 /* Dashboard42UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dashboard42UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01454F382C52A9FE00AC5B12 /* AsyncButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
+		01454F3C2C52AA3000AC5B12 /* AsyncButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncButtonTests.swift; sourceTree = "<group>"; };
+		01454F3F2C52AFCC00AC5B12 /* Dashboard42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Dashboard42.app; path = "/Users/marcmosca/Developer/Xcode/Dashboard42/build/Debug-iphoneos/Dashboard42.app"; sourceTree = "<absolute>"; };
+		01454F402C52AFCC00AC5B12 /* Dashboard42Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Dashboard42Tests.xctest; path = "/Users/marcmosca/Developer/Xcode/Dashboard42/build/Debug-iphoneos/Dashboard42.app/PlugIns/Dashboard42Tests.xctest"; sourceTree = "<absolute>"; };
+		01454F412C52AFCC00AC5B12 /* Dashboard42UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Dashboard42UITests.xctest; path = "/Users/marcmosca/Developer/Xcode/Dashboard42/build/Debug-iphoneos/Dashboard42UITests-Runner.app/PlugIns/Dashboard42UITests.xctest"; sourceTree = "<absolute>"; };
+		01454F422C52B07600AC5B12 /* .swift-format */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-format"; sourceTree = "<group>"; };
 		0170E9A12BE8D39E00D59D45 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		0170E9A42BE8D48300D59D45 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard42App.swift; sourceTree = "<group>"; };
@@ -88,10 +93,51 @@
 		01454F212C52A36200AC5B12 /* Dashboard42UITests */ = {
 			isa = PBXGroup;
 			children = (
+				01454F3A2C52AA0D00AC5B12 /* Components */,
 				01454F222C52A36200AC5B12 /* Dashboard42UITests.swift */,
 				01454F242C52A36200AC5B12 /* Dashboard42UITestsLaunchTests.swift */,
 			);
 			path = Dashboard42UITests;
+			sourceTree = "<group>";
+		};
+		01454F352C52A9E900AC5B12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				01454F362C52A9EF00AC5B12 /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		01454F362C52A9EF00AC5B12 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				01454F372C52A9F400AC5B12 /* Atoms */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		01454F372C52A9F400AC5B12 /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				01454F382C52A9FE00AC5B12 /* AsyncButton.swift */,
+			);
+			path = Atoms;
+			sourceTree = "<group>";
+		};
+		01454F3A2C52AA0D00AC5B12 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				01454F3B2C52AA1300AC5B12 /* Atoms */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		01454F3B2C52AA1300AC5B12 /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				01454F3C2C52AA3000AC5B12 /* AsyncButtonTests.swift */,
+			);
+			path = Atoms;
 			sourceTree = "<group>";
 		};
 		0170E9AA2BE8D69C00D59D45 /* Ressources */ = {
@@ -105,18 +151,16 @@
 		01D976A42BE8D0D900DB9F30 = {
 			isa = PBXGroup;
 			children = (
-				01454F322C52A86000AC5B12 /* Release.xcconfig */,
-				01454F312C52A85700AC5B12 /* Development.xcconfig */,
-				01454F2C2C52A40900AC5B12 /* XcodeWarnings.xcconfig */,
-				01454F2B2C52A39E00AC5B12 /* Dashboard42.xctestplan */,
+				01454F422C52B07600AC5B12 /* .swift-format */,
 				01D976AF2BE8D0D900DB9F30 /* Dashboard42 */,
 				01454F142C52A2E300AC5B12 /* Dashboard42Tests */,
 				01454F212C52A36200AC5B12 /* Dashboard42UITests */,
 				0170E9A12BE8D39E00D59D45 /* .gitignore */,
+				01454F2B2C52A39E00AC5B12 /* Dashboard42.xctestplan */,
+				01454F312C52A85700AC5B12 /* Development.xcconfig */,
 				0170E9A42BE8D48300D59D45 /* README.md */,
-				01454F302C52A7A300AC5B12 /* Dashboard42.app */,
-				01454F332C52A8FF00AC5B12 /* Dashboard42Tests.xctest */,
-				01454F342C52A8FF00AC5B12 /* Dashboard42UITests.xctest */,
+				01454F322C52A86000AC5B12 /* Release.xcconfig */,
+				01454F2C2C52A40900AC5B12 /* XcodeWarnings.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +169,7 @@
 			children = (
 				01D976B62BE8D0DA00DB9F30 /* Preview Content */,
 				0170E9AA2BE8D69C00D59D45 /* Ressources */,
+				01454F352C52A9E900AC5B12 /* Views */,
 				01D976B22BE8D0D900DB9F30 /* ContentView.swift */,
 				01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */,
 			);
@@ -157,7 +202,7 @@
 			);
 			name = Dashboard42Tests;
 			productName = Dashboard42Tests;
-			productReference = 01454F332C52A8FF00AC5B12 /* Dashboard42Tests.xctest */;
+			productReference = 01454F402C52AFCC00AC5B12 /* Dashboard42Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		01454F1F2C52A36200AC5B12 /* Dashboard42UITests */ = {
@@ -175,7 +220,7 @@
 			);
 			name = Dashboard42UITests;
 			productName = Dashboard42UITests;
-			productReference = 01454F342C52A8FF00AC5B12 /* Dashboard42UITests.xctest */;
+			productReference = 01454F412C52AFCC00AC5B12 /* Dashboard42UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		01D976AC2BE8D0D900DB9F30 /* Dashboard42 */ = {
@@ -185,6 +230,7 @@
 				01D976A92BE8D0D900DB9F30 /* Sources */,
 				01D976AA2BE8D0D900DB9F30 /* Frameworks */,
 				01D976AB2BE8D0D900DB9F30 /* Resources */,
+				01454F3E2C52AC6D00AC5B12 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -192,7 +238,7 @@
 			);
 			name = Dashboard42;
 			productName = Dashboard42;
-			productReference = 01454F302C52A7A300AC5B12 /* Dashboard42.app */;
+			productReference = 01454F3F2C52AFCC00AC5B12 /* Dashboard42.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -264,6 +310,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01454F3E2C52AC6D00AC5B12 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swift-format >/dev/null; then\n    echo \"Formatting with swift-format\"\n    swift-format format --in-place --recursive ${PROJECT_DIR}\n    echo \"Linting with swift-format\"\n    swift-format lint --recursive --strict ${PROJECT_DIR}\nelse\n    echo \"warning: swift-format not installed\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		01454F0F2C52A2E300AC5B12 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -279,6 +347,7 @@
 			files = (
 				01454F232C52A36200AC5B12 /* Dashboard42UITests.swift in Sources */,
 				01454F252C52A36200AC5B12 /* Dashboard42UITestsLaunchTests.swift in Sources */,
+				01454F3D2C52AA3000AC5B12 /* AsyncButtonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +357,7 @@
 			files = (
 				01D976B32BE8D0D900DB9F30 /* ContentView.swift in Sources */,
 				01D976B12BE8D0D900DB9F30 /* Dashboard42App.swift in Sources */,
+				01454F392C52A9FE00AC5B12 /* AsyncButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +489,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -484,7 +554,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
