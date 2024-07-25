@@ -34,13 +34,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01454EAF2C529E8800AC5B12 /* Dashboard42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Dashboard42.app; path = "/Users/marcmosca/Developer/Xcode/Dashboard42/build/Debug-iphoneos/Dashboard42.app"; sourceTree = "<absolute>"; };
-		01454F132C52A2E300AC5B12 /* Dashboard42Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Dashboard42Tests.xctest; path = "/Users/marcmosca/Developer/Xcode/Dashboard42/build/Debug-iphoneos/Dashboard42.app/PlugIns/Dashboard42Tests.xctest"; sourceTree = "<absolute>"; };
 		01454F152C52A2E300AC5B12 /* Dashboard42Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard42Tests.swift; sourceTree = "<group>"; };
-		01454F202C52A36200AC5B12 /* Dashboard42UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Dashboard42UITests.xctest; path = "/Users/marcmosca/Developer/Xcode/Dashboard42/build/Debug-iphoneos/Dashboard42UITests-Runner.app/PlugIns/Dashboard42UITests.xctest"; sourceTree = "<absolute>"; };
 		01454F222C52A36200AC5B12 /* Dashboard42UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard42UITests.swift; sourceTree = "<group>"; };
 		01454F242C52A36200AC5B12 /* Dashboard42UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard42UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		01454F2B2C52A39E00AC5B12 /* Dashboard42.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Dashboard42.xctestplan; sourceTree = "<group>"; };
+		01454F2C2C52A40900AC5B12 /* XcodeWarnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = XcodeWarnings.xcconfig; sourceTree = "<group>"; };
+		01454F2D2C52A51700AC5B12 /* Dashboard42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dashboard42.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01454F2E2C52A55B00AC5B12 /* Dashboard42Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dashboard42Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01454F2F2C52A55B00AC5B12 /* Dashboard42UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dashboard42UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0170E9A12BE8D39E00D59D45 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		0170E9A42BE8D48300D59D45 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard42App.swift; sourceTree = "<group>"; };
@@ -102,12 +103,16 @@
 		01D976A42BE8D0D900DB9F30 = {
 			isa = PBXGroup;
 			children = (
+				01454F2C2C52A40900AC5B12 /* XcodeWarnings.xcconfig */,
 				01454F2B2C52A39E00AC5B12 /* Dashboard42.xctestplan */,
 				01D976AF2BE8D0D900DB9F30 /* Dashboard42 */,
 				01454F142C52A2E300AC5B12 /* Dashboard42Tests */,
 				01454F212C52A36200AC5B12 /* Dashboard42UITests */,
 				0170E9A12BE8D39E00D59D45 /* .gitignore */,
 				0170E9A42BE8D48300D59D45 /* README.md */,
+				01454F2D2C52A51700AC5B12 /* Dashboard42.app */,
+				01454F2E2C52A55B00AC5B12 /* Dashboard42Tests.xctest */,
+				01454F2F2C52A55B00AC5B12 /* Dashboard42UITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,7 +153,7 @@
 			);
 			name = Dashboard42Tests;
 			productName = Dashboard42Tests;
-			productReference = 01454F132C52A2E300AC5B12 /* Dashboard42Tests.xctest */;
+			productReference = 01454F2E2C52A55B00AC5B12 /* Dashboard42Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		01454F1F2C52A36200AC5B12 /* Dashboard42UITests */ = {
@@ -166,7 +171,7 @@
 			);
 			name = Dashboard42UITests;
 			productName = Dashboard42UITests;
-			productReference = 01454F202C52A36200AC5B12 /* Dashboard42UITests.xctest */;
+			productReference = 01454F2F2C52A55B00AC5B12 /* Dashboard42UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		01D976AC2BE8D0D900DB9F30 /* Dashboard42 */ = {
@@ -183,7 +188,7 @@
 			);
 			name = Dashboard42;
 			productName = Dashboard42;
-			productReference = 01454EAF2C529E8800AC5B12 /* Dashboard42.app */;
+			productReference = 01454F2D2C52A51700AC5B12 /* Dashboard42.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -375,6 +380,7 @@
 		};
 		01D976B92BE8D0DA00DB9F30 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01454F2C2C52A40900AC5B12 /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -433,11 +439,13 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		01D976BA2BE8D0DA00DB9F30 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01454F2C2C52A40900AC5B12 /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -488,6 +496,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -495,8 +504,6 @@
 		01D976BC2BE8D0DA00DB9F30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Dashboard42/Preview Content\"";
@@ -518,11 +525,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.marcmosca.Dashboard42;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -530,8 +533,6 @@
 		01D976BD2BE8D0DA00DB9F30 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Dashboard42/Preview Content\"";
@@ -553,11 +554,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.marcmosca.Dashboard42;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
