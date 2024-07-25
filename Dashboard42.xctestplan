@@ -1,0 +1,35 @@
+{
+  "configurations" : [
+    {
+      "id" : "C625DA46-6245-40A2-AD1F-6437083A3D95",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Dashboard42.xcodeproj",
+      "identifier" : "01D976AC2BE8D0D900DB9F30",
+      "name" : "Dashboard42"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Dashboard42.xcodeproj",
+        "identifier" : "01454F122C52A2E300AC5B12",
+        "name" : "Dashboard42Tests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Dashboard42.xcodeproj",
+        "identifier" : "01454F1F2C52A36200AC5B12",
+        "name" : "Dashboard42UITests"
+      }
+    }
+  ],
+  "version" : 1
+}

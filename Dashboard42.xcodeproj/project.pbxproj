@@ -7,14 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01454F162C52A2E300AC5B12 /* Dashboard42Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01454F152C52A2E300AC5B12 /* Dashboard42Tests.swift */; };
+		01454F232C52A36200AC5B12 /* Dashboard42UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01454F222C52A36200AC5B12 /* Dashboard42UITests.swift */; };
+		01454F252C52A36200AC5B12 /* Dashboard42UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01454F242C52A36200AC5B12 /* Dashboard42UITestsLaunchTests.swift */; };
 		01D976B12BE8D0D900DB9F30 /* Dashboard42App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */; };
 		01D976B32BE8D0D900DB9F30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D976B22BE8D0D900DB9F30 /* ContentView.swift */; };
 		01D976B52BE8D0DA00DB9F30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01D976B42BE8D0DA00DB9F30 /* Assets.xcassets */; };
 		01D976B82BE8D0DA00DB9F30 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01D976B72BE8D0DA00DB9F30 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		01454F172C52A2E300AC5B12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01D976A52BE8D0D900DB9F30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01D976AC2BE8D0D900DB9F30;
+			remoteInfo = Dashboard42;
+		};
+		01454F262C52A36200AC5B12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01D976A52BE8D0D900DB9F30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01D976AC2BE8D0D900DB9F30;
+			remoteInfo = Dashboard42;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		01454EAF2C529E8800AC5B12 /* Dashboard42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dashboard42.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01454EAF2C529E8800AC5B12 /* Dashboard42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Dashboard42.app; path = "/Users/marcmosca/Developer/Xcode/Dashboard42/build/Debug-iphoneos/Dashboard42.app"; sourceTree = "<absolute>"; };
+		01454F132C52A2E300AC5B12 /* Dashboard42Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Dashboard42Tests.xctest; path = "/Users/marcmosca/Developer/Xcode/Dashboard42/build/Debug-iphoneos/Dashboard42.app/PlugIns/Dashboard42Tests.xctest"; sourceTree = "<absolute>"; };
+		01454F152C52A2E300AC5B12 /* Dashboard42Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard42Tests.swift; sourceTree = "<group>"; };
+		01454F202C52A36200AC5B12 /* Dashboard42UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Dashboard42UITests.xctest; path = "/Users/marcmosca/Developer/Xcode/Dashboard42/build/Debug-iphoneos/Dashboard42UITests-Runner.app/PlugIns/Dashboard42UITests.xctest"; sourceTree = "<absolute>"; };
+		01454F222C52A36200AC5B12 /* Dashboard42UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard42UITests.swift; sourceTree = "<group>"; };
+		01454F242C52A36200AC5B12 /* Dashboard42UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard42UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		01454F2B2C52A39E00AC5B12 /* Dashboard42.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Dashboard42.xctestplan; sourceTree = "<group>"; };
 		0170E9A12BE8D39E00D59D45 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		0170E9A42BE8D48300D59D45 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard42App.swift; sourceTree = "<group>"; };
@@ -24,6 +50,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		01454F102C52A2E300AC5B12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01454F1D2C52A36200AC5B12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		01D976AA2BE8D0D900DB9F30 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -34,6 +74,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01454F142C52A2E300AC5B12 /* Dashboard42Tests */ = {
+			isa = PBXGroup;
+			children = (
+				01454F152C52A2E300AC5B12 /* Dashboard42Tests.swift */,
+			);
+			path = Dashboard42Tests;
+			sourceTree = "<group>";
+		};
+		01454F212C52A36200AC5B12 /* Dashboard42UITests */ = {
+			isa = PBXGroup;
+			children = (
+				01454F222C52A36200AC5B12 /* Dashboard42UITests.swift */,
+				01454F242C52A36200AC5B12 /* Dashboard42UITestsLaunchTests.swift */,
+			);
+			path = Dashboard42UITests;
+			sourceTree = "<group>";
+		};
 		0170E9AA2BE8D69C00D59D45 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
@@ -45,10 +102,12 @@
 		01D976A42BE8D0D900DB9F30 = {
 			isa = PBXGroup;
 			children = (
+				01454F2B2C52A39E00AC5B12 /* Dashboard42.xctestplan */,
 				01D976AF2BE8D0D900DB9F30 /* Dashboard42 */,
+				01454F142C52A2E300AC5B12 /* Dashboard42Tests */,
+				01454F212C52A36200AC5B12 /* Dashboard42UITests */,
 				0170E9A12BE8D39E00D59D45 /* .gitignore */,
 				0170E9A42BE8D48300D59D45 /* README.md */,
-				01454EAF2C529E8800AC5B12 /* Dashboard42.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +133,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		01454F122C52A2E300AC5B12 /* Dashboard42Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01454F192C52A2E300AC5B12 /* Build configuration list for PBXNativeTarget "Dashboard42Tests" */;
+			buildPhases = (
+				01454F0F2C52A2E300AC5B12 /* Sources */,
+				01454F102C52A2E300AC5B12 /* Frameworks */,
+				01454F112C52A2E300AC5B12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01454F182C52A2E300AC5B12 /* PBXTargetDependency */,
+			);
+			name = Dashboard42Tests;
+			productName = Dashboard42Tests;
+			productReference = 01454F132C52A2E300AC5B12 /* Dashboard42Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		01454F1F2C52A36200AC5B12 /* Dashboard42UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01454F282C52A36200AC5B12 /* Build configuration list for PBXNativeTarget "Dashboard42UITests" */;
+			buildPhases = (
+				01454F1C2C52A36200AC5B12 /* Sources */,
+				01454F1D2C52A36200AC5B12 /* Frameworks */,
+				01454F1E2C52A36200AC5B12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01454F272C52A36200AC5B12 /* PBXTargetDependency */,
+			);
+			name = Dashboard42UITests;
+			productName = Dashboard42UITests;
+			productReference = 01454F202C52A36200AC5B12 /* Dashboard42UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		01D976AC2BE8D0D900DB9F30 /* Dashboard42 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01D976BB2BE8D0DA00DB9F30 /* Build configuration list for PBXNativeTarget "Dashboard42" */;
@@ -98,9 +193,17 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
+					01454F122C52A2E300AC5B12 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 01D976AC2BE8D0D900DB9F30;
+					};
+					01454F1F2C52A36200AC5B12 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 01D976AC2BE8D0D900DB9F30;
+					};
 					01D976AC2BE8D0D900DB9F30 = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -121,11 +224,27 @@
 			projectRoot = "";
 			targets = (
 				01D976AC2BE8D0D900DB9F30 /* Dashboard42 */,
+				01454F122C52A2E300AC5B12 /* Dashboard42Tests */,
+				01454F1F2C52A36200AC5B12 /* Dashboard42UITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		01454F112C52A2E300AC5B12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01454F1E2C52A36200AC5B12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		01D976AB2BE8D0D900DB9F30 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -138,6 +257,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		01454F0F2C52A2E300AC5B12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01454F162C52A2E300AC5B12 /* Dashboard42Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01454F1C2C52A36200AC5B12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01454F232C52A36200AC5B12 /* Dashboard42UITests.swift in Sources */,
+				01454F252C52A36200AC5B12 /* Dashboard42UITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		01D976A92BE8D0D900DB9F30 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -149,7 +285,94 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		01454F182C52A2E300AC5B12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01D976AC2BE8D0D900DB9F30 /* Dashboard42 */;
+			targetProxy = 01454F172C52A2E300AC5B12 /* PBXContainerItemProxy */;
+		};
+		01454F272C52A36200AC5B12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01D976AC2BE8D0D900DB9F30 /* Dashboard42 */;
+			targetProxy = 01454F262C52A36200AC5B12 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		01454F1A2C52A2E300AC5B12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BHH429N5DK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.marcmosca.Dashboard42Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dashboard42.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Dashboard42";
+			};
+			name = Debug;
+		};
+		01454F1B2C52A2E300AC5B12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BHH429N5DK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.marcmosca.Dashboard42Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dashboard42.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Dashboard42";
+			};
+			name = Release;
+		};
+		01454F292C52A36200AC5B12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BHH429N5DK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.marcmosca.Dashboard42UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Dashboard42;
+			};
+			name = Debug;
+		};
+		01454F2A2C52A36200AC5B12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BHH429N5DK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.marcmosca.Dashboard42UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Dashboard42;
+			};
+			name = Release;
+		};
 		01D976B92BE8D0DA00DB9F30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -342,6 +565,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		01454F192C52A2E300AC5B12 /* Build configuration list for PBXNativeTarget "Dashboard42Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01454F1A2C52A2E300AC5B12 /* Debug */,
+				01454F1B2C52A2E300AC5B12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01454F282C52A36200AC5B12 /* Build configuration list for PBXNativeTarget "Dashboard42UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01454F292C52A36200AC5B12 /* Debug */,
+				01454F2A2C52A36200AC5B12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		01D976A82BE8D0D900DB9F30 /* Build configuration list for PBXProject "Dashboard42" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
