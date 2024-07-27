@@ -12,8 +12,23 @@ import XCTest
 
 final class AsyncButtonTests: XCTestCase {
 
+    private var app: XCUIApplication!
+
+    @MainActor
+    override func setUpWithError() throws {
+        continueAfterFailure = false
+        app = XCUIApplication()
+        app.launch()
+    }
+
+    override func tearDownWithError() throws {
+        app = nil
+    }
+
     @MainActor
     func test_default_ShouldHaveRightTextLabel() throws {
-        XCTFail()
+        let greatings = app.staticTexts["greatings"]
+
+        XCTAssertTrue(greatings.exists)
     }
 }

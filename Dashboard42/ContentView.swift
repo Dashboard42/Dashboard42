@@ -14,6 +14,7 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.blue)
             Text("Hello, World!")
+                .accessibilityIdentifier("greatings")
         }
     }
 }

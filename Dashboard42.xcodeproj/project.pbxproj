@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		01454F392C52A9FE00AC5B12 /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01454F382C52A9FE00AC5B12 /* AsyncButton.swift */; };
 		01454F3D2C52AA3000AC5B12 /* AsyncButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01454F3C2C52AA3000AC5B12 /* AsyncButtonTests.swift */; };
+		0168B7D22C54F40D005A8FF3 /* Dashboard42Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168B7D12C54F40D005A8FF3 /* Dashboard42Tests.swift */; };
 		01D976B12BE8D0D900DB9F30 /* Dashboard42App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */; };
 		01D976B32BE8D0D900DB9F30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D976B22BE8D0D900DB9F30 /* ContentView.swift */; };
 		01D976B52BE8D0DA00DB9F30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01D976B42BE8D0DA00DB9F30 /* Assets.xcassets */; };
@@ -39,10 +40,11 @@
 		01454F322C52A86000AC5B12 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		01454F382C52A9FE00AC5B12 /* AsyncButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
 		01454F3C2C52AA3000AC5B12 /* AsyncButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncButtonTests.swift; sourceTree = "<group>"; };
-		01454F402C52AFCC00AC5B12 /* Dashboard42Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Dashboard42Tests.xctest; path = "/Users/marcmosca/Developer/Xcode/Dashboard42/build/Debug-iphoneos/Dashboard42.app/PlugIns/Dashboard42Tests.xctest"; sourceTree = "<absolute>"; };
-		01454F412C52AFCC00AC5B12 /* Dashboard42UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Dashboard42UITests.xctest; path = "/Users/marcmosca/Developer/Xcode/Dashboard42/build/Debug-iphoneos/Dashboard42UITests-Runner.app/PlugIns/Dashboard42UITests.xctest"; sourceTree = "<absolute>"; };
 		01454F422C52B07600AC5B12 /* .swift-format */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-format"; sourceTree = "<group>"; };
 		01454F432C52B8B200AC5B12 /* Dashboard42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dashboard42.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0168B7CC2C54F236005A8FF3 /* Dashboard42Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dashboard42Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0168B7CD2C54F236005A8FF3 /* Dashboard42UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dashboard42UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0168B7D12C54F40D005A8FF3 /* Dashboard42Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard42Tests.swift; sourceTree = "<group>"; };
 		0170E9A12BE8D39E00D59D45 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		0170E9A42BE8D48300D59D45 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard42App.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		01454F142C52A2E300AC5B12 /* Dashboard42Tests */ = {
 			isa = PBXGroup;
 			children = (
+				0168B7D12C54F40D005A8FF3 /* Dashboard42Tests.swift */,
 			);
 			path = Dashboard42Tests;
 			sourceTree = "<group>";
@@ -153,6 +156,8 @@
 				01454F322C52A86000AC5B12 /* Release.xcconfig */,
 				01454F2C2C52A40900AC5B12 /* XcodeWarnings.xcconfig */,
 				01454F432C52B8B200AC5B12 /* Dashboard42.app */,
+				0168B7CC2C54F236005A8FF3 /* Dashboard42Tests.xctest */,
+				0168B7CD2C54F236005A8FF3 /* Dashboard42UITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,7 +199,7 @@
 			);
 			name = Dashboard42Tests;
 			productName = Dashboard42Tests;
-			productReference = 01454F402C52AFCC00AC5B12 /* Dashboard42Tests.xctest */;
+			productReference = 0168B7CC2C54F236005A8FF3 /* Dashboard42Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		01454F1F2C52A36200AC5B12 /* Dashboard42UITests */ = {
@@ -212,7 +217,7 @@
 			);
 			name = Dashboard42UITests;
 			productName = Dashboard42UITests;
-			productReference = 01454F412C52AFCC00AC5B12 /* Dashboard42UITests.xctest */;
+			productReference = 0168B7CD2C54F236005A8FF3 /* Dashboard42UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		01D976AC2BE8D0D900DB9F30 /* Dashboard42 */ = {
@@ -222,7 +227,7 @@
 				01D976A92BE8D0D900DB9F30 /* Sources */,
 				01D976AA2BE8D0D900DB9F30 /* Frameworks */,
 				01D976AB2BE8D0D900DB9F30 /* Resources */,
-				01454F3E2C52AC6D00AC5B12 /* ShellScript */,
+				01454F3E2C52AC6D00AC5B12 /* Linter & Formatter */,
 			);
 			buildRules = (
 			);
@@ -245,6 +250,7 @@
 				TargetAttributes = {
 					01454F122C52A2E300AC5B12 = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 						TestTargetID = 01D976AC2BE8D0D900DB9F30;
 					};
 					01454F1F2C52A36200AC5B12 = {
@@ -303,7 +309,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		01454F3E2C52AC6D00AC5B12 /* ShellScript */ = {
+		01454F3E2C52AC6D00AC5B12 /* Linter & Formatter */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -313,13 +319,14 @@
 			);
 			inputPaths = (
 			);
+			name = "Linter & Formatter";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swift-format >/dev/null; then\n    echo \"Formatting with swift-format\"\n    swift-format format --in-place --recursive ${PROJECT_DIR}\n#    echo \"Linting with swift-format\"\n#    swift-format lint --recursive --strict ${PROJECT_DIR}\nelse\n    echo \"warning: swift-format not installed\"\nfi\n";
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swift-format >/dev/null; then\n    echo \"Formatting with swift-format\"\n    swift-format format --in-place --recursive ${PROJECT_DIR}\n    echo \"Linting with swift-format\"\n    swift-format lint --recursive --strict ${PROJECT_DIR}\nelse\n    echo \"warning: swift-format not installed\"\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -329,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0168B7D22C54F40D005A8FF3 /* Dashboard42Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +378,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BHH429N5DK;
@@ -379,6 +388,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.marcmosca.Dashboard42Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dashboard42.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Dashboard42";
@@ -389,6 +399,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BHH429N5DK;

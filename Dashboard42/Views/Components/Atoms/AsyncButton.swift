@@ -25,7 +25,8 @@ struct AsyncButton<Label>: View where Label: View {
             },
             label: {
                 ZStack {
-                    label().opacity(isPerformingTask ? 0 : 1)
+                    label()
+                        .opacity(isPerformingTask ? 0 : 1)
 
                     if isPerformingTask {
                         ProgressView()
