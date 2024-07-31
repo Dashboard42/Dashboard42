@@ -12,6 +12,7 @@
 		01454F392C52A9FE00AC5B12 /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01454F382C52A9FE00AC5B12 /* AsyncButton.swift */; };
 		01454F3D2C52AA3000AC5B12 /* AsyncButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01454F3C2C52AA3000AC5B12 /* AsyncButtonTests.swift */; };
 		0168B7D22C54F40D005A8FF3 /* Dashboard42Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168B7D12C54F40D005A8FF3 /* Dashboard42Tests.swift */; };
+		017508822C5AA6B000B526CD /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017508812C5AA6B000B526CD /* AppIcon.swift */; };
 		01D976B12BE8D0D900DB9F30 /* Dashboard42App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */; };
 		01D976B32BE8D0D900DB9F30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D976B22BE8D0D900DB9F30 /* ContentView.swift */; };
 		01D976B52BE8D0DA00DB9F30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01D976B42BE8D0DA00DB9F30 /* Assets.xcassets */; };
@@ -43,12 +44,13 @@
 		01454F382C52A9FE00AC5B12 /* AsyncButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
 		01454F3C2C52AA3000AC5B12 /* AsyncButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncButtonTests.swift; sourceTree = "<group>"; };
 		01454F422C52B07600AC5B12 /* .swift-format */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-format"; sourceTree = "<group>"; };
-		01454F432C52B8B200AC5B12 /* Dashboard42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dashboard42.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0168B7CC2C54F236005A8FF3 /* Dashboard42Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dashboard42Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0168B7CD2C54F236005A8FF3 /* Dashboard42UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dashboard42UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01454F432C52B8B200AC5B12 /* Dashboard42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Dashboard42.app; path = "/Users/marcmosca/Developer/Xcode/Dashboard42/build/Debug-iphoneos/Dashboard42.app"; sourceTree = "<absolute>"; };
+		0168B7CC2C54F236005A8FF3 /* Dashboard42Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Dashboard42Tests.xctest; path = "/Users/marcmosca/Developer/Xcode/Dashboard42/build/Debug-iphoneos/Dashboard42.app/PlugIns/Dashboard42Tests.xctest"; sourceTree = "<absolute>"; };
+		0168B7CD2C54F236005A8FF3 /* Dashboard42UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Dashboard42UITests.xctest; path = "/Users/marcmosca/Developer/Xcode/Dashboard42/build/Debug-iphoneos/Dashboard42UITests-Runner.app/PlugIns/Dashboard42UITests.xctest"; sourceTree = "<absolute>"; };
 		0168B7D12C54F40D005A8FF3 /* Dashboard42Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard42Tests.swift; sourceTree = "<group>"; };
 		0170E9A12BE8D39E00D59D45 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		0170E9A42BE8D48300D59D45 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		017508812C5AA6B000B526CD /* AppIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
 		01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard42App.swift; sourceTree = "<group>"; };
 		01D976B22BE8D0D900DB9F30 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		01D976B42BE8D0DA00DB9F30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,13 +84,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		013972412C5A6BBF00228D1F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		01454F142C52A2E300AC5B12 /* Dashboard42Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				01454F382C52A9FE00AC5B12 /* AsyncButton.swift */,
+				017508812C5AA6B000B526CD /* AppIcon.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -166,10 +162,6 @@
 				0170E9A42BE8D48300D59D45 /* README.md */,
 				01454F322C52A86000AC5B12 /* Release.xcconfig */,
 				01454F2C2C52A40900AC5B12 /* XcodeWarnings.xcconfig */,
-				01454F432C52B8B200AC5B12 /* Dashboard42.app */,
-				0168B7CC2C54F236005A8FF3 /* Dashboard42Tests.xctest */,
-				0168B7CD2C54F236005A8FF3 /* Dashboard42UITests.xctest */,
-				013972412C5A6BBF00228D1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -349,6 +341,7 @@
 			files = (
 				01D976B32BE8D0D900DB9F30 /* ContentView.swift in Sources */,
 				01D976B12BE8D0D900DB9F30 /* Dashboard42App.swift in Sources */,
+				017508822C5AA6B000B526CD /* AppIcon.swift in Sources */,
 				01454F392C52A9FE00AC5B12 /* AsyncButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
