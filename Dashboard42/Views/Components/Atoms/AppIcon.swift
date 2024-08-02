@@ -26,6 +26,8 @@ struct AppIcon: View {
 
     var body: some View {
         Image(uiImage: UIImage(imageLiteralResourceName: appIcon))
+            .resizable()
+            .scaledToFill()
     }
 }
 

@@ -9,13 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "network")
-                .imageScale(.large)
-                .foregroundStyle(.blue)
-            Text("Hello, World!")
-                .accessibilityIdentifier("greatings")
-        }
+        OnBoardingView()
     }
 }
 
