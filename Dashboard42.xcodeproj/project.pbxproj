@@ -10,6 +10,17 @@
 		011DFDB92C5CD7F400C9E507 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011DFDB82C5CD7F400C9E507 /* OnBoardingView.swift */; };
 		013972432C5A6BBF00228D1F /* HTTPTypes in Frameworks */ = {isa = PBXBuildFile; productRef = 013972422C5A6BBF00228D1F /* HTTPTypes */; };
 		013972452C5A6BC200228D1F /* HTTPTypesFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 013972442C5A6BC200228D1F /* HTTPTypesFoundation */; };
+		013BEB862C60F10800560453 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 013BEB852C60F10800560453 /* Algorithms */; };
+		013BEB8E2C60F2D700560453 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013BEB8D2C60F2D700560453 /* AuthService.swift */; };
+		013BEB902C60F36200560453 /* AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013BEB8F2C60F36200560453 /* AuthUser.swift */; };
+		013BEB982C60F91100560453 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013BEB972C60F91100560453 /* Configuration.swift */; };
+		013BEB9A2C60FA7A00560453 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013BEB992C60FA7A00560453 /* Constant.swift */; };
+		013BEB9D2C60FD7700560453 /* HTTPTypes+HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013BEB9C2C60FD7700560453 /* HTTPTypes+HTTPRequest.swift */; };
+		013BEBA02C61041C00560453 /* AuthEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013BEB9F2C61041C00560453 /* AuthEndpoints.swift */; };
+		013BEBA22C61073100560453 /* QueryItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013BEBA12C61073100560453 /* QueryItems.swift */; };
+		013BEBA52C610E4C00560453 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013BEBA42C610E4C00560453 /* Store.swift */; };
+		013BEBA72C610E9400560453 /* EnvironmentValues+Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013BEBA62C610E9400560453 /* EnvironmentValues+Store.swift */; };
+		013BEBA92C610F8800560453 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013BEBA82C610F8800560453 /* Errors.swift */; };
 		01454F392C52A9FE00AC5B12 /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01454F382C52A9FE00AC5B12 /* AsyncButton.swift */; };
 		01454F3D2C52AA3000AC5B12 /* AsyncButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01454F3C2C52AA3000AC5B12 /* AsyncButtonTests.swift */; };
 		0168B7D22C54F40D005A8FF3 /* Dashboard42Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168B7D12C54F40D005A8FF3 /* Dashboard42Tests.swift */; };
@@ -42,6 +53,17 @@
 		011DFDB42C5CD76900C9E507 /* Dashboard42Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dashboard42Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		011DFDB52C5CD76900C9E507 /* Dashboard42UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dashboard42UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		011DFDB82C5CD7F400C9E507 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		013BEB8D2C60F2D700560453 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		013BEB8F2C60F36200560453 /* AuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUser.swift; sourceTree = "<group>"; };
+		013BEB962C60F8AF00560453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		013BEB972C60F91100560453 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		013BEB992C60FA7A00560453 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		013BEB9C2C60FD7700560453 /* HTTPTypes+HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPTypes+HTTPRequest.swift"; sourceTree = "<group>"; };
+		013BEB9F2C61041C00560453 /* AuthEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoints.swift; sourceTree = "<group>"; };
+		013BEBA12C61073100560453 /* QueryItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryItems.swift; sourceTree = "<group>"; };
+		013BEBA42C610E4C00560453 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		013BEBA62C610E9400560453 /* EnvironmentValues+Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Store.swift"; sourceTree = "<group>"; };
+		013BEBA82C610F8800560453 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		01454F2B2C52A39E00AC5B12 /* Dashboard42.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Dashboard42.xctestplan; sourceTree = "<group>"; };
 		01454F2C2C52A40900AC5B12 /* XcodeWarnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = XcodeWarnings.xcconfig; sourceTree = "<group>"; };
 		01454F312C52A85700AC5B12 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
@@ -78,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				013BEB862C60F10800560453 /* Algorithms in Frameworks */,
 				013972432C5A6BBF00228D1F /* HTTPTypes in Frameworks */,
 				013972452C5A6BC200228D1F /* HTTPTypesFoundation in Frameworks */,
 			);
@@ -100,6 +123,92 @@
 				011DFDB82C5CD7F400C9E507 /* OnBoardingView.swift */,
 			);
 			path = "On Boarding";
+			sourceTree = "<group>";
+		};
+		013BEB842C60F10800560453 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		013BEB872C60F27E00560453 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				013BEB882C60F28100560453 /* Api */,
+				013BEBA32C610E4200560453 /* Store */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		013BEB882C60F28100560453 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				013BEB9E2C61040B00560453 /* Endpoints */,
+				013BEB8A2C60F28C00560453 /* Models */,
+				013BEB892C60F28700560453 /* Services */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		013BEB892C60F28700560453 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				013BEB8D2C60F2D700560453 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		013BEB8A2C60F28C00560453 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				013BEB912C60F78000560453 /* Auth */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		013BEB912C60F78000560453 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				013BEB8F2C60F36200560453 /* AuthUser.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		013BEB932C60F7FE00560453 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				013BEB972C60F91100560453 /* Configuration.swift */,
+				013BEB992C60FA7A00560453 /* Constant.swift */,
+				013BEBA12C61073100560453 /* QueryItems.swift */,
+				013BEBA82C610F8800560453 /* Errors.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		013BEB9B2C60FD2D00560453 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				013BEB9C2C60FD7700560453 /* HTTPTypes+HTTPRequest.swift */,
+				013BEBA62C610E9400560453 /* EnvironmentValues+Store.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		013BEB9E2C61040B00560453 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				013BEB9F2C61041C00560453 /* AuthEndpoints.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		013BEBA32C610E4200560453 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				013BEBA42C610E4C00560453 /* Store.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 		01454F142C52A2E300AC5B12 /* Dashboard42Tests */ = {
@@ -184,17 +293,22 @@
 				011DFDB32C5CD76900C9E507 /* Dashboard42.app */,
 				011DFDB42C5CD76900C9E507 /* Dashboard42Tests.xctest */,
 				011DFDB52C5CD76900C9E507 /* Dashboard42UITests.xctest */,
+				013BEB842C60F10800560453 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		01D976AF2BE8D0D900DB9F30 /* Dashboard42 */ = {
 			isa = PBXGroup;
 			children = (
+				013BEB872C60F27E00560453 /* Core */,
+				013BEB9B2C60FD2D00560453 /* Extensions */,
+				013BEB932C60F7FE00560453 /* Helpers */,
 				01D976B62BE8D0DA00DB9F30 /* Preview Content */,
 				0170E9AA2BE8D69C00D59D45 /* Ressources */,
 				01454F352C52A9E900AC5B12 /* Views */,
 				01D976B22BE8D0D900DB9F30 /* ContentView.swift */,
 				01D976B02BE8D0D900DB9F30 /* Dashboard42App.swift */,
+				013BEB962C60F8AF00560453 /* Info.plist */,
 			);
 			path = Dashboard42;
 			sourceTree = "<group>";
@@ -262,6 +376,7 @@
 			packageProductDependencies = (
 				013972422C5A6BBF00228D1F /* HTTPTypes */,
 				013972442C5A6BC200228D1F /* HTTPTypesFoundation */,
+				013BEB852C60F10800560453 /* Algorithms */,
 			);
 			productName = Dashboard42;
 			productReference = 011DFDB32C5CD76900C9E507 /* Dashboard42.app */;
@@ -302,6 +417,7 @@
 			mainGroup = 01D976A42BE8D0D900DB9F30;
 			packageReferences = (
 				013972402C5A6B1F00228D1F /* XCRemoteSwiftPackageReference "swift-http-types" */,
+				013BEB832C60F0F400560453 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
 			);
 			productRefGroup = 01D976A42BE8D0D900DB9F30;
 			projectDirPath = "";
@@ -362,9 +478,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				01D976B32BE8D0D900DB9F30 /* ContentView.swift in Sources */,
+				013BEBA92C610F8800560453 /* Errors.swift in Sources */,
+				013BEBA72C610E9400560453 /* EnvironmentValues+Store.swift in Sources */,
 				01D976B12BE8D0D900DB9F30 /* Dashboard42App.swift in Sources */,
+				013BEB9A2C60FA7A00560453 /* Constant.swift in Sources */,
+				013BEBA02C61041C00560453 /* AuthEndpoints.swift in Sources */,
 				017508822C5AA6B000B526CD /* AppIcon.swift in Sources */,
+				013BEB902C60F36200560453 /* AuthUser.swift in Sources */,
+				013BEB9D2C60FD7700560453 /* HTTPTypes+HTTPRequest.swift in Sources */,
+				013BEBA52C610E4C00560453 /* Store.swift in Sources */,
+				013BEBA22C61073100560453 /* QueryItems.swift in Sources */,
+				013BEB8E2C60F2D700560453 /* AuthService.swift in Sources */,
 				011DFDB92C5CD7F400C9E507 /* OnBoardingView.swift in Sources */,
+				013BEB982C60F91100560453 /* Configuration.swift in Sources */,
 				01454F392C52A9FE00AC5B12 /* AsyncButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -595,6 +721,7 @@
 				DEVELOPMENT_TEAM = BHH429N5DK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Dashboard42/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Dashboard42;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -625,6 +752,7 @@
 				DEVELOPMENT_TEAM = BHH429N5DK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Dashboard42/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Dashboard42;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -695,6 +823,14 @@
 				minimumVersion = 1.3.0;
 			};
 		};
+		013BEB832C60F0F400560453 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -707,6 +843,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 013972402C5A6B1F00228D1F /* XCRemoteSwiftPackageReference "swift-http-types" */;
 			productName = HTTPTypesFoundation;
+		};
+		013BEB852C60F10800560453 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 013BEB832C60F0F400560453 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
