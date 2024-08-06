@@ -11,8 +11,10 @@ enum Dashboard42Errors: Error {
     case configurationMissingKey
     case configurationInvalidValue
 
-    case invalidNetworkResponse
-    case invalidNetworkDecodingResponse
+    case corruptAccessToken
+    case tooManyRequests
+    case unauthorized
+    case invalidServerResponse
 
     case unknow(Error)
 }

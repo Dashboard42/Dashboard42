@@ -9,7 +9,15 @@ import Foundation
 
 @Observable final class Store {
 
-    let errors: Dashboard42Errors? = nil
-    let authService: AuthService = AuthService()
+    private let network: Network
 
+    let errors: Dashboard42Errors?
+    let authService: AuthService
+
+    init(network: Network) {
+        self.network = network
+
+        self.errors = nil
+        self.authService = AuthService(network: self.network)
+    }
 }

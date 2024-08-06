@@ -8,11 +8,11 @@
 import AuthenticationServices
 import SwiftUI
 
-struct OnBoardingView: View, Sendable {
+struct OnBoardingView: View {
     @Environment(\.webAuthenticationSession) private var webAuthenticationSession: WebAuthenticationSession
     @Environment(\.store) private var store: Store
 
-    private func authenticate() async {
+    @MainActor private func authenticate() async {
         let authorize = AuthEndpoints.authorize.request.url
         let callback = Constant.redirectUri.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
 

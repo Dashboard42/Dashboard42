@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct Dashboard42App: App {
-    @State private var store: Store = Store()
+    @State private var store: Store = Store(network: Network())
 
     var body: some Scene {
         WindowGroup {

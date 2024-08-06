@@ -8,7 +8,7 @@
 import SwiftUI
 
 private struct StoreKey: EnvironmentKey {
-    static var defaultValue = Store()
+    static var defaultValue = Store(network: Network())
 }
 
 extension EnvironmentValues {
