@@ -13,7 +13,7 @@ struct AppIcon: View {
     /// Creates the application icon image.
     init() {}
 
-    var appIcon: String {
+    private var appIcon: String {
         guard let icons = Bundle.main.object(forInfoDictionaryKey: "CFBundleIcons") as? [String: Any],
             let primaryIcon = icons["CFBundlePrimaryIcon"] as? [String: Any],
             let iconFiles = primaryIcon["CFBundleIconFiles"] as? [String],

@@ -10,7 +10,7 @@ import SwiftUI
 
 @MainActor
 struct OnBoardingView: View {
-    @Environment(\.webAuthenticationSession) private var webAuthenticationSession
+    @Environment(\.webAuthenticationSession) private var webAuthenticationSession: WebAuthenticationSession
     @Environment(\.store) private var store: Store
 
     var body: some View {

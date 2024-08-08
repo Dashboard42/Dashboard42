@@ -9,8 +9,8 @@ import SwiftUI
 
 /// A control that initiates an asynchronous action.
 struct AsyncButton<Label>: View where Label: View {
-    let action: () async -> Void
-    let label: () -> Label
+    private let action: () async -> Void
+    private let label: () -> Label
 
     /// Creates a button that displays a custom label.
     ///
