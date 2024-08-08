@@ -8,29 +8,10 @@
 import AuthenticationServices
 import SwiftUI
 
+@MainActor
 struct OnBoardingView: View {
-    @Environment(\.webAuthenticationSession) private var webAuthenticationSession: WebAuthenticationSession
+    @Environment(\.webAuthenticationSession) private var webAuthenticationSession
     @Environment(\.store) private var store: Store
-
-    @MainActor private func authenticate() async {
-        let authorize = AuthEndpoints.authorize.request.url
-        let callback = Constant.redirectUri.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
-
-        guard let authorize = authorize, let callback = callback else {
-            return
-        }
-
-        do {
-            let url = try await self.webAuthenticationSession.authenticate(
-                using: authorize,
-                callbackURLScheme: callback
-            )
-            try await self.store.authService.signIn(using: url)
-        }
-        catch let error {
-            print("Erreur : \(error)")
-        }
-    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -55,7 +36,7 @@ struct OnBoardingView: View {
             Spacer()
 
             VStack(spacing: 16) {
-                AsyncButton("Sign In", action: self.authenticate)
+                AsyncButton("Sign In", action: self.signIn)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
                     .padding()
                     .background(.accent)
@@ -71,6 +52,41 @@ struct OnBoardingView: View {
         }
         .padding(.horizontal, 32)
     }
+}
+
+extension OnBoardingView {
+
+    private func signIn() async {
+        let url: URL?
+        let callback: String?
+        let authenticationURL: URL
+
+        url = AuthEndpoints.authorize.request.url
+        callback = Constant.redirectUri.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+        do {
+            authenticationURL = try await self.authenticate(url: url, callback: callback)
+            try await self.store.authService.signIn(using: authenticationURL)
+        }
+        catch let error {
+            print("Erreur : \(error)")
+        }
+    }
+
+    private func authenticate(url: URL?, callback: String?) async throws -> URL {
+        guard let url = url, let callback = callback else { throw NSError() }
+
+        if #available(iOS 17.4, *) {
+            return try await self.webAuthenticationSession.authenticate(
+                using: url,
+                callback: .customScheme(callback),
+                additionalHeaderFields: [:]
+            )
+        }
+        else {
+            return try await self.webAuthenticationSession.authenticate(using: url, callbackURLScheme: callback)
+        }
+    }
+
 }
 
 #Preview {

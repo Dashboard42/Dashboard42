@@ -7,7 +7,7 @@
 
 import Foundation
 
-@Observable final class Store {
+@Observable final class Store: Sendable {
 
     private let network: Network
 

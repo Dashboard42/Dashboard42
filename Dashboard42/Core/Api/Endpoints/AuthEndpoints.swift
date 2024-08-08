@@ -15,19 +15,10 @@ enum AuthEndpoints {
     case updateUserAccessToken(refreshToken: String)
 
     private var method: HTTPRequest.Method {
-        switch self {
-        case .authorize:
-            return .post
-        case .fetchUserAccessToken:
-            return .post
-        case .fetchApplicationAccessToken:
-            return .post
-        case .updateUserAccessToken:
-            return .post
-        }
+        return .post
     }
 
-    var queryItems: [String: String] {
+    private var queryItems: [String: String] {
         switch self {
         case .authorize:
             return [
